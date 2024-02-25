@@ -1,0 +1,9 @@
+nav:
+    - index.md
+    - 'Θεωρία':
+        - theory.md
+    - 'Εργαστήριο':
+        - lab.md
+        - lab-python.md
+        - lab-haskell.md
+        - lab-prolog.md
