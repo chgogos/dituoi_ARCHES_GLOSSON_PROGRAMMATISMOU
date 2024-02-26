@@ -59,15 +59,21 @@
 ## Βιβλία για Python
 * [Automate the Boring Stuff with Python by Al Sweigart](https://automatetheboringstuff.com/)
 * [Think Python by Allen B. Downey](https://greenteapress.com/wp/think-python-2e/)
-
-## Βιβλία για Python στα ελληνικά
+* [A byte of Python by Swaroop](https://python.swaroopch.com/)
+    * [Μετάφραση στα Ελληνικά]( http://dide.flo.sch.gr/Plinet/Meetings/Meeting23/A_Byte_of_Python-el.pdf)
 * [Εισαγωγή στον Προγραμματισμό με αρωγό τη γλώσσα Python, Μανής Γεώργιος - ΚΑΛΛΙΠΟΣ 2015](https://repository.kallipos.gr/handle/11419/2745)
 * [Εισαγωγή στον αντικειμενοστραφή προγραμματισμό με Python, Μαγκούτης Κωνσταντίνος, Νικολάου Χρήστος - ΚΑΛΛΙΠΟΣ 2015](https://repository.kallipos.gr/handle/11419/1708)
 * [Μια εισαγωγή στην Python για Μεταλλειολόγους & άλλους Μηχανικούς, Παναγιώτου Γιώργος - ΚΑΛΛΙΠΟΣ 2022](https://repository.kallipos.gr/handle/11419/8587)
+* [Github repository με ελεύθερα διαθέσιμα βιβλία για Python](https://github.com/pamoroso/free-python-books)
 
 ## Online μαθήματα
 * [PY4E: Python for everybody](https://www.py4e.com/)
 * [python-course.eu](https://python-course.eu/)
+
+## Videos
+* [Corey Schafer -  Python tutorials](https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g)
+* [Socratica - Python learning tutorials](https://www.youtube.com/playlist?list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-)
+* [CS50x -  Python](https://cs50.harvard.edu/x/2021/shorts/python/)
 
 ## Cheat sheets
 * [Python Crash Course cheat sheets](https://ehmatthes.github.io/pcc/cheatsheets/README.html)

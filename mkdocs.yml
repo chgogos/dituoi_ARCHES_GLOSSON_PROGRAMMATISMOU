@@ -13,6 +13,7 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.highlight
   - attr_list
+  - pymdownx.details
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -22,6 +23,7 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.arithmatex:
       generic: true
+
 
 extra_javascript:
   - javascripts/katex.js
