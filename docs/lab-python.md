@@ -71,9 +71,13 @@
 * [python-course.eu](https://python-course.eu/)
 
 ## Videos
-* [Corey Schafer -  Python tutorials](https://www.youtube.com/channel/UCCezIgC97PvUuR4_gbFUs5g)
+* [Corey Schafer -  Python tutorials](https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU)
 * [Socratica - Python learning tutorials](https://www.youtube.com/playlist?list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-)
 * [CS50x -  Python](https://cs50.harvard.edu/x/2021/shorts/python/)
 
 ## Cheat sheets
 * [Python Crash Course cheat sheets](https://ehmatthes.github.io/pcc/cheatsheets/README.html)
+
+## Python roadmap
+
+[![A mushroom-head robot](images/python-roadmap2024.png 'Python roadmap from roadmap.sh')](https://roadmap.sh/python)

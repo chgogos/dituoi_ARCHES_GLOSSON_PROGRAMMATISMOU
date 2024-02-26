@@ -9,6 +9,7 @@ theme:
 markdown_extensions:
   - pymdownx.snippets:
       base_path: ["docs"]
+  - admonition
   - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.highlight
