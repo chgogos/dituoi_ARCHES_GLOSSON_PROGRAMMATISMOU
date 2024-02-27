@@ -1,5 +1,5 @@
 import math
-x = math.sqrt(2**101/(math.pi**53 + 11**17))
+x = math.sqrt(2**101/(math.pi**53 + 11**7))
 
 # εμφάνιση πλήρους αριθμητικού αποτελέσματος
 print(x)

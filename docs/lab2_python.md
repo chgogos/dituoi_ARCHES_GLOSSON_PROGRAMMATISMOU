@@ -6,17 +6,34 @@
 --8<-- "src/python/lab2/template2_1.py"
 ```
 
+??? note "Λύση άσκησης 1"
+    ```{.py title="template2_1_sol.py" linenums="1"}
+    --8<-- "src/python/lab2/template2_1_sol.py"
+    ```
+
 **Άσκηση E2A2** - Γράψτε μια συνάρτηση που να ελέγχει αν μια φράση είναι παντόγραμμα, δηλαδή περιλαμβάνει και τα 24 γράμματα του Ελληνικού αλφαβήτου. Τροποποιήστε το ακόλουθο template κώδικα έτσι ώστε η λύση σας να επιτυγχάνει σε όλα τα unit tests.
 
 ```{.py title="template2_2.py" linenums="1"}
 --8<-- "src/python/lab2/template2_2.py"
 ```
 
+??? note "Λύση άσκησης 2"
+    ```{.py title="template2_2_sol.py" linenums="1"}
+    --8<-- "src/python/lab2/template2_2_sol.py"
+    ```
+
+
 **Άσκηση E2A3**  -  Γράψτε μια συνάρτηση που να δέχεται ένα κείμενο, να αφαιρεί τα σύμβολα τελεία και κόμμα, να εντοπίζει το μεγαλύτερο μήκος λέξης που περιέχει και να επιστρέφει μια λίστα με όλες τις λέξεις του κειμένου με μήκος ίσο με το μεγαλύτερο μήκος. Τροποποιήστε το ακόλουθο template κώδικα έτσι ώστε η λύση σας να επιτυγχάνει σε όλα τα unit tests.
 
 ```{.py title="template2_3.py" linenums="1"}
 --8<-- "src/python/lab2/template2_3.py"
 ```
+
+??? note "Λύση άσκησης 3"
+    ```{.py title="template2_3_sol.py" linenums="1"}
+    --8<-- "src/python/lab2/template2_3_sol.py"
+    ```
+
 
 **Άσκηση E2A4** - Για την ακόλουθη λίστα τιμών 56, 37, 771, 90, 16, 11 γράψτε comprehensions που να κάνουν τα ακόλουθα:
 
@@ -30,3 +47,8 @@
 ```{.py title="template2_4.py" linenums="1"}
 --8<-- "src/python/lab2/template2_4.py"
 ```
+
+??? note "Λύση άσκησης 4"
+    ```{.py title="template2_4_sol.py" linenums="1"}
+    --8<-- "src/python/lab2/template2_4_sol.py"
+    ```

@@ -14,5 +14,6 @@ $ pip install mkdocs-awesome-pages-plugin
 ## Development
 
 ```
+$ source venv/bin/activate
 $ mkdocs serve
 ```

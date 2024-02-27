@@ -25,7 +25,7 @@ freq_dict = {}
 for c in txt:
     if c.isalpha():
         c = c.upper()
-        freq_dict[c] = freq_dict.get(c,0) + 1
+        freq_dict[c] = freq_dict.get(c, 0) + 1
 
 for c in sorted(freq_dict.keys()):
-    print(f'Χαρακτήρας {c} εμφανίσεις {freq_dict[c]}')
+    print(f"Χαρακτήρας {c} εμφανίσεις {freq_dict[c]}")
