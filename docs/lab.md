@@ -14,3 +14,8 @@
 ## Haskell
 
 ## Prolog -->
+
+
+## Εργαστηριακές ασκήσεις
+
+* [1η άσκηση](./projects/2024_agp_assignment1.pdf)
