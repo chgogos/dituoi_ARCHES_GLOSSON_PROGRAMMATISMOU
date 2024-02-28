@@ -61,9 +61,9 @@
 * [Think Python by Allen B. Downey](https://greenteapress.com/wp/think-python-2e/)
 * [A byte of Python by Swaroop](https://python.swaroopch.com/)
     * [Μετάφραση στα Ελληνικά]( http://dide.flo.sch.gr/Plinet/Meetings/Meeting23/A_Byte_of_Python-el.pdf)
-* [Εισαγωγή στον Προγραμματισμό με αρωγό τη γλώσσα Python, Μανής Γεώργιος - ΚΑΛΛΙΠΟΣ 2015](https://repository.kallipos.gr/handle/11419/2745)
-* [Εισαγωγή στον αντικειμενοστραφή προγραμματισμό με Python, Μαγκούτης Κωνσταντίνος, Νικολάου Χρήστος - ΚΑΛΛΙΠΟΣ 2015](https://repository.kallipos.gr/handle/11419/1708)
-* [Μια εισαγωγή στην Python για Μεταλλειολόγους & άλλους Μηχανικούς, Παναγιώτου Γιώργος - ΚΑΛΛΙΠΟΣ 2022](https://repository.kallipos.gr/handle/11419/8587)
+* [Μανής, Γ. (2015). Εισαγωγή στον Προγραμματισμό με αρωγό τη γλώσσα Python [Προπτυχιακό εγχειρίδιο]. Κάλλιπος, Ανοικτές Ακαδημαϊκές Εκδόσεις. https://hdl.handle.net/11419/2745](https://repository.kallipos.gr/handle/11419/2745)
+* [Μαγκούτης, Κ., & Νικολάου, Χ. (2015). Εισαγωγή στον αντικειμενοστραφή προγραμματισμό με Python [Προπτυχιακό εγχειρίδιο]. Κάλλιπος, Ανοικτές Ακαδημαϊκές Εκδόσεις. https://hdl.handle.net/11419/1708](https://repository.kallipos.gr/handle/11419/1708)
+* [Παναγιώτου, Γ. (2022). Μια εισαγωγή στην Python για Μεταλλειολόγους & άλλους Μηχανικούς [Προπτυχιακό εγχειρίδιο]. Κάλλιπος, Ανοικτές Ακαδημαϊκές Εκδόσεις. https://dx.doi.org/10.57713/kallipos-99](https://repository.kallipos.gr/handle/11419/8587)
 * [Github repository με ελεύθερα διαθέσιμα βιβλία για Python](https://github.com/pamoroso/free-python-books)
 
 ## Online μαθήματα
