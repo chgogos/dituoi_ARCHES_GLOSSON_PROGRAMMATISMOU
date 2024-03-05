@@ -14,6 +14,7 @@ $ pip install mkdocs-awesome-pages-plugin
 ## Development
 
 ```
+$ conda deactivate
 $ source venv/bin/activate
 $ mkdocs serve
 ```
