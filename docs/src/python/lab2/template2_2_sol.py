@@ -23,7 +23,7 @@ def is_pangram(s):
 class TestPantogram(unittest.TestCase):
     def test(self):
         self.assertEqual(is_pangram("ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ"), True)
-        self.assertEqual(is_pangram("ΑΒΓΔΕΖΗΘΙΚΛΜΝΞΟΠΡΣΤΥΦΧΨΩ"[::-1]), True)
+        self.assertEqual(is_pangram("ΩΨΧΦΥΤΣΡΠΟΞΝΜΛΚΙΘΗΖΕΔΓΒΑ"), True)
         self.assertEqual(is_pangram("ΞΕΣΚΕΠΑΖΩ ΤΗΝ ΨΥΧΟΦΘΟΡΟ ΒΔΕΛΥΓΜΙΑ"), True)
         self.assertEqual(
             is_pangram(

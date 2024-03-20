@@ -81,4 +81,22 @@ Valerie Gray;310 Kendra Common Apt. 164, Reidstad, GA 49021;1959-02-15
 Mia Sutton;327 Nelson Route, Lake Mark, WI 07832;1949-11-29
 ```
 
+??? note "Λύση άσκησης 5"
+    ```{.py title="e2a5.py" linenums="1"}
+    --8<-- "src/python/lab2/e2a5.py"
+    ```
+
 **Άσκηση E2A6** Μια άλλη βιβλιοθήκη για unit tests είναι η εξωτερική βιβλιοθήκη [pytest](https://docs.pytest.org/). Επιλύστε ξανά την άσκηση **Ε2Α1** χρησιμοποιώντας αυτή τη φορά την pytest για τους ελέγχους.
+
+??? note "Λύση άσκησης 6"
+    Πρώτα θα πρέπει να εγκατασταθεί η βιβλιοθήκη pytest.
+    ```
+    (myenv) > pip install pytest
+    ```
+    
+    Ο κώδικας που πραγματοποιεί τους ελέγχους με το pytest ακολουθεί:
+    ```{.py title="e2a6.py" linenums="1"}
+    --8<-- "src/python/lab2/e2a6.py"
+    ```
+
+

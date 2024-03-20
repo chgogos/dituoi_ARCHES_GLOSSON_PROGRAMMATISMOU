@@ -7,13 +7,16 @@
 * [Εργαστήριο 1](./lab1_python.md)
 * [Εργαστήριο 2](./lab2_python.md)
 * [Εργαστήριο 3](./lab3_python.md)
+* [Εργαστήριο 4](./lab4_python.md)
 
-<!-- * [Εργαστήριο 4](./lab4_python.md)
-* [Εργαστήριο 5](./lab5_python.md)
+<!-- [Εργαστήριο 5](./lab5_python.md)
 
 ## Haskell
 
-## Prolog -->
+* [Εργαστήριο](./lab1_haskell.md)
+
+
+## Prolog  -->
 
 
 ## Εργαστηριακές ασκήσεις
