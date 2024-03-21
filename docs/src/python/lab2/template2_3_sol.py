@@ -8,7 +8,7 @@ def longest_words(s):
     if words == []:
         return []
     max_length = max([len(w) for w in words])
-    return [w for w in words if len(w) == max_length]
+    return sorted([w for w in words if len(w) == max_length])
 
 
 # Mην αλλάξετε κάτι από εδώ και κάτω
