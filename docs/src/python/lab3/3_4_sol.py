@@ -1,6 +1,7 @@
+import os
 import xml.etree.ElementTree as ET
 
-fn = "ITC2021_Test8_SolGenMethodA.xml"
+fn = os.path.join(os.path.dirname(__file__), "ITC2021_Test8_SolGenMethodA.xml")
 xml_f = open(fn, "r", encoding="utf-8")
 tree = ET.ElementTree(file=xml_f)
 elem = tree.getroot()

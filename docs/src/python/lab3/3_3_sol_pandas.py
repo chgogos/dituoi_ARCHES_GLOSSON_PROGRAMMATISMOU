@@ -1,8 +1,10 @@
 import os, pandas as pd
 from tabulate import tabulate
 
-file_to_movies_len_ratings = os.path.join("", "src", "ml-100k", "u.data")
-file_to_movies_len_names = os.path.join("", "src", "ml-100k", "u.item")
+file_to_movies_len_ratings = os.path.join(
+    os.path.dirname(__file__), "ml-100k", "u.data"
+)
+file_to_movies_len_names = os.path.join(os.path.dirname(__file__), "ml-100k", "u.item")
 
 if __name__ == "__main__":
     # read data
@@ -19,19 +21,19 @@ if __name__ == "__main__":
         names=["movie id", "movie name"],
     )
 
-    # group data per movie_id
+    # ομαδοποίηση ταινιών ανά movie_id
     ratings = ratings.groupby(["movie id"], sort=False).agg(
         {"user id": "count", "rating": "mean"}
     )
 
-    # search for mean rating value of movies with # of ratings>50
+    # λήψη των 10 καλύτερων ταινιών με βάση τον μέσο όρο αξιολογήσεων για ταινίες που έχουν πάνω από 50 αξιολογήσεις
     top_10 = (
         ratings[ratings["user id"] > 50]
         .sort_values(["rating"], ascending=False)
         .head(10)
     )
 
-    # find top_10 movie names
+    # εύρεση top_10 ταινιών
     n = desc_movie_info[desc_movie_info["movie id"].isin(top_10.index)]
     top_10["movie name"] = [
         n.iloc[i]["movie name"]
@@ -40,7 +42,6 @@ if __name__ == "__main__":
         if n.iloc[i]["movie id"] == j
     ]
 
-    # print data in tabulate format
     print(
         tabulate(
             top_10,

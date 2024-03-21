@@ -1,12 +1,12 @@
 # Εργαστήριο 3 στην Python
 
-Θέματα που εξετάζονται στο εργαστήριο: αρχεία κειμένου, κανονικές εκφράσεις (regular expressions), αρχεία XML.
+Θέματα που εξετάζονται στο εργαστήριο: αρχεία κειμένου, κανονικές εκφράσεις (regular expressions), αρχεία XML, μορφοποίηση κώδικα (π.χ. με το black), διάταξη imports με το isort.
 
 ## Εξάσκηση (εκφωνήσεις και λύσεις ασκήσεων)
 
 **Άσκηση E3A1** - Στο ακόλουθο tweet ο [Lex Fridman](https://twitter.com/lexfridman) αναφέρει ότι η αναμενόμενη τιμή του πλήθους τυχαίων επιλογών αριθμών στο διάστημα 0 έως 1 που απαιτούνται έτσι ώστε το άθροισμά τους να ξεπεράσει το 1 είναι ίση με e=2.7182…
 
-![A mushroom-head robot](images/lex_fridman_tweet.png)
+![lex fridman tweet about e](images/lex_fridman_tweet.png)
 
 <!-- ```
   Select numbers between 0 and 1 randomly until sum is > 1.

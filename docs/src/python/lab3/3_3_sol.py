@@ -1,8 +1,10 @@
+import os
 import csv
 
 # Φόρτωση του αρχείου με τις αξιολογήσεις
 movies = {}
-with open("ml-100k/u.data") as f:
+fn = os.path.join(os.path.dirname(__file__), "ml-100k", "u.data")
+with open(fn, encoding="latin-1") as f:
     csv_reader = csv.reader(f, delimiter="\t")
     for row in csv_reader:
         user, movie_id, rating, timestamp = row
@@ -33,7 +35,8 @@ movie_avg_rating.sort(key=lambda x: x[1], reverse=True)
 
 # Φόρτωση του αρχείου με τους τίτλους ταινιών
 titles = {}
-with open("ml-100k/u.item") as f:
+fn = os.path.join(os.path.dirname(__file__), "ml-100k", "u.item")
+with open(fn, encoding="latin-1") as f:
     csv_reader = csv.reader(f, delimiter="|")
     for row in csv_reader:
         movie_id, title = row[0], row[1]

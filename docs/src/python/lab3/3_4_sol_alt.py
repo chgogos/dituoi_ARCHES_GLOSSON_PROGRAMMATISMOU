@@ -1,8 +1,9 @@
 # Εναλλακτική, συντομότερη λύση για την άσκηση Ε3Α4
-
+import os
 import xml.etree.ElementTree as ET
 
-with open("ITC2021_Test8_SolGenMethodA.xml") as xml_f:
+fn = os.path.join(os.path.dirname(__file__), "ITC2021_Test8_SolGenMethodA.xml")
+with open(fn) as xml_f:
     tree = ET.ElementTree(file=xml_f)
 
 matches = {}
