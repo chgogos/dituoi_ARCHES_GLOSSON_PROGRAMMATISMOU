@@ -1,14 +1,16 @@
 # Θεωρήστε ως λέξεις τις συμβολοσειρές που περιέχουν μόνο χαρακτήρες του αγγλικού αλφαβήτου.
-
+import os
 import re
 import unittest
 
-with open("metamorphosis.txt", encoding="utf-8") as f:
+fn = os.path.join(os.path.dirname(__file__), "metamorphosis.txt")
+with open(fn, encoding="utf-8") as f:
     a_list = f.readlines()
 
 text = "".join(a_list[45:52])
 text = text.lower()
 print(text)
+
 
 # Πλήθος των λέξεων του κειμένου
 def q1():
@@ -17,20 +19,23 @@ def q1():
     # print(results)
     return len(results)
 
-def q1_alt1(): # 1ος εναλλακτικός τρόπος επίλυσης του ερωτήματος 1
+
+def q1_alt1():  # 1ος εναλλακτικός τρόπος επίλυσης του ερωτήματος 1
     pattern = re.compile(r"\b[a-z]+\b")
     results = pattern.findall(text)
     results = set(results)
     # print(results)
     return len(results)
 
-def q1_alt2(): # 2ος εναλλακτικός τρόπος επίλυσης του ερωτήματος 1
+
+def q1_alt2():  # 2ος εναλλακτικός τρόπος επίλυσης του ερωτήματος 1
     pattern = re.compile(r"\b[a-z]+\b")
     results = set()
     for x in pattern.finditer(text):
         results.add(x.group(0))
     # print(results)
     return len(results)
+
 
 # Πλήθος των λέξεων που ξεκινούν με τον χαρακτήρα 'h' και τελειώνουν με τον χαρακτήρα 'e'
 def q2():

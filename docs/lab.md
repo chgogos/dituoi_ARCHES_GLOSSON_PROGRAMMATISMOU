@@ -21,4 +21,17 @@
 
 ## Εργαστηριακές ασκήσεις
 
-* [1η άσκηση](./projects/2024_agp_assignment1.pdf)
+* [1η εργαστηριακή άσκηση](./projects/2024_agp_assignment1.pdf)
+* [2η εργαστηριακή άσκηση](./projects/2024_agp_assignment2.pdf)
+
+??? note "template για το my_re_functions.py"
+    ```{.py title="my_re_functions_template.py" linenums="1"}
+    --8<-- "projects/my_re_functions_template.py"
+    ```
+    Θα πρέπει να εμφανίζει:
+    ```
+    ΔΙΑΦΟΡΑ ΔΥΝΑΜΙΚΟΤΗΤΑΣ: 7
+    ΝΙΚΗΤΗΣ: ΙΣΟΠΑΛΙΑ
+    ΗΜΕΡΟΜΗΝΙΑ ΑΓΩΝΑ: 09-04-2023
+    ΠΛΗΘΟΣ ΚΙΝΗΣΕΩΝ: 49
+    ```
