@@ -9,7 +9,7 @@
 [Σημειώσεις](./theory_ch2.md), παρουσίαση: [ΕΝ](./resources/pl11ch2.pdf)
 
 ### 3. Περιγραφή συντακτικού και σημασιολογίας
-Παρουσίαση: [ΕΝ](./resources/pl11ch3.pdf) | [ΕΛ](./resources/pl11ch3GR.pdf)
+[Σημειώσεις](./theory_ch3.md), παρουσίαση: [ΕΝ](./resources/pl11ch3.pdf) | [ΕΛ](./resources/pl11ch3GR.pdf)
 
 ### 5. Ονόματα προσδέσεις και εμβέλειες 
 Παρουσίαση: [ΕΝ](./resources/pl11ch5.pdf) | [ΕΛ](./resources/pl11ch5GR.pdf)

@@ -1,10 +1,27 @@
 # Εργαστήριο 3 στην Python
 
-Θέματα που εξετάζονται στο εργαστήριο: αρχεία κειμένου, κανονικές εκφράσεις (regular expressions), αρχεία XML, μορφοποίηση κώδικα (π.χ. με το black), διάταξη imports με το isort.
+Θέματα που εξετάζονται στο εργαστήριο: αρχεία κειμένου[^1], κανονικές εκφράσεις[^2][^3][^4] (regular expressions), αρχεία XML[^5], μορφοποίηση κώδικα (π.χ. με το black), διάταξη imports με το isort, docstrings.
+ 
+[^1]: [Notebook με παραδείγματα χειρισμού αρχείων κειμένου](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/08-files.ipynb)
+
+[^2]: [Notebook με παραδείγματα κανονικών εκφράσεων](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/22-regular_expressions.ipynb), 
+
+[^3]: [Automate the boring stuff with Python - Chapter 7 – Pattern Matching with Regular Expressions](https://automatetheboringstuff.com/chapter7/)
+
+[^4]: [python-course.eu - Chapter 15 Regular Expressions](https://python-course.eu/advanced-python/regular-expressions.php), [python-course.eu - Chapter 16 Advanced Regular Expressions](https://python-course.eu/advanced-python/advanced-regular-expressions.php)
+
+[^5]: [Notebook με παραδείγματα χειρισμού αρχείων XML](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/16-xml.ipynb)
+
+**Εργαλεία πειραματισμού με κανονικές εκφράσεις**
+
+* <https://regex101.com/>
+* <https://regexr.com/>
+* <https://pythex.org/>
+
 
 ## Εξάσκηση (εκφωνήσεις και λύσεις ασκήσεων)
 
-**Άσκηση E3A1** - Στο ακόλουθο tweet ο [Lex Fridman](https://twitter.com/lexfridman) αναφέρει ότι η αναμενόμενη τιμή του πλήθους τυχαίων επιλογών αριθμών στο διάστημα 0 έως 1 που απαιτούνται έτσι ώστε το άθροισμά τους να ξεπεράσει το 1 είναι ίση με e=2.7182…
+**Άσκηση E3A1** - Στο ακόλουθο tweet ο [Lex Fridman](https://twitter.com/lexfridman) αναφέρει ότι η αναμενόμενη τιμή του πλήθους τυχαίων επιλογών αριθμών στο διάστημα 0 έως 1 που απαιτούνται έτσι ώστε το άθροισμά τους να ξεπεράσει το 1 είναι ίση με e=2.718...
 
 ![lex fridman tweet about e](images/lex_fridman_tweet.png)
 
@@ -14,7 +31,7 @@
   — Lex Fridman (@lexfridman) March 8, 2021
 ``` -->
 
-Τροποποιήστε το ακόλουθο template κώδικα έτσι ώστε η λύση σας να επιτυγχάνει στο unit test:
+Τροποποιήστε το ακόλουθο template κώδικα έτσι ώστε η λύση σας να επιτυγχάνει στο unit test (παρατηρήστε ότι ο κώδικας περιέχει 2 docstrings):
 
 ```{.py title="template3_1.py" linenums="1"}
 --8<-- "src/python/lab3/template3_1.py"
@@ -543,9 +560,9 @@
 
 ## Επιπλέον εξάσκηση
 
-**Άσκηση E3A5[^1]** - Δίνεται ένα αρχείο με συνθηματικά (passwords) και κωδικοποιημένους κανόνες που πρέπει να ισχύουν για καθένα από αυτά. Το αρχείο περιέχει δεδομένα της ακόλουθης μορφής:
+**Άσκηση E3A5[^6]** - Δίνεται ένα αρχείο με συνθηματικά (passwords) και κωδικοποιημένους κανόνες που πρέπει να ισχύουν για καθένα από αυτά. Το αρχείο περιέχει δεδομένα της ακόλουθης μορφής:
 
-[^1]: πρόκειται για το [Day 2: Password Philosophy](https://adventofcode.com/2020/day/2) από το [Advent of Code 2020](https://adventofcode.com/2020).
+[^6]: πρόκειται για το [Day 2: Password Philosophy](https://adventofcode.com/2020/day/2) από το [Advent of Code 2020](https://adventofcode.com/2020).
 
 ```
 1-3 a: abcde
@@ -570,8 +587,95 @@
 ```
 1-3 a: abcde είναι έγκυρο: το συνθηματικό περιέχει τον χαρακτήρα a στη θέση 1 και όχι στη θέση 3.
 1-3 b: cdefg είναι μη έγκυρο: το συνθηματικό δεν περιέχει τον χαρακτήρα b ούτε στη θέση 1 ούτε στη θέση 3.
-2-9 c: ccccccccc είναι μη έγκυρο: το συνθηματικό περιέχει τον χαρακτήρα c καιν στη θέση 2 και στη θέση 9.
+2-9 c: ccccccccc είναι μη έγκυρο: το συνθηματικό περιέχει τον χαρακτήρα c και στη θέση 2 και στη θέση 9.
 ```
 
 Συμπληρώστε το πρόγραμμα έτσι ώστε πάλι με χρήση **κανονικών εκφράσεων** και με unit test να ελέγχει ότι το πλήθος των έγκυρων συνθηματικών στο αρχείο [aoc2020_d2_input.txt](./datasets/aoc2020_d2_input.txt) τώρα είναι 530.
 
+**Άσκηση E3A6** - Για τα περιεχόμενα του αρχείου [simpsons_phone_book.txt](./datasets/simpsons_phone_book.txt), χρησιμοποιώντας κανονικές εκφράσεις: 
+
+1. Εντοπίστε όλους τους αριθμούς τηλεφώνου για καταχωρήσεις που περιέχουν τουλάχιστον μια λέξη που ξεκινά με J.
+2. Εντοπίστε όλους τους αριθμούς τηλεφώνου για καταχωρήσεις που περιέχουν τουλάχιστον μια λέξη που τελειώνει σε eu.
+3. Εντοπίστε όλους τους αριθμούς τηλεφώνων που περιέχουν γράμματα.
+4. Εντοπίστε όλους τους αριθμούς τηλεφώνου χωρίς τον κωδικό της περιοχής (π.χ. 555) και εμφανίστε τους ταξινομημένους.
+
+<!-- ??? note "Λύση άσκησης 6"
+    ```{.py title="3_6_sol.py" linenums="1"}
+    --8<-- "src/python/lab3/3_6_sol.py"
+    ```
+    Παράδειγμα εκτέλεσης:
+    ```
+    $ python 3_6_sol.py
+    Ερώτημα 1
+    Julius Hibbert  -> 555-3642
+    Jay Simpson (Plow King episode)  -> 555-3223
+    Jay Simpson (work)  -> 555-7334
+    Jack Neu  -> 555-7666
+    Jeb Neu  -> 555-5543
+    Jennifer Neu  -> 555-3652
+    John Frink's Lab  -> 555-5782
+    Ερώτημα 2
+    Allison Neu -> 555-8396
+    Cathy Neu -> 555-2362
+    Jack Neu -> 555-7666
+    Jeb Neu -> 555-5543
+    Jennifer Neu -> 555-3652
+    Ken Neu -> 555-8752
+    Ερώτημα 3
+    City of New York Parking Violation Bureau  -> 555-BOOT
+    Dr. Nick Riviera  -> 555-NICK
+    Family Therapy Center  -> 555-HUGS
+    Marvin Monroe's radio therapy show  -> 555-PAIN
+    ORB     Dr Nick's "B"argain Medical Services 1- -> 800-DOCT
+    Original Famous Ray's Pizza  -> 555-PIZA
+    Ερώτημα 4
+    555-0000 -> Moe Szyslak 
+    555-0001 -> C. Montgomery Burns 
+    555-0078 -> Ruff-form Dog School 
+    555-0113 -> C. Montgomery Burns 
+    555-0113 -> The Simpsons, 742 Evergreen Terrace 
+    555-1000 -> Sleep-Eazy Motel 
+    555-1239 -> Moe's Tavern 
+    555-1680 -> Marital Street Hotline 
+    555-2362 -> Cathy Neu 
+    555-2362 -> Susan Newhall 
+    555-2668 -> New York Parking Violation Bureau 
+    555-2849 -> Canine Therapy Institute 
+    555-3223 -> Homer Jay Simpson (Plow King episode) 
+    555-3226 -> Mr. Plow 
+    555-3226 -> Pretzel Wagon 
+    555-3642 -> Dr. Julius Hibbert 
+    555-3652 -> Jennifer Neu 
+    555-3700 -> Marvin Monroe 
+    555-3872 -> Sugar Truck 
+    555-4344 -> Bob Newhall 
+    555-4796 -> Plow King 
+    555-5246 -> The Nuclear Powerplant 
+    555-5299 -> Lionel Putz 
+    555-5543 -> Jeb Neu 
+    555-5680 -> NY Metro 
+    555-5782 -> Prof John Frink's Lab 
+    555-6312 -> Earn Cash For Your Teeth 
+    555-6542 -> Reverend Timothy Lovejoy 
+    555-7201 -> Canine College 
+    555-7246 -> Radio Psychaiatrist 
+    555-7334 -> Homer Jay Simpson (work) 
+    555-7666 -> Jack Neu 
+    555-8396 -> Allison Neu 
+    555-8628 -> MAD Magazine 
+    555-8707 -> The Simpsons' residence 
+    555-8752 -> Ken Neu 
+    555-8821 -> Otto's "How's my Driving" 
+    555-8904 -> Ned Flanders 
+    555-9716 -> Santitarium for Dogs 
+    555-9972 -> Toby Muntz 
+    555-9973 -> Richard Newhall 
+    555-9996 -> Richard Nash 
+    555-BOOT -> City of New York Parking Violation Bureau 
+    555-HUGS -> Family Therapy Center 
+    555-NICK -> Dr. Nick Riviera 
+    555-PAIN -> Marvin Monroe's radio therapy show 
+    555-PIZA -> Original Famous Ray's Pizza 
+    648-4377 -> Moe Szyslak (phone number spells SMITHERS) 7
+    800-DOCT -> ORB         Dr Nick's "B"argain Medical Services 1-
+    ``` -->

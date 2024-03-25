@@ -13,11 +13,19 @@
 * Η απαρχή της αφαίρεσης δεδομένων: SIMULA 67.
 * Ορθογώνια σχεδίαση: ALGOL 68.
 * Μερικοί σημαντικοί απόγονοι των ALGOLs.
-* Προγραμματσιμός βασισμένος σε λογική: Prolog.
-* Η μεγαλύτερη προσπάθεια σχεδιασμού στην ιστορία: Ada.
+* Προγραμματισμός βασισμένος σε λογική: Prolog.
+* Η μεγαλύτερη   προσπάθεια σχεδιασμού στην ιστορία: Ada.
 * Αντικειμενοστραφής Προγραμματισμός: Smalltalk.
 * Συνδυασμός προστακτικών και αντικειμενοστραφών χαρακτηριστικών: C++.
 * Μια αντικειμενοστραφής γλώσσα: Java.
 * Γλώσσες σεναρίων (scripting languages)
+    * Perl
+    * Javascript
+        * [Node.js: The Documentary | An origin story](https://www.youtube.com/watch?v=LB8KwiiUGy0) :clapper:
+    * PHP
+    * Python
+        * [Python extends its lead as the most popular programming language — but why does it have such widespread appeal?](https://www.itpro.com/software/development/python-stretches-its-lead-as-the-most-popular-programming-language-but-why-does-it-have-such-widespread-appeal)
+    * Ruby
+    * Lua
 * Η ναυαρχίδα του .ΝΕΤ: C#
 * Υβριδικές γλώσσες με επισημειώσεις
