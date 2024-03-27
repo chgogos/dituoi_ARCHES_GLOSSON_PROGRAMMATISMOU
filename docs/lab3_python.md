@@ -1,6 +1,6 @@
 # Εργαστήριο 3 στην Python
 
-Θέματα που εξετάζονται στο εργαστήριο: αρχεία κειμένου[^1], κανονικές εκφράσεις[^2][^3][^4] (regular expressions), αρχεία XML[^5], μορφοποίηση κώδικα (π.χ. με το black), διάταξη imports με το isort, docstrings.
+Θέματα που εξετάζονται στο εργαστήριο: αρχεία κειμένου[^1], κανονικές εκφράσεις[^2][^3][^4] (regular expressions), αρχεία XML[^5], μορφοποίηση κώδικα (π.χ. με το black[^6]), διάταξη imports με το isort, docstrings.
  
 [^1]: [Notebook με παραδείγματα χειρισμού αρχείων κειμένου](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/08-files.ipynb)
 
@@ -12,11 +12,16 @@
 
 [^5]: [Notebook με παραδείγματα χειρισμού αρχείων XML](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/16-xml.ipynb)
 
+[^6]: [camcode.io - black](https://calmcode.io/course/black/introduction)
+
 **Εργαλεία πειραματισμού με κανονικές εκφράσεις**
 
-* <https://regex101.com/>
+* <https://regex101.com/> 
 * <https://regexr.com/>
 * <https://pythex.org/>
+* <https://regexper.com/> οπτικοποίηση κανονικών εκφράσεων
+* <https://regexcrossword.com/> 
+* <https://alf.nu/RegexGolf>
 
 
 ## Εξάσκηση (εκφωνήσεις και λύσεις ασκήσεων)
@@ -560,9 +565,9 @@
 
 ## Επιπλέον εξάσκηση
 
-**Άσκηση E3A5[^6]** - Δίνεται ένα αρχείο με συνθηματικά (passwords) και κωδικοποιημένους κανόνες που πρέπει να ισχύουν για καθένα από αυτά. Το αρχείο περιέχει δεδομένα της ακόλουθης μορφής:
+**Άσκηση E3A5[^7]** - Δίνεται ένα αρχείο με συνθηματικά (passwords) και κωδικοποιημένους κανόνες που πρέπει να ισχύουν για καθένα από αυτά. Το αρχείο περιέχει δεδομένα της ακόλουθης μορφής:
 
-[^6]: πρόκειται για το [Day 2: Password Philosophy](https://adventofcode.com/2020/day/2) από το [Advent of Code 2020](https://adventofcode.com/2020).
+[^7]: πρόκειται για το [Day 2: Password Philosophy](https://adventofcode.com/2020/day/2) από το [Advent of Code 2020](https://adventofcode.com/2020).
 
 ```
 1-3 a: abcde

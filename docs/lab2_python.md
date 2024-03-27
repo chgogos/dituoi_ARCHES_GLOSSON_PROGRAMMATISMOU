@@ -1,6 +1,7 @@
 # Εργαστήριο 2 στην Python
 
-Θέματα που εξετάζονται στο εργαστήριο: συγγραφή συναρτήσεων, unit tests με τη στάνταρντ βιβλιοθήκη unittest, comprehensions, virtual environments (venv), εξωτερικές βιβλιοθήκες και εγκατάσταση με το pip, unit tests με το pytest.
+Θέματα που εξετάζονται στο εργαστήριο: συγγραφή συναρτήσεων[^1], unit tests με τη στάνταρντ βιβλιοθήκη unittest[^2], comprehensions[^3][^4], virtual environments (venv), εξωτερικές βιβλιοθήκες και εγκατάσταση με το pip, unit tests με το pytest[^5].
+
 
 ## Εξάσκηση (εκφωνήσεις και λύσεις ασκήσεων)
 
@@ -169,3 +170,8 @@ Mia Sutton;327 Nelson Route, Lake Mark, WI 07832;1949-11-29
     Στο pytest το όνομα του αρχείου που περιέχει τα tests πρέπει να ξεκινά με ```test_``` ή να τελειώνει με ```_test.py```. Επίσης, τα ονόματα των συναρτήσεων με τους ελέγχους πρέπει να ξεκινούν με ```test_``` ή η κλάση που περιέχει ως μεθόδους τους ελέγχους να έχει όνομα που να ξεκινά με ```Test```. 
 
 
+[^1]: [Notebook με παραδείγματα συναρτήσεων](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/09-functions.ipynb)
+[^2]: [Notebook με παραδείγματα unittest](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/13-testing.ipynb)
+[^3]: [Notebook με παραδείγματα comprehensions](https://calmcode.io/course/comprehensions/introduction)
+[^4]: [Παραδείγματα με comprehensions από το calmcode.io](https://calmcode.io/course/comprehensions/introduction)
+[^5]: [Παραδείγματα με το pytest από το calmcode.io](https://calmcode.io/course/pytest/introduction)
