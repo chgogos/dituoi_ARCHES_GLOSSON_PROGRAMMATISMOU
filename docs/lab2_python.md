@@ -103,13 +103,12 @@
 > myenv\Scripts\activate.bat
 ```
 
+ή με τις ακόλουθες εντολές σε Linux ή MacOS:
+
 ```
 $ python -m venv myenv
 $ source myenv/bin/activate
 ```
-
-
-ή με τις ακόλουθες εντολές σε Linux ή MacOS:
 
 Εγκαταστήστε στο ```myenv``` με το ```pip``` τη βιβλιοθήκη [Faker](https://faker.readthedocs.io/en/master/). 
 
