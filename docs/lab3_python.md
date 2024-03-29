@@ -12,7 +12,7 @@
 
 [^5]: [Notebook με παραδείγματα χειρισμού αρχείων XML](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/16-xml.ipynb)
 
-[^6]: [camcode.io - black](https://calmcode.io/course/black/introduction)
+[^6]: [calmcode.io - black](https://calmcode.io/course/black/introduction)
 
 **Εργαλεία πειραματισμού με κανονικές εκφράσεις**
 
@@ -597,7 +597,7 @@
 
 Συμπληρώστε το πρόγραμμα έτσι ώστε πάλι με χρήση **κανονικών εκφράσεων** και με unit test να ελέγχει ότι το πλήθος των έγκυρων συνθηματικών στο αρχείο [aoc2020_d2_input.txt](./datasets/aoc2020_d2_input.txt) τώρα είναι 530.
 
-??? note "Λύση άσκησης 6"
+??? note "Λύση άσκησης 5"
     ```{.py title="3_5_sol.py" linenums="1"}
     --8<-- "src/python/lab3/3_5_sol.py"
     ```
@@ -618,6 +618,9 @@
 2. Εντοπίστε όλους τους αριθμούς τηλεφώνου για καταχωρήσεις που περιέχουν τουλάχιστον μια λέξη που τελειώνει σε eu.
 3. Εντοπίστε όλους τους αριθμούς τηλεφώνων που περιέχουν γράμματα.
 4. Εντοπίστε όλους τους αριθμούς τηλεφώνου χωρίς τον κωδικό της περιοχής (π.χ. 555) και εμφανίστε τους ταξινομημένους.
+
+<center><iframe src="https://giphy.com/embed/jUwpNzg9IcyrK" width="240" height="180" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></center>
+
 
 ??? note "Λύση άσκησης 6"
     ```{.py title="3_6_sol.py" linenums="1"}

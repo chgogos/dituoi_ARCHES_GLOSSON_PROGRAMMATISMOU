@@ -172,5 +172,5 @@ Mia Sutton;327 Nelson Route, Lake Mark, WI 07832;1949-11-29
 [^1]: [Notebook με παραδείγματα συναρτήσεων](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/09-functions.ipynb)
 [^2]: [Notebook με παραδείγματα unittest](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/13-testing.ipynb)
 [^3]: [Notebook με παραδείγματα comprehensions](https://calmcode.io/course/comprehensions/introduction)
-[^4]: [Παραδείγματα με comprehensions από το calmcode.io](https://calmcode.io/course/comprehensions/introduction)
-[^5]: [Παραδείγματα με το pytest από το calmcode.io](https://calmcode.io/course/pytest/introduction)
+[^4]: [calmcode.io - comprehensions](https://calmcode.io/course/comprehensions/introduction)
+[^5]: [calmcode.io - pytest](https://calmcode.io/course/pytest/introduction)
