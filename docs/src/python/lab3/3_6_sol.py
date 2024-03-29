@@ -78,5 +78,5 @@ results = re.findall(
     r"(.*)(\d{3}-(\d{4}|[a-z]{4}))$", phones, flags=re.IGNORECASE | re.MULTILINE
 )
 
-for result in sorted(results, key=lambda row: row[1]):
+for result in sorted(results, key=lambda row: row[2]):
     print(f"{result[1]} -> {result[0]}")

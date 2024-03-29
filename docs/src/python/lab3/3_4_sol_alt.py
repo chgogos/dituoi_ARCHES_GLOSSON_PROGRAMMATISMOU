@@ -18,5 +18,5 @@ for team1 in range(nr_of_teams):
         slot1 = matches[(team1, team2)]
         slot2 = matches[(team2, team1)]
         print(
-            f"Ομάδα {team1} εναντίον {team2} αγωνιστικές {slot1} & {slot2} διαφορά {abs(slot1-slot2)} "
+            f"Η ομάδα {team1} παίζει εναντίον της ομάδας {team2} στις αγωνιστικές {slot1} & {slot2}, διαφορά {abs(slot1-slot2)}"
         )
