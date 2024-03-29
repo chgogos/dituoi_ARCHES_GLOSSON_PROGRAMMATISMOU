@@ -12,7 +12,7 @@
 [Σημειώσεις](./theory_ch3.md), παρουσίαση: [ΕΝ](./resources/pl11ch3.pdf) | [ΕΛ](./resources/pl11ch3GR.pdf)
 
 ### 5. Ονόματα προσδέσεις και εμβέλειες 
-Παρουσίαση: [ΕΝ](./resources/pl11ch5.pdf) | [ΕΛ](./resources/pl11ch5GR.pdf)
+[Σημειώσεις](./theory_ch5.md) Παρουσίαση: [ΕΝ](./resources/pl11ch5.pdf) | [ΕΛ](./resources/pl11ch5GR.pdf)
 
 ### 6. Τύποι δεδομένων
 Παρουσίαση: [ΕΝ](./resources/pl11ch6.pdf)
