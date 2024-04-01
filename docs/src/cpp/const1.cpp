@@ -11,6 +11,3 @@ int main() {
 
   cout << result << endl;
 }
-
-// Input width: 5
-// 11

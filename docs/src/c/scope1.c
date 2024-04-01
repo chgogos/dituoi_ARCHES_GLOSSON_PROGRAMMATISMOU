@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(void) {
   int x = 1;
   {
     int x = 2;
@@ -10,10 +10,3 @@ int main() {
   }
   printf("x=%d at line %d\n", x, __LINE__);
 }
-
-
-/*
-x=2 at line 8
-y=3 at line 9
-x=1 at line 11
-*/

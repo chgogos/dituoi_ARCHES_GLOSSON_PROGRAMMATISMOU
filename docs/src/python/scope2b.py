@@ -16,8 +16,3 @@ def sub1():
 
 sub1()
 print(f"checkpoint4: g={g}")
-
-# checkpoint1: g=3, a=5, b=7
-# checkpoint2: g=9, a=9, b=9
-# checkpoint3: g=9, a=9, b=7
-# checkpoint4: g=9

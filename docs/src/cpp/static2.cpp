@@ -17,8 +17,3 @@ int main() {
   cout << adder(a, 3) << endl;
   cout << adder(b, 4) << endl;
 }
-
-/*
-6
-28
-*/

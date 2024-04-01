@@ -1,6 +1,6 @@
 # Εργαστήριο 1 στην Python
 
-Θέματα που εξετάζονται στο εργαστήριο: συγγραφή και εκτέλεση απλών προγραμμάτων σε Python, ranges, δομή επανάληψης[^1], δομή επιλογής[^2], βασικές δομές δεδομένων[^3] (lists, tuples, dictionaries, sets), λεκτικά[^4] (μήκος λεκτικού, αντιστροφή λεκτικού, λήψη τμήματος λεκτικού με slice), αμυντικός προγραμματισμός, import και χρήση βιλιοθηκών, ChatGPT prompts για παραγωγή κώδικα Python, χρήση του REPL (Read Evaluate Print Loop) της Python.
+Θέματα που εξετάζονται στο εργαστήριο: συγγραφή και εκτέλεση απλών προγραμμάτων σε Python, ranges, δομή επανάληψης[^1], δομή επιλογής[^2], βασικές δομές δεδομένων[^3] (lists, tuples, dictionaries, sets), λεκτικά[^4] (μήκος λεκτικού, αντιστροφή λεκτικού, λήψη τμήματος λεκτικού με slice), αμυντικός προγραμματισμός[^5], import και χρήση βιλιοθηκών, ChatGPT prompts για παραγωγή κώδικα Python, χρήση του REPL (Read Evaluate Print Loop) της Python.
 
 ## Εξάσκηση (εκφωνήσεις και λύσεις ασκήσεων)
 
@@ -165,3 +165,4 @@ $ python 1_6.py
 [^2]: [Notebook με παραδείγματα δομής επιλογής](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/04-conditionals.ipynb)
 [^3]: [Notebook με παραδείγματα βασικών δομών δεδομένων](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/03-lists-tuples-dictionaries-sets.ipynb)
 [^4]: [Notebook με παραδείγματα χειρισμού λεκτικών](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/02-strings.ipynb)
+[^5]: [Παραδείγματα αμυντικού προγραμματισμού](./defensive.md)
