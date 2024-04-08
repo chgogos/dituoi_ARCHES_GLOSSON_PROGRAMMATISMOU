@@ -10,4 +10,4 @@ text = "ΠΑΝΕΠΙΣΤΗΜΙΟ ΙΩΑΝΝΙΝΩΝ28706162"
 hash2 = hashlib.sha256(
     text.encode()
 ).hexdigest()  # Hash τιμή του κειμένου με την προσθήκη του αριθμού 28706162
-print(hash2) # 5c4b9aaed7f48d66a643fc05665f868454c1517e9f5f108b0478305c00000000
+print(hash2)  # 5c4b9aaed7f48d66a643fc05665f868454c1517e9f5f108b0478305c00000000

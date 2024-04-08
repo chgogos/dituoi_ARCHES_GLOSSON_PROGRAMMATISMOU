@@ -1,5 +1,5 @@
-import os
 import csv
+import os
 
 # Φόρτωση του αρχείου με τις αξιολογήσεις
 movies = {}

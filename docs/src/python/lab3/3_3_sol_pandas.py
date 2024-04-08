@@ -1,4 +1,6 @@
-import os, pandas as pd
+import os
+
+import pandas as pd
 from tabulate import tabulate
 
 file_to_movies_len_ratings = os.path.join(

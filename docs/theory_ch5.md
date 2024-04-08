@@ -327,8 +327,7 @@ The day is Tuesday
 
 #### LEGB (Local Enclosing Global Builitins) στην Python
 
-[LEGB notebook](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/
--intro.ipynb)
+[LEGB notebook](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/41-LEGB.ipynb)
 
 <!-- (από το βιβλίο σελ. 223) -->
 ```{.py title="scope2a.py" linenums="1"}
