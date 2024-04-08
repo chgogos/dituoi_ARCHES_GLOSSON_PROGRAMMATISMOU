@@ -19,9 +19,10 @@
 ## Prolog  -->
 
 
-## Εργαστηριακές ασκήσεις
+## Εργαστηριακές ασκήσεις 2023-2024
 
 * [1η εργαστηριακή άσκηση](./projects/2024_agp_assignment1.pdf)
+    * [Ενδεικτική λύση](./assignment2024_1_sol.md)
 * [2η εργαστηριακή άσκηση](./projects/2024_agp_assignment2.pdf)
 
 ??? note "template για το my_re_functions.py"

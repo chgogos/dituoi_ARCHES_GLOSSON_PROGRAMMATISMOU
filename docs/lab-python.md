@@ -80,6 +80,7 @@
 * [CS50x -  Python](https://cs50.harvard.edu/x/2021/shorts/python/)
 
 ## Cheat sheets
+* [The *Best Python Cheat Sheet](https://kieranholland.com/best-python-cheat-sheet/)
 * [Python Crash Course cheat sheets](https://ehmatthes.github.io/pcc/cheatsheets/README.html)
 
 ## Python roadmap
