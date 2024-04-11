@@ -1,8 +1,7 @@
-# Υλοποίηση από Γκιόκεζα Δημήτρη (4/5/2022)
-
 import tkinter as tk
 from tkinter import messagebox
 import sys
+
 
 # Complex == Model εφαρμογής
 class Complex:
@@ -264,7 +263,6 @@ class Controller:
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
-
         self.title("Complex Calculator")
         # Δημιουργία μοντέλου
         model = Complex(1, 2)
