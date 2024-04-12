@@ -24,7 +24,7 @@
     ```
     $ python 5_1_sol_oop.py
     ```
-    ![TODO List GUI example](images/e5a1_TODO.png)
+    ![TODO List GUI example OOP](images/e5a1_TODO.png)
 
 
 **Άσκηση E5A2** - Δημιουργήστε ένα πρόγραμμα που να διαχειρίζεται επαφές (contacts). Για κάθε επαφή να διατηρούνται οι πληροφορίες, επώνυμο, όνομα, τηλέφωνο. Να παρέχεται λειτουργικότητα CRUD (Create, Retrieve, Update, Delete). Τα δεδομένα να αποθηκεύονται σε αρχείο contacts.csv και να ανακαλούνται από αυτό κατά την εκκίνηση του προγράμματος.

@@ -4,7 +4,7 @@ class Length:
         self.unit = unit
 
     def __str__(self):
-        return f"{self.value}{self.unit}"
+        return f"{self.value:.2f}{self.unit}"
 
     def __repr__(self):
         return f"value={self.value} unit={self.unit}"
@@ -28,12 +28,12 @@ def main():
     a = Length(5.5, "cm")
     b = Length(3.0, "in")
 
-    print("Εκτύπωση αντικειμένου με τη μέθοδο __str__")
+    print("Εκτύπωση αντικειμένου με τη μέθοδο __str__ (3 τρόποι)")
     print(a)
     print(str(a))
     print(a.__str__())
 
-    print("Εκτύπωση αντικειμένου με τη μέθοδο __repr__")
+    print("Εκτύπωση αντικειμένου με τη μέθοδο __repr__ (2 τρόποι)")
     print(repr(b))
     print(b.__repr__())
 
