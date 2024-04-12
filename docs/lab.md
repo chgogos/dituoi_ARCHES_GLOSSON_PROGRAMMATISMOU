@@ -8,15 +8,13 @@
 * [Εργαστήριο 2](./lab2_python.md)
 * [Εργαστήριο 3](./lab3_python.md)
 * [Εργαστήριο 4](./lab4_python.md)
+* [Εργαστήριο 5](./lab5_python.md)
 
-<!-- [Εργαστήριο 5](./lab5_python.md)
-
-## Haskell
+<!-- ## Haskell
 
 * [Εργαστήριο](./lab1_haskell.md)
 
-
-## Prolog  -->
+## Prolog -->
 
 
 ## Εργαστηριακές ασκήσεις 2023-2024

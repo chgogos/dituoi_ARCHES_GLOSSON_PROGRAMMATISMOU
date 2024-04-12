@@ -3,7 +3,6 @@ from tkinter import messagebox
 import sys
 
 
-# Complex == Model εφαρμογής
 class Complex:
     def __init__(self, real: float, imag: float):
         self.real = real
@@ -164,26 +163,22 @@ class ViewTui:
 
     # Συνάρτηση χειρισμού εισαγωγής μιγαδικών αριθμών
     def handle_input_event(self):
-        # Εισαγωγή πρώτου μιγαδικού αριθμού
         print("Input of 1st complex number:")
         print("Give real part of 1st complex number: ")
         self.real1 = float(input())
         print("Give imaginary part of 1st complex number: ")
         self.imag1 = float(input())
 
-        # Εισαγωγή δεύετερου μιγαδικού αριθμού
         print("Input of 2nd complex number:")
         print("Give real part of 2nd complex number: ")
         self.real2 = float(input())
         print("Give imaginary part of 2nd complex number: ")
         self.imag2 = float(input())
 
-    # Συνάρτηση μοντελοποίησης μιγαδικών αριθμών
     def handle_modelling_stage(self):
         self.complex1 = Complex(self.real1, self.imag1)
         self.complex2 = Complex(self.real2, self.imag2)
 
-    # Συνάρτηση εμφάνισης τελικού μιγαδικού αριθμού
     def show_result(self, complex_result: Complex):
         print(
             "Real Result: {:.3f}, Imaginary Result: {:.3f}".format(
@@ -195,7 +190,6 @@ class ViewTui:
     def add_clicked(self):
         self.handle_input_event()
         self.handle_modelling_stage()
-
         self.controller.add(self.complex1, self.complex2)
 
     def substract_clicked(self):
@@ -284,7 +278,6 @@ if __name__ == "__main__":
         elif sys.argv[1].upper() == "TUI":
             while True:
                 view = ViewTui()
-
                 if view.operation_selection == 5:
                     break
 

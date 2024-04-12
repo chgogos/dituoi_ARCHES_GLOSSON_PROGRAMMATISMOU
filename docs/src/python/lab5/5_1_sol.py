@@ -27,8 +27,6 @@ def delete_task():
 
 
 # Δημιουργία GUI
-
-
 # Frame για το listbox και το scrollbar
 frame_tasks = ttk.Frame(root)
 frame_tasks.pack()
