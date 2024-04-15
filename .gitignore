@@ -211,3 +211,4 @@ dkms.conf
 
 
 ## Mine
+*.class

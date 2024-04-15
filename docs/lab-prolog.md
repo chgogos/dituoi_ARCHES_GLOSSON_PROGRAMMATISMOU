@@ -7,7 +7,8 @@
 * [Σακελλαρίου, Η., Βασιλειάδης, Ν., Κεφαλάς, Π., & Σταμάτης, Δ. (2015). Τεχνικές λογικού προγραμματισμού [Προπτυχιακό εγχειρίδιο]. Κάλλιπος, Ανοικτές Ακαδημαϊκές Εκδόσεις. https://hdl.handle.net/11419/777](https://repository.kallipos.gr/handle/11419/777)
 
 ## Videos
-* [Prolog tutorial by Derek Banas (video)](https://www.youtube.com/watch?v=SykxWpFwMGs)
+* [Prolog tutorial by Derek Banas](https://www.youtube.com/watch?v=SykxWpFwMGs)
+* [Logic Programming Education](https://www.youtube.com/@LogicProgrammingEducation)
 
 ## Πηγές
 * [Learn Prolog Now (LPN)](http://www.let.rug.nl/bos/lpn//lpnpage.php)

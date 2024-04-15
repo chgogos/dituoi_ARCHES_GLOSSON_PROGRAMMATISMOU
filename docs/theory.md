@@ -27,7 +27,7 @@
 Παρουσίαση: [ΕΝ](./resources/pl11ch9.pdf) | [ΕΛ](./resources/pl11ch9GR.pdf)
 
 ### 12. Υποστήριξη αντικειμενοστραφούς προγραμματισμού
-Παρουσίαση: [ΕΝ](./resources/pl11ch12.pdf) | [ΕΛ](./resources/pl11ch12GR.pdf)
+[Σημειώσεις](./theory_ch12.md) Παρουσίαση: [ΕΝ](./resources/pl11ch12.pdf) | [ΕΛ](./resources/pl11ch12GR.pdf)
 
 ### 14. Χειρισμός εξαιρέσεων και χειρισμός συμβάντων
 Παρουσίαση: [ΕΝ](./resources/pl11ch14.pdf) 

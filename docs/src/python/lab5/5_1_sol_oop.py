@@ -23,16 +23,16 @@ class App(tk.Tk):
         self.listbox_tasks.config(yscrollcommand=self.scrollbar_tasks.set)
         self.scrollbar_tasks.config(command=self.listbox_tasks.yview)
 
-        self.entry_task = ttk.Entry(self, width=50)
+        self.entry_task = ttk.Entry(self)
         self.entry_task.pack(fill="x", expand=True)
 
         self.button_add_task = ttk.Button(
-            self, text="Νέα εργασία", width=45, command=self.add_task
+            self, text="Νέα εργασία", command=self.add_task
         )
         self.button_add_task.pack(fill="x", expand=True)
 
         self.button_delete_task = ttk.Button(
-            self, text="Διαγραφή εργασίας", width=45, command=self.delete_task
+            self, text="Διαγραφή εργασίας", command=self.delete_task
         )
         self.button_delete_task.pack(fill="x", expand=True)
 
