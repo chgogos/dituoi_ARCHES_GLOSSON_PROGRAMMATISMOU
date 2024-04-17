@@ -8,18 +8,16 @@ from matplotlib.figure import Figure
 
 
 def plot():
-    # Enter your API key
     api_key = "ΣΥΜΠΛΗΡΩΣΤΕ ΤΟ ΔΙΚΟ ΣΑΣ API ΚΛΕΙΔΙ ΕΔΩ"
 
-    # Set geographical coordinates (latitude, longitude)
     lat = latitude_entry.get()
     lon = longitude_entry.get()
 
     date_time = datetime.datetime.now() - datetime.timedelta(days=5)
     utc_time = calendar.timegm(date_time.utctimetuple())
 
-    temperatures = []
     timezone = ""
+    temperatures = []
     dates = []
 
     for _ in range(5):
@@ -27,22 +25,8 @@ def plot():
         temp_date = temp_date.split("-")
         dates.append(temp_date[2] + "/" + temp_date[1] + "/" + temp_date[0])
 
-        # API url
-        weather_url = (
-            "https://api.openweathermap.org/data/2.5/onecall/timemachine?lat="
-            + lat
-            + "&lon="
-            + lon
-            + "&units=metric&dt="
-            + str(utc_time)
-            + "&appid="
-            + api_key
-        )
-
-        # Get the response from weather url
+        weather_url = f"https://api.openweathermap.org/data/2.5/onecall/timemachine?lat={lat}&lon={lon}&units=metric&dt={utc_time}&appid={api_key}"
         response = requests.get(weather_url)
-
-        # Response will be in json format and we need to change it to pythonic format
         weather_data = response.json()
 
         if timezone == "":
@@ -59,30 +43,24 @@ def plot():
     temp_date = temp_date.split("-")
     dates.append(temp_date[2] + "/" + temp_date[1] + "/" + temp_date[0])
 
-    # the figure that will contain the plot
     fig = Figure(figsize=(10, 5), dpi=100)
-
     plot1 = fig.add_subplot(111)
-
     plot1.plot(temperatures)
-    plot1.set_title(f"Temperature in {lat=} {lon=}")
-    plot1.set_ylabel("Temperature (°C)")
+    plot1.set_title(f"Θερμοκρασία στις γεωγραφικές συντεταγμένες {lat=} {lon=}")
+    plot1.set_ylabel("Θερμοκρασία (°C)")
     plot1.set_xticks([0, 24, 48, 72, 96, 120])
     plot1.set_xticklabels(dates)
 
     canvas = FigureCanvasTkAgg(fig, master=plot_frame)
     canvas.draw()
-
     canvas.get_tk_widget().pack()
-
     toolbar = NavigationToolbar2Tk(canvas, plot_frame)
     toolbar.update()
-
     canvas.get_tk_widget().pack()
 
 
 window = Tk()
-window.title("Plotting Temperature in Tkinter for the past 5 days")
+window.title("Διάγραμμα θερμοκρασιών για τις 5 τελευταίες ημέρες")
 window.geometry("1000x500")
 
 frame = Frame(window)
@@ -91,8 +69,8 @@ frame.pack()
 plot_frame = Frame(window)
 plot_frame.pack(side=BOTTOM)
 
-Label(frame, text="Latitude").grid(row=0, sticky="w")
-Label(frame, text="Longitude").grid(row=1, sticky="w")
+Label(frame, text="Γεωγραφικό πλάτος (latitude)").grid(row=0, sticky="w")
+Label(frame, text="Γεωγραφικό μήκος (longitude)").grid(row=1, sticky="w")
 
 default_lat = StringVar(window, value="39.1606")
 default_lon = StringVar(window, value="20.9853")

@@ -1,6 +1,6 @@
+import sys
 import tkinter as tk
 from tkinter import messagebox
-import sys
 
 
 class Complex:
@@ -20,12 +20,12 @@ class Complex:
         return Complex(real_new, imag_new)
 
     def __mul__(self, other_complex: "Complex"):
-        real_new = (self.real * other_complex.real) - (self.imag * other_complex.imag)
-        imag_new = (self.imag * other_complex.real) + (self.real * other_complex.imag)
+        real_new = self.real * other_complex.real - self.imag * other_complex.imag
+        imag_new = self.imag * other_complex.real + self.real * other_complex.imag
         return Complex(real_new, imag_new)
 
     def __truediv__(self, other_complex: "Complex"):
-        temp_real = (self.real * other_complex.real) + (self.imag * other_complex.imag)
+        temp_real = self.real * other_complex.real + self.imag * other_complex.imag
         temp_imag = other_complex.real * self.imag - self.real * other_complex.imag
         denum = other_complex.real**2 + other_complex.imag**2
         real_new = temp_real / denum

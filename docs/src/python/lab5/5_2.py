@@ -1,7 +1,8 @@
 import os
 import tkinter as tk
 from tkinter import ttk
-from tkinter.messagebox import showinfo, showerror
+from tkinter.messagebox import showerror, showinfo
+
 
 class Contact:
     def __init__(self, owner_name, owner_lastname, owner_phone):

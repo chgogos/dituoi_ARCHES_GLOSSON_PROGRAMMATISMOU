@@ -30,7 +30,7 @@
 [Σημειώσεις](./theory_ch12.md) Παρουσίαση: [ΕΝ](./resources/pl11ch12.pdf) | [ΕΛ](./resources/pl11ch12GR.pdf)
 
 ### 14. Χειρισμός εξαιρέσεων και χειρισμός συμβάντων
-Παρουσίαση: [ΕΝ](./resources/pl11ch14.pdf) 
+Παρουσίαση: [ΕΝ](./resources/pl11ch14.pdf) | [ΕΛ](./resources/pl11ch14GR.pdf)
 
 ### 15. Γλώσσες συναρτησιακού προγραμματισμού
 Παρουσίαση: [ΕΝ](./resources/pl11ch15.pdf) | [ΕΛ](./resources/pl11ch15GR.pdf)

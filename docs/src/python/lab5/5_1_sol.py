@@ -16,7 +16,7 @@ def add_task():
 
 def delete_task():
     try:
-        task_index = listbox_tasks.curselection()[0] # επιλογή εργασίας
+        task_index = listbox_tasks.curselection()[0]  # επιλογή εργασίας
         listbox_tasks.delete(task_index)
     except:
         showwarning(title="Σφάλμα!", message="Θα πρέπει να επιλέξετε μια εργασία")
