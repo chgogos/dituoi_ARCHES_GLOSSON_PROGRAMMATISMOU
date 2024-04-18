@@ -401,7 +401,15 @@ function big(){
 $ g++ static1.cpp
 $ ./a.out
 1
-100
+2
+3
+4
+5
+6
+7
+8
+9
+10
 ```
 
 ```{.cpp title="static2cpp" linenums="1"}

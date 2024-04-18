@@ -657,3 +657,55 @@ rel_op = συγκριτικός τελεστής
 
 * Είναι δύσκολη η ανάπτυξη αξιωμάτων ή κανόνων συμπερασμού για όλες τις εντολές μιας γλώσσας.
 * Αποτελεί καλό εργαλείο για αποδείξεις ορθότητας, και εξαιρετικό πλαίσιο συλλογισμού για τα προγράμματα, αλλά δεν είναι το ίδιο χρήσιμο για χρήστες γλωσσών και συγγραφείς μεταγλωττιστών.
+
+
+---
+
+
+## Επιπλέον ασκήσεις για το κεφάλαιο 3
+
+1. Δίνεται η ακόλουθη γραμματική:
+
+```
+<stmt> -> <assignment_ stmt> | <if_ stmt>
+<assignment_ stmt> -> <var> = <expr>;
+<if_ stmt> -> if (<cond>) <stmt> else <stmt>
+<cond> -> <expr> ==  <expr>
+<expr> -> <var>
+                | <const>
+                | <expr> + <expr>
+<var> -> a | b | c
+<cons> -> 0 | 1 | 2 
+```
+
+Γράψτε μια αριστερότερη παραγωγή για την ακόλουθη πρόταση:
+
+```
+if (a==0) b=2; else c=a+1;
+```
+
+??? note "Λύση άσκησης 1"
+    ```
+    <stmt> -> 
+    <if_stmt> -> 
+    if (<cond>) <stmt> else <stmt> -> 
+    if (<expr> ==  <expr>) <stmt> else <stmt> ->
+    if (<var> ==  <expr>) <stmt> else <stmt> -> 
+    if (a ==  <expr>) <stmt> else <stmt> -> 
+    if (a ==  <const>) <stmt> else <stmt> -> 
+    if (a ==  0) <stmt> else <stmt> -> 
+    if (a ==  0) <assignment_stmt> else <stmt> -> 
+    if (a ==  0) <var> = <expr>; else <stmt> -> 
+    if (a ==  0) b = <expr>; else <stmt> -> 
+    if (a ==  0) b = <const>; else <stmt> -> 
+    if (a ==  0) b = 2; else <stmt> -> 
+    if (a ==  0) b = 2; else <assignment_stmt> -> 
+    if (a ==  0) b = 2; else <var> = <expr>; -> 
+    if (a ==  0) b = 2; else <var> = <expr>; -> 
+    if (a ==  0) b = 2; else c = <expr>; -> 
+    if (a ==  0) b = 2; else c = <expr> + <expr>; -> 
+    if (a ==  0) b = 2; else c = <var> + <expr>; -> 
+    if (a ==  0) b = 2; else c = a + <expr>; -> 
+    if (a ==  0) b = 2; else c = a + <const>; -> 
+    if (a ==  0) b = 2; else c = a + 1;
+    ```
