@@ -1,5 +1,5 @@
 # Λύση από τον φοιτητή Ράντο Κωνσταντίνο
-# του Τμήματος Πηροφορικής και Τηλεπικοινωνιών
+# του Τμήματος Πληροφορικής και Τηλεπικοινωνιών
 # του Πανεπιστημίου Ιωαννίνων τον Απρίλιο του 2024
 
 import csv
@@ -11,15 +11,20 @@ class ContactManager:
     def __init__(self, root):
         self.root = root
         self.root.title("Διαχείριση Επαφών")
-        self.contacts = self.load_contacts()
+        self.contacts = (
+            self.load_contacts()
+        )  # Φόρτωση των επαφών κατά την αρχικοποίηση.
         self.deleted_contacts = []
         self.create_widgets()
-        self.root.eval("tk::PlaceWindow . center")
+        self.root.eval(
+            "tk::PlaceWindow . center"
+        )  # Κεντραρισμα του παραθύρου στην οθόνη.
 
     def create_widgets(self):
         tree_frame = tk.Frame(self.root)
         tree_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
 
+        # Δημιουργία Treeview για την παρουσίαση των επαφών.
         self.tree = ttk.Treeview(
             tree_frame, columns=("lastname", "firstname", "phone"), show="headings"
         )
@@ -35,11 +40,14 @@ class ContactManager:
             tree_frame, orient=tk.VERTICAL, command=self.tree.yview
         )
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-        self.tree.configure(yscrollcommand=scrollbar.set)
+        self.tree.configure(
+            yscrollcommand=scrollbar.set
+        )  # Σύνδεση του scrollbar με το treeview.
 
-        btn_frame = tk.Frame(self.root)
+        btn_frame = tk.Frame(self.root)  # Πλαίσιο για τα κουμπιά.
         btn_frame.pack(side=tk.BOTTOM, fill=tk.X)
 
+        # Κουμπιά για διαχείριση των επαφών.
         tk.Button(btn_frame, text="Προσθήκη Επαφής", command=self.add_contact).pack(
             side=tk.TOP, fill=tk.X
         )
@@ -56,20 +64,25 @@ class ContactManager:
             side=tk.TOP, fill=tk.X
         )
 
-        self.display_contacts()
+        self.display_contacts()  # Αρχική εμφάνιση επαφών καλώντας την display_contacts.
 
     def load_contacts(self):
+        # Φόρτωση των επαφών από το CSV αρχείο.
         try:
             with open("contacts.csv", mode="r", newline="", encoding="utf-8") as file:
                 reader = csv.reader(file)
-                return [tuple(contact) for contact in reader]
+                return sorted(
+                    [tuple(contact) for contact in reader], key=lambda x: x[0].lower()
+                )
         except FileNotFoundError:
             return []
 
     def save_contacts(self):
+        # Αποθήκευση των επαφών στο CSV αρχείο.
         with open("contacts.csv", mode="w", newline="", encoding="utf-8") as file:
             writer = csv.writer(file)
-            writer.writerows(self.contacts)
+            for contact in sorted(self.contacts, key=lambda x: x[0].lower()):
+                writer.writerow(contact)
         messagebox.showinfo("Επιτυχία!", "Οι επαφές αποθηκεύτηκαν στο αρχείο.")
 
     def add_contact(self):
@@ -84,6 +97,7 @@ class ContactManager:
             messagebox.showerror("Σφάλμα!", "Δεν έχει επιλεγεί καμία επαφή")
 
     def create_dialog(self, title, contact=None):
+        # Δημιουργία παραθύρου διαλόγου για εισαγωγή ή επεξεργασία επαφής.
         dialog = tk.Toplevel(self.root)
         dialog.title(title)
         dialog.geometry(
@@ -109,6 +123,7 @@ class ContactManager:
         phone_number_entry.insert(0, contact[2] if contact else "")
 
         def save_contact():
+            # Αποθήκευση της νέας ή της τροποποιημένης επαφής.
             last_name = last_name_entry.get()
             first_name = first_name_entry.get()
             phone_number = phone_number_entry.get()
@@ -131,12 +146,13 @@ class ContactManager:
         tk.Button(dialog, text="Αποθήκευση", command=save_contact).pack()
 
     def display_contacts(self):
-        for i in self.tree.get_children():
-            self.tree.delete(i)
-        for contact in self.contacts:
+        # Εμφάνιση επαφών ταξινομημένες αλφαβητικά κατά επώνυμο.
+        self.tree.delete(*self.tree.get_children())
+        for contact in sorted(self.contacts, key=lambda x: x[0].lower()):
             self.tree.insert("", tk.END, values=contact)
 
     def delete_contact(self):
+        # Διαγραφή της επιλεγμένης επαφής.
         try:
             selected_item = self.tree.selection()[0]
             contact = self.tree.item(selected_item, "values")
@@ -147,15 +163,18 @@ class ContactManager:
             messagebox.showerror("Σφάλμα!", "Δεν έχει επιλεγεί καμία επαφή")
 
     def show_retrieve_dialog(self):
+        # Διάλογος ανάκτησης διαγραμμένων επαφών.
         if not self.deleted_contacts:
             messagebox.showinfo(
-                "Πληροφορία", "Δεν υπάρχουν διαγραμμένες επαφές για ανάκτηση"
+                "Πληροφορία", "Δεν υπάρχουν διαγραμμένες επαφές για ανάκτηση."
             )
             return
 
         retrieve_window = tk.Toplevel(self.root)
         retrieve_window.title("Ανάκτηση Επαφής")
-        retrieve_window.geometry("300x300+450+450")
+        retrieve_window.geometry(
+            "300x300+450+450"
+        )  # Θέση του παραθύρου, ώστε να μην συμπίπτει με το κεντρικό.
 
         list_frame = tk.Frame(retrieve_window)
         list_frame.pack(side=tk.TOP, fill=tk.BOTH, expand=True)
@@ -171,6 +190,7 @@ class ContactManager:
             listbox.insert(tk.END, f"{idx+1}. {contact[0]} {contact[1]} - {contact[2]}")
 
         def retrieve_selected_contact():
+            # Ανάκτηση της επιλεγμένης διαγραμμένης επαφής.
             selected_idx = listbox.curselection()
             if selected_idx:
                 selected_contact = self.deleted_contacts.pop(selected_idx[0])

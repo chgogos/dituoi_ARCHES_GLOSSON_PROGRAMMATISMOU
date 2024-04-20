@@ -129,6 +129,37 @@
     ```
     ![7GUIs task 2](images/e5a6.png)
 
+
+**Άσκηση Ε5Α7** - Υλοποιήστε με το tkinter την 3η εργασία (Book Flight) από την ιστοσελίδα [7GUIs](https://eugenkiss.github.io/7guis/tasks). Δηλαδή, δημιουργήστε ένα παράθυρο που να συμπεριφέρεται όπως τα ακόλουθο: 
+
+![Book Flight](https://eugenkiss.github.io/7guis/static/bookflight.a5434663.png)
+
+??? note "Λύση άσκησης E5A7"
+    ```{.py title="e5a7.py" linenums="1"}
+    --8<-- "src/python/lab5/e5a7.py"
+    ```
+    <!-- Παράδειγμα εκτέλεσης:
+    ``` -->
+    <!-- $ python e5a7.py
+    ```
+    ![7GUIs task 3](images/e5a7.png) -->
+
+
+<!-- **Άσκηση Ε5Α8** - Υλοποιήστε με το tkinter την 4η εργασία (Timer) από την ιστοσελίδα [7GUIs](https://eugenkiss.github.io/7guis/tasks). Δημιουργήστε ένα παράθυρο όπως το το ακόλουθο:
+
+![Timer](https://eugenkiss.github.io/7guis/static/timer.ed46b6b4.png)
+
+??? note "Λύση άσκησης E5A8"
+    ```{.py title="e5a8.py" linenums="1"}
+    --8<-- "src/python/lab5/e5a8.py"
+    ```
+    Παράδειγμα εκτέλεσης:
+    ```
+    $ python e5a7.py
+    ```
+    ![7GUIs task 4](images/e5a8.png) -->
+
+
 [^1]: [Tkinter Tutorial](https://www.pythontutorial.net/tkinter/)
 [^2]: [Tkinter Matplotlib](https://www.pythontutorial.net/tkinter/tkinter-matplotlib/)
 [^3]: [Tkinter MVC](https://www.pythontutorial.net/tkinter/tkinter-mvc/)
