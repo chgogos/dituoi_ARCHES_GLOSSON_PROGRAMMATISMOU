@@ -83,3 +83,5 @@
     $ python matplotlib_example1.py
     ```
     ![matplotlib example 1](images/matplotlib_example1.png)
+
+* [3η εργαστηριακή άσκηση](./projects/2024_agp_assignment3.pdf)

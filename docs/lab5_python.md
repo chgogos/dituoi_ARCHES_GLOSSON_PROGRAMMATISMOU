@@ -29,14 +29,15 @@
 
 **Άσκηση E5A2** - Δημιουργήστε ένα πρόγραμμα που να διαχειρίζεται επαφές (contacts). Για κάθε επαφή να διατηρούνται οι πληροφορίες, επώνυμο, όνομα, τηλέφωνο. Να παρέχεται λειτουργικότητα CRUD (Create, Retrieve, Update, Delete). Τα δεδομένα να αποθηκεύονται σε αρχείο contacts.csv και να ανακαλούνται από αυτό κατά την εκκίνηση του προγράμματος.
 
-<!-- ??? note "Λύση άσκησης E5A2"
+??? note "Λύση άσκησης E5A2"
     ```{.py title="5_2_sol.py" linenums="1"}
     --8<-- "src/python/lab5/5_2_sol.py"
     ```
     Παράδειγμα εκτέλεσης:
     ```
     $ python 5_2_sol.py
-    ``` -->
+    ```
+    ![CRUD](images/e5a2_CRUD.png)
 
 **Άσκηση E5A3** - Δημιουργήστε ένα πρόγραμμα που να απεικονίζει σε ένα γράφημα τις θερμοκρασίες για τις 5 τελευταίες ημέρες στην Άρτα [39.1606, 20.9853]. Χρησιμοποιήστε το module matplotlib για τη σχεδίαση του γραφήματος και για τη λήψη των θερμοκρασιών το [OpenWeathermap API](https://openweathermap.org/api) (προσοχή πρέπει να λάβετε API key και να το συμπληρώσετε μέσα στον κώδικα).
 
@@ -52,13 +53,57 @@
 
 **Άσκηση E5A4** - Χρησιμοποιήστε το pattern MVC έτσι ώστε να αναπτύξετε μια εφαρμογή που να πραγματοποιεί πράξεις πρόσθεσης, αφαίρεσης, πολλαπλασιασμού και διαίρεσης με μιγαδικούς αριθμούς. Στο ρόλο του view να μπορεί να εναλλάσσεται γραφικό περιβάλλον (GUI=Graphical User Interface) και περιβάλλον κειμένου (TUI=Text User Interface).
 
+??? note "Λύση άσκησης E5A4"
+    ```{.py title="5_4_sol.py" linenums="1"}
+    --8<-- "src/python/lab5/5_4_sol.py"
+    ```
+    Παράδειγμα εκτέλεσης για TUI:
+    ```
+    $ python 5_4_sol.py TUI
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Complex Calculator  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    Choose operation::
+    1.Addition  2.Substraction  3.Multiplication  4.Division
+    5.Quit
+    3
+    Input of 1st complex number:
+    Give real part of 1st complex number:
+    2
+    Give imaginary part of 1st complex number:
+    4
+    Input of 2nd complex number:
+    Give real part of 2nd complex number:
+    3
+    Give imaginary part of 2nd complex number:
+    5
+    Real Result: -14.000, Imaginary Result: 22.000
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  Complex Calculator  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+    Choose operation::
+    1.Addition  2.Substraction  3.Multiplication  4.Division
+    5.Quit
+    5
+    Quitting ...
+    ```
+    
+    Παράδειγμα εκτέλεσης για GUI:
+    ```
+    $ python 5_4_sol.py GUI
+    ```
+    ![Calculator GUI](images/e5a4.png)
+
+
 ## Επιπλέον εξάσκηση
 
 **Άσκηση E5A5** - Υλοποιήστε με το tkinter την 1η εργασία (Counter) από την ιστοσελίδα [7GUIs](https://eugenkiss.github.io/7guis/tasks). Δηλαδή, δημιουργήστε ένα παράθυρο όπως το ακόλουθο και κάθε φορά που ο χρήστης πατά το πλήκτρο Count η τιμή στο πεδίο κειμένου που κατά την εκκίνηση έχει τιμή 0 να αυξάνεται κατά 1.
 
 ![Counter](https://eugenkiss.github.io/7guis/static/counter.9cd92091.png)
 
-<!-- ??? note "Λύση άσκησης E5A5"
+??? note "Λύση άσκησης E5A5"
     ```{.py title="e5a5.py" linenums="1"}
     --8<-- "src/python/lab5/e5a5.py"
     ```
@@ -66,7 +111,7 @@
     ```
     $ python e5a5.py
     ```
-    ![7GUIs task 1](images/e5a5.png) -->
+    ![7GUIs task 1](images/e5a5.png)
 
 **Άσκηση Ε5Α6** - Υλοποιήστε με το tkinter τη 2η εργασία (Temperature Converter) από την ιστοσελίδα [7GUIs](https://eugenkiss.github.io/7guis/tasks). Δηλαδή, δημιουργήστε ένα παράθυρο όπως το ακόλουθο: 
 
