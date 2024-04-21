@@ -2,7 +2,7 @@
 
 Στο εργαστήριο του μαθήματος οι γλώσσες προγραμματισμού που εξετάζονται είναι η Python, η Haskell και η Prolog, ως εκπρόσωποι του προστακτικού, του συναρτησιακού και του λογικού προγραμματισμού αντίστοιχα.
 
-## Python
+<!-- ## Python -->
 
 * [Εργαστήριο 1](./lab1_python.md)
 * [Εργαστήριο 2](./lab2_python.md)
@@ -19,9 +19,9 @@
 
 ## Εργαστηριακές ασκήσεις 2023-2024
 
-* [1η εργαστηριακή άσκηση](./projects/2024_agp_assignment1.pdf)
+* [1η εργαστηριακή άσκηση (pdf)](./projects/2024_agp_assignment1.pdf)
     * [Ενδεικτική λύση](./assignment2024_1_sol.md)
-* [2η εργαστηριακή άσκηση](./projects/2024_agp_assignment2.pdf)
+* [2η εργαστηριακή άσκηση (pdf)](./projects/2024_agp_assignment2.pdf)
     * [Ενδεικτική λύση](./assignment2024_2_sol.md)
 
 ??? note "template για το my_re_functions.py"
@@ -85,4 +85,4 @@
     ```
     ![matplotlib example 1](images/matplotlib_example1.png)
 
-* [3η εργαστηριακή άσκηση](./projects/2024_agp_assignment3.pdf)
+* [3η εργαστηριακή άσκηση (pdf)](./projects/2024_agp_assignment3.pdf)
