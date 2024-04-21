@@ -13,14 +13,15 @@ class Application(tk.Tk):
 
         # Set up main window
         self.title("Book Flight")
-        self.geometry("300x100")
+        self.geometry("300x150")
         for x in range(4):
             self.rowconfigure(x, weight=1)
         self.columnconfigure(0, weight=1)
 
         # Set up combo box
         options = ["one-way flight", "return flight"]
-        self.flight_options = ttk.Combobox(self, values=options)
+        self.flight_options = ttk.Combobox(self, values=options, state="readonly")
+        self.flight_options.set("one-way flight")
         self.flight_options.bind("<<ComboboxSelected>>", self.on_combobox_select)
         self.flight_options.grid(row=0, sticky="nesw", padx=3, pady=3)
 
@@ -34,31 +35,64 @@ class Application(tk.Tk):
         self.entry_val2 = tk.StringVar()
         self.entry_val2.trace_add("write", self.validate_date)
         self.return_date = tk.Entry(self, textvariable=self.entry_val2)
+        self.return_date["state"] = "disabled"
         self.return_date.grid(row=2, sticky="nesw", padx=3, pady=3)
 
         # Set up book button
-        self.book_button = ttk.Button(self, text="Book", command=self.display_message)
+        self.book_button = ttk.Button(
+            self, text="Book", command=self.display_message, state="disabled"
+        )
         self.book_button.grid(row=3, sticky="nesw", padx=3, pady=3)
 
+    def check_box1(self):
+        try:
+            datetime.strptime(self.start_date.get(), "%d.%m.%Y")
+            self.start_date["bg"] = "white"
+            self.book_button["state"] = "normal"
+            return True
+        except ValueError:
+            self.start_date["bg"] = "red"
+            return False
+
+    def check_box2(self):
+        try:
+            datetime.strptime(self.return_date.get(), "%d.%m.%Y")
+            self.return_date["bg"] = "white"
+            return True
+        except ValueError:
+            self.return_date["bg"] = "red"
+            return False
+
     def on_combobox_select(self, event):
-        # Enable or disable return date entry based on flight option
+        # Extra checks for boxes
         if self.flight_options.get() == "one-way flight":
-            self.return_date.config(state="disabled")
+            self.return_date["state"] = "disabled"
+            if self.check_box1():
+                self.book_button["state"] = "normal"
+            else:
+                self.book_button["state"] = "disabled"
         else:
-            self.return_date.config(state="normal")
+            self.return_date["state"] = "normal"
+            if self.check_box1() and self.check_box2():
+                self.book_button["state"] = "normal"
+            else:
+                self.book_button["state"] = "disabled"
 
     def validate_date(self, *args):
         focused_widget = self.focus_get()
 
         # Validate date entries
         if focused_widget in [self.start_date, self.return_date]:
-            try:
-                datetime.strptime(focused_widget.get(), "%d.%m.%Y")
-                focused_widget.configure(bg="white")
-                self.book_button["state"] = "normal"
-            except ValueError:
-                focused_widget.configure(bg="red")
+            if not focused_widget.get():
                 self.book_button["state"] = "disabled"
+            else:
+                try:
+                    datetime.strptime(focused_widget.get(), "%d.%m.%Y")
+                    focused_widget["bg"] = "white"
+                    self.book_button["state"] = "normal"
+                except ValueError:
+                    focused_widget["bg"] = "red"
+                    self.book_button["state"] = "disabled"
 
         # Compare dates if return flight is selected
         if self.flight_options.get() == "return flight":

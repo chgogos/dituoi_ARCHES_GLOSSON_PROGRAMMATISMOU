@@ -32,10 +32,13 @@ class Application(tk.Tk):
         self.d_label = ttk.Label(self, text="Duration:")
         self.d_label.grid(row=2, column=0)
 
-        self.d_time = 0
+        self.d_time = 10
+        self.elapsed_ms = 0
+        self.timer_id = None
         self.d_slider = ttk.Scale(
-            self, from_=0, to=100, orient="horizontal", command=self.update_time
+            self, from_=0, to=100, orient="horizontal", command=self.slider_update
         )
+        self.d_slider.set(10)
         self.d_slider.grid(row=2, column=1, sticky="nswe", padx=10)
 
         self.reset_button = ttk.Button(self, text="Reset", command=self.reset)
@@ -43,34 +46,37 @@ class Application(tk.Tk):
             row=3, column=0, columnspan=2, sticky="nswe", padx=10, pady=10
         )
 
-        self.timer()
+        self.start_timer()
 
-    def update_time(self, value):
-        self.d_time = float(value)
+    def start_timer(self):
+        self.update_timer()
 
-    def timer(self):
-        # Update the elapsed time label
-        elapsed_time = int(self.et_time["text"]) + 1
-        self.et_time["text"] = str(elapsed_time)
+    def update_timer(self):
+        self.et_time["text"] = (
+            "{:.1f}".format(self.elapsed_ms / 1000) + "s"
+        )  # Display elapsed time with one decimal place
 
-        diff = self.d_time - elapsed_time
+        diff = self.d_time - (self.elapsed_ms / 1000)
 
-        # Update the progress bar
-        if not elapsed_time >= self.d_time:
-            if diff >= 0:
-                self.progress_bar["value"] = (
-                    ((self.d_time - diff) / self.d_time) * 100 if self.d_time else 0
-                )
-            else:
-                self.progress_bar["value"] = 0
-
-            # Call the timer function again after 1 second
-            self.after(1000, self.timer)
+        if not (self.elapsed_ms / 1000) >= self.d_time:
+            self.progress_bar["value"] = (
+                ((self.d_time - diff) / self.d_time) * 100 if self.d_time else 0
+            )
+            # Update the timer every 1ms
+            self.elapsed_ms += 1
+            self.timer_id = self.after(1, self.update_timer)
+        else:
+            self.progress_bar["value"] = 100
 
     def reset(self):
-        self.et_time["text"] = "0"
-        self.progress_bar["value"] = 0
-        self.timer()
+        self.elapsed_ms = 0
+        self.after_cancel(self.timer_id)
+        self.start_timer()
+
+    def slider_update(self, value):
+        self.d_time = float(value)
+        if self.d_time > self.elapsed_ms / 1000 and self.progress_bar["value"] == 100:
+            self.start_timer()
 
 
 if __name__ == "__main__":
