@@ -121,7 +121,7 @@ GHCi, version 9.4.8: https://www.haskell.org/ghc/  :? for help
 ghci> :load day1.hs
 ghci> double 10
 20
-Main> :quit
+ghci> :quit
 Leaving GHCi
 ```
 
@@ -133,6 +133,7 @@ GHCi, version 9.4.8: https://www.haskell.org/ghc/  :? for help
 ghci> double 10
 20
 ghci> :quit
+Leaving GHCi
 ```
 
 
