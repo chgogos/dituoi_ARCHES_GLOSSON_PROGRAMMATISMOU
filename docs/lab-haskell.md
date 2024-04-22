@@ -119,6 +119,8 @@ double x = 2 * x
 $ ghci
 GHCi, version 9.4.8: https://www.haskell.org/ghc/  :? for help
 ghci> :load day1.hs
+[1 of 2] Compiling Main             ( day1.hs, interpreted )
+Ok, one module loaded.
 ghci> double 10
 20
 ghci> :quit
@@ -130,6 +132,8 @@ Leaving GHCi
 ```
 $ ghci day1.hs
 GHCi, version 9.4.8: https://www.haskell.org/ghc/  :? for help
+[1 of 2] Compiling Main             ( day1.hs, interpreted )
+Ok, one module loaded.
 ghci> double 10
 20
 ghci> :quit
