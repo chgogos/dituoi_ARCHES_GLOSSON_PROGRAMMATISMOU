@@ -212,3 +212,4 @@ dkms.conf
 
 ## Mine
 *.class
+*.hi

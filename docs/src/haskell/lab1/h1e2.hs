@@ -11,7 +11,7 @@ main = do
   putStr ("Ohms = " ++ show c)
 
 -- Συνάρτηση με pattern matching
-colorValue :: Num a => String -> a
+colorValue :: (Num a) => String -> a
 colorValue "black" = 0
 colorValue "brown" = 1
 colorValue "red" = 2
@@ -24,5 +24,5 @@ colorValue "grey" = 8
 colorValue "white" = 9
 colorValue _ = -1
 
-ohms :: Num a => String -> String -> String -> a
+ohms :: (Num a) => String -> String -> String -> a
 ohms band1 band2 band3 = (10 * colorValue band1 + colorValue band2) * 10 ^ colorValue band3

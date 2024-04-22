@@ -13,8 +13,8 @@ main = do
       bricks = volumeSquarePyramid nb nh / volumeBox 0.19 0.09 0.06
   putStrLn ("Αριθμός πέτρινων τούβλων = " ++ show bricks)
 
-volumeBox :: Num a => a -> a -> a -> a
+volumeBox :: (Num a) => a -> a -> a -> a
 volumeBox w h d = w * h * d
 
-volumeSquarePyramid :: Fractional a => a -> a -> a
+volumeSquarePyramid :: (Fractional a) => a -> a -> a
 volumeSquarePyramid b h = b * b * h / 3
