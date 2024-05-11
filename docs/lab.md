@@ -87,3 +87,5 @@
     ![matplotlib example 1](images/matplotlib_example1.png)
 
 * [3η εργαστηριακή άσκηση (pdf)](./projects/2024_agp_assignment3.pdf)
+
+* [4η εργαστηριακή άσκηση (pdf)](./projects/2024_agp_assignment4.pdf)
