@@ -9,11 +9,13 @@
 * [Εργαστήριο 3](./lab3_python.md)
 * [Εργαστήριο 4](./lab4_python.md)
 * [Εργαστήριο 5](./lab5_python.md)
+* [Εργαστήριο 6](./lab6_python.md)
 
 ## Haskell
 
 * [Εργαστήριο 1](./lab1_haskell.md)
 * [Εργαστήριο 2](./lab2_haskell.md)
+* [Εργαστήριο 3](./lab3_haskell.md)
 
 <!-- ## Prolog -->
 
@@ -89,3 +91,23 @@
 * [3η εργαστηριακή άσκηση (pdf)](./projects/2024_agp_assignment3.pdf)
 
 * [4η εργαστηριακή άσκηση (pdf)](./projects/2024_agp_assignment4.pdf)
+
+??? note "χρονομέτρηση κώδικα στην Python με το time.time()"
+    ```{.py title="time_execution1.py" linenums="1"}
+    --8<-- "projects/time_execution1.py"
+    ```
+    Ένα παράδειγμα εκτέλεσης
+    ```
+    $ python time_execution1.py
+    Execution time: 2.0694435829936992 seconds
+    ```
+
+??? note "χρονομέτρηση κώδικα στην Python με το timeit.default_timer()"
+    ```{.py title="time_execution2.py" linenums="1"}
+    --8<-- "projects/time_execution2.py"
+    ```
+    Ένα παράδειγμα εκτέλεσης
+    ```
+    $ python time_execution2.py
+    Execution time: 1.9552855410147458 seconds
+    ```

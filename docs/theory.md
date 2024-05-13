@@ -33,7 +33,10 @@
 Παρουσίαση: [ΕΝ](./resources/pl11ch14.pdf) | [ΕΛ](./resources/pl11ch14GR.pdf)
 
 ### 15. Γλώσσες συναρτησιακού προγραμματισμού
-Παρουσίαση: [ΕΝ](./resources/pl11ch15.pdf) | [ΕΛ](./resources/pl11ch15GR.pdf)
+[Σημειώσεις](./theory_ch15.md) Παρουσίαση: [ΕΝ](./resources/pl11ch15.pdf) | [ΕΛ](./resources/pl11ch15GR.pdf)
+
+* [Επιρροές συναρτησιακού προγραμματισμού σε προστακτικές γλώσσες](./fp_influences.md) 
+
 
 ### 16. Γλώσσες λογικού προγραμματισμού
 Παρουσίαση: [ΕΝ](./resources/pl11ch16.pdf) | [ΕΛ](./resources/pl11ch15GR.pdf)

@@ -65,4 +65,78 @@
     YES
     ```
 
-<!-- **Άσκηση H1E4**  -->
+**Άσκηση H1E4** Συμπληρώστε σε ένα αρχείο με όνομα `h1e4i.hs` τον ακόλουθο κώδικα που ταξινομεί μια λίστα τιμών υλοποιώντας τον αλγόριθμο quicksort.
+
+```hs
+quicksort :: (Ord a) => [a] -> [a]
+quicksort [] = []
+quicksort (x:xs) =
+  let smallerSorted = quicksort [a | a <- xs, a <= x]
+      biggerSorted = quicksort [a | a <- xs, a > x]
+  in  smallerSorted ++ [x] ++ biggerSorted
+```
+
+α) Φορτώστε το αρχείο `h1e4i.hs` στο ghci και ταξινομήστε τις ακόλουθες λίστες τιμών:
+
+```
+[9, 7, 3, 2, 1, 5, 6, 0, 4, 8]
+[3.142, 2.718, 1.414, 1.618]
+["Ioannina", "Preveza", "Igoumenitsa", "Arta"]
+[False, True, False, True]
+```
+
+<!-- ??? note "Λύση άσκησης H1E4 (α' ερώτημα)"
+    ```
+    $ ghci h1e4i.hs
+    GHCi, version 9.4.8: https://www.haskell.org/ghc/  :? for help
+    [1 of 2] Compiling Main             ( h1e4i.hs, interpreted )
+    Ok, one module loaded.
+    ghci> quicksort [9, 7, 3, 2, 1, 5, 6, 0, 4, 8]
+    [0,1,2,3,4,5,6,7,8,9]
+    ghci> quicksort [3.142, 2.718, 1.414, 1.618]
+    [1.414,1.618,2.718,3.142]
+    ghci> quicksort ["Ioannina", "Preveza", "Igoumenitsa", "Arta"]
+    ["Arta","Igoumenitsa","Ioannina","Preveza"]
+    ghci> quicksort [False, True, False, True]
+    [False,False,True,True]
+    ghci> :module Data.List
+    ghci> sort [9, 7, 3, 2, 1, 5, 6, 0, 4, 8]
+    [0,1,2,3,4,5,6,7,8,9]
+    ghci> :q
+    Leaving GHCi.
+    ``` -->
+
+β) Δημιουργήστε ένα αρχείο `h1e4.hs` που όταν μεταγλωττιστεί με το ghc να προκύπτει εκτελέσιμο που κατά την εκτέλεσή του να ταξινομεί και να εμφανίζει ταξινομημένες τις παραπάνω λίστες.
+
+<!-- ??? note "Λύση άσκησης H1E4 (β' ερώτημα με την υλοποίηση της quicksort)"
+    ```{.hs title=h1e4.hs linenums="1"}
+    --8<-- "src/haskell/lab1/h1e4.hs"
+    ```
+    Μεταγλώττιση και εκτέλεση:
+    ```
+    $ ghc h1e4.hs
+    [1 of 2] Compiling Main             ( h1e4.hs, h1e4.o )
+    [2 of 2] Linking h1e4
+    $ ./h1e4
+    [0,1,2,3,4,5,6,7,8,9]
+    [1.414,1.618,2.718,3.142]
+    ["Arta","Igoumenitsa","Ioannina","Preveza"]
+    [False,False,True,True]
+    ``` -->
+
+<!-- ??? note "Λύση άσκησης H1E4 (β' ερώτημα με τη συνάρτηση βιβλιοθήκης sort)"
+    ```{.hs title=h1e4sort.hs linenums="1"}
+    --8<-- "src/haskell/lab1/h1e4sort.hs"
+    ```
+    Μεταγλώττιση και εκτέλεση:
+    ```
+    $ ghc h1e4sort.hs
+    [1 of 2] Compiling Main             ( h1e4sort.hs, h1e4sort.o )
+    [2 of 2] Linking h1e4sort
+    $ ./h1e4sort
+    [0,1,2,3,4,5,6,7,8,9]
+    [1.414,1.618,2.718,3.142]
+    ["Arta","Igoumenitsa","Ioannina","Preveza"]
+    [False,False,True,True]
+    ``` -->
+

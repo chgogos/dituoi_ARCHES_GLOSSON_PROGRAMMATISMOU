@@ -8,6 +8,8 @@ H Haskell είναι μια αμιγώς συναρτησιακή γλώσσα �
 ## Εγκατάσταση της Haskell
 H Haskell (η Glasgow Haskell) μπορεί να εγκατασταθεί χρησιμοποιώντας το GHCup, ακολουθώντας τις οδηγίες από το <https://www.haskell.org/downloads/>. 
 
+Εναλλακτικά, για την εγκατάσταση της Haskell μπορεί να χρησιμοποιηθεί το εργαλείο stack, ακολουθώντας τις οδηγίες από το <https://docs.haskellstack.org/en/stable/>.
+
 ## Ο διερμηνευτής της Haskell
 Ενεργοποίηση και τερματισμός του διερμηνευτή ghci της Haskell.
 
@@ -17,6 +19,20 @@ GHCi, version 9.4.8: https://www.haskell.org/ghc/  :? for help
 ghci> "Hello World"
 "Hello World"
 ghci> :quit
+Leaving GHCi.
+$
+```
+Αν έχει εγκατασταθεί η Haskell με το εργαλείο stack τότε η ενεργοποίηση του ghci γίνεται ως εξής:
+
+```
+$ stack ghci
+tests> initial-build-steps (lib)
+Configuring GHCi with the following packages: tests.
+GHCi, version 9.2.8: https://www.haskell.org/ghc/  :? for help
+Loaded GHCi configuration from /Users/chgogos/.cache/stack/ghci-script/2a3bbd58/ghci-script
+ghci> 2 ^100
+1267650600228229401496703205376
+ghci> :q
 Leaving GHCi.
 $
 ```
@@ -102,17 +118,20 @@ ghci> double 21
 42
 ```
 
-Αποθήκευση συνάρτησης σε αρχείο.
 
-```
-double :: Integer -> Integer
-double x = 2 * x
-```
+Αποθήκευση συνάρτησης σε αρχείο.
 
 ??? note "Αρχείο day1.hs με ορισμούς των συναρτήσεων: double, fact, factpm, factg, fibpm, fibt, fibc, size, prod, allEven"
     ```{.hs title="day1.hs" linenums="1"}
     --8<-- "src/haskell/7L7W/day1.hs"
     ```
+
+```
+-- ο κώδικας βρίσκεται στο αρχείο day1.hs
+double :: Integer -> Integer
+double x = 2 * x
+```
+
 Φόρτωση κώδικα, κλήση συνάρτησης.
 
 ```
@@ -143,7 +162,7 @@ Leaving GHCi
 
 ## Αναδρομή (recursion)
 
-Ορισμός της συνάρτησης fact απευθείας στο ghci
+Ορισμός της συνάρτησης fact απευθείας στο ghci με τη χρήση της if-then-else.
 
 ```
 ghci> let fact x = if x == 0 then 1 else fact (x - 1) * x
@@ -151,7 +170,7 @@ ghci> fact 3
 6
 ```
 
-**Αντιστοίχιση μοτίβων (pattern matching)**
+**Ταίριασμα προτύπων (pattern matching)**
 
 Ορισμός της multiline συνάρτησης `factpm` απευθείας στο ghci, προσοχή στη χρήση των συμβόλων `:{` και `:}`.
 
@@ -597,4 +616,4 @@ $ ./fileWriteTo
 
 ## Πηγές
 * [Learning Haskell](https://wiki.haskell.org/Learning_Haskell)
-* [Learn X in Y minutes](https://learnxinyminutes.com/docs/haskell/)
+* [Learn X in Y minutes, where X is Haskell](https://learnxinyminutes.com/docs/haskell/)
