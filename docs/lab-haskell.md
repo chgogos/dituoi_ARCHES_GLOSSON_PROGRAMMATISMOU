@@ -353,7 +353,7 @@ ghci> [1..10]
 [1,2,3,4,5,6,7,8,10]
 ghci> [0,5..10]
 [0,5,10]
-ghci> [2, 1.5, 0]
+ghci> [2,1.5..0]
 [2.0,1.5,1.0,0.5,0.0]
 ```
 
@@ -421,7 +421,7 @@ ghci> map (\x -> x * x) [1, 2, 3]
 -- ο κώδικας βρίσκεται στο αρχείο day2.hs
 squareAll :: Num b => [b] -> [b]
 squareAll list = map square list
-    where square x = x *x
+    where square x = x * x
 ```
 
 ```
@@ -570,6 +570,12 @@ $ ./example1
 1405006117752879898543142606244511569936384000000000
 ```
 
+**Μεταγλώττιση και εκτέλεση με το runghc**
+```
+$ runghc example1.hs
+1405006117752879898543142606244511569936384000000000
+```
+
 ## Ανάγνωση και εγγραφή σε αρχεία
 
 Ανάγνωση από το αρχείο κειμένου [input_for_haskell.txt](src/haskell/input_for_haskell.txt)
@@ -601,6 +607,8 @@ $ ./fileWriteTo
 "Write successed!"
 ```
 
+Το αρχείο [output_from_haskell.txt](./src/haskell/output_from_haskell.txt) αποθηκεύεται στον τρέχοντα φάκελο.
+
 ## Βιβλία - σημειώσεις
 * [Σταματόπουλος, Π. (2015). Λογικός και συναρτησιακός προγραμματισμός [Προπτυχιακό εγχειρίδιο]. Κάλλιπος, Ανοικτές Ακαδημαϊκές Εκδόσεις. https://hdl.handle.net/11419/3587](https://repository.kallipos.gr/handle/11419/3587)
 * [Learn You a Haskell for Great Good](http://learnyouahaskell.com/chapters)
@@ -615,5 +623,5 @@ $ ./fileWriteTo
 * [Search Haskell packages](https://flora.pm/)
 
 ## Πηγές
-* [Learning Haskell](https://wiki.haskell.org/Learning_Haskell)
+* [Learning Haskell wiki](https://wiki.haskell.org/Learning_Haskell)
 * [Learn X in Y minutes, where X is Haskell](https://learnxinyminutes.com/docs/haskell/)

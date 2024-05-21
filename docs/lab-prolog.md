@@ -13,6 +13,6 @@
 ## Πηγές
 * [Learn Prolog Now (LPN)](http://www.let.rug.nl/bos/lpn//lpnpage.php)
 * [The power of Prolog by Markus Triska](https://www.metalevel.at/prolog)
-* [Prolog tutorial by J.R.Fisher](https://skolemmachines.org/ThePrologTutorial/www/prolog_tutorial/contents.html)
+* [Prolog tutorial by J.R.Fisher](https://saksagan.ceng.metu.edu.tr/courses/ceng242/documents/prolog/jrfisher/contents.html)
 * [CLP(FD) tutorial by A. Ogborn](https://github.com/Anniepoo/swiplclpfd/blob/master/clpfd.adoc)
 * [Learn X in Y minutes where X=prolog](https://learnxinyminutes.com/docs/prolog/)

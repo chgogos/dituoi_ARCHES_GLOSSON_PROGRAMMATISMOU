@@ -39,4 +39,4 @@
 
 
 ### 16. Γλώσσες λογικού προγραμματισμού
-Παρουσίαση: [ΕΝ](./resources/pl11ch16.pdf) | [ΕΛ](./resources/pl11ch16GR.pdf)
+[Σημειώσεις](./theory_ch16.md)Παρουσίαση: [ΕΝ](./resources/pl11ch16.pdf) | [ΕΛ](./resources/pl11ch16GR.pdf)

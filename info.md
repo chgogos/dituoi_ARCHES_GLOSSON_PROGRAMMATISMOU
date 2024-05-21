@@ -2,7 +2,7 @@
 
 ## Installation
 
-**Linux**
+**Linux and MacOS**
 ```
 $ conda deactivate
 $ python -m venv venv
@@ -21,6 +21,7 @@ $ deactivate
 
 ## Development
 
+**Linux and MacOS**
 ```
 $ conda deactivate
 $ source venv/bin/activate
