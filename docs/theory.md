@@ -24,7 +24,7 @@
 Παρουσίαση: [ΕΝ](./resources/pl11ch8.pdf)
 
 ### 9. Υποπρογράμματα
-Παρουσίαση: [ΕΝ](./resources/pl11ch9.pdf) | [ΕΛ](./resources/pl11ch9GR.pdf)
+[Σημειώσεις](./theory_ch9.md) Παρουσίαση: [ΕΝ](./resources/pl11ch9.pdf) | [ΕΛ](./resources/pl11ch9GR.pdf)
 
 ### 12. Υποστήριξη αντικειμενοστραφούς προγραμματισμού
 [Σημειώσεις](./theory_ch12.md) Παρουσίαση: [ΕΝ](./resources/pl11ch12.pdf) | [ΕΛ](./resources/pl11ch12GR.pdf)
