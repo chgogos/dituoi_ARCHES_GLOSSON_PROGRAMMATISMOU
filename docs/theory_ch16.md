@@ -235,7 +235,7 @@ Family = [bob, jo, jake, darcie].
 * `subset/2`
 * `subtract/3`
 
-[SWI-PROLOG list of predicates]((https://www.swi-prolog.org/pldoc/man?section=lists))
+[SWI-PROLOG list of predicates](https://www.swi-prolog.org/pldoc/man?section=lists)
 
 Μια υλοποίηση της `member` (η `member` υπάρχει υλοποιημένη στην Prolog)
 

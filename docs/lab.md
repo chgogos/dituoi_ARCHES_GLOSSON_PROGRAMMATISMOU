@@ -92,7 +92,8 @@
     ![matplotlib example 1](images/matplotlib_example1.png)
 
 * [3η εργαστηριακή άσκηση (pdf)](./projects/2024_agp_assignment3.pdf)
-
+    * [Ενδεικτική λύση](./assignment2024_3_sol.md)
+  
 * [4η εργαστηριακή άσκηση (pdf)](./projects/2024_agp_assignment4.pdf)
 
 ??? note "χρονομέτρηση κώδικα στην Python με το time.time()"

@@ -87,7 +87,7 @@ quicksort (x:xs) =
 [False, True, False, True]
 ```
 
-<!-- ??? note "Λύση άσκησης H1E4 (α' ερώτημα)"
+??? note "Λύση άσκησης H1E4 (α' ερώτημα)"
     ```
     $ ghci h1e4i.hs
     GHCi, version 9.4.8: https://www.haskell.org/ghc/  :? for help
@@ -106,11 +106,11 @@ quicksort (x:xs) =
     [0,1,2,3,4,5,6,7,8,9]
     ghci> :q
     Leaving GHCi.
-    ``` -->
+    ```
 
 β) Δημιουργήστε ένα αρχείο `h1e4.hs` που όταν μεταγλωττιστεί με το ghc να προκύπτει εκτελέσιμο που κατά την εκτέλεσή του να ταξινομεί και να εμφανίζει ταξινομημένες τις παραπάνω λίστες.
 
-<!-- ??? note "Λύση άσκησης H1E4 (β' ερώτημα με την υλοποίηση της quicksort)"
+??? note "Λύση άσκησης H1E4 (β' ερώτημα με την υλοποίηση της quicksort)"
     ```{.hs title=h1e4.hs linenums="1"}
     --8<-- "src/haskell/lab1/h1e4.hs"
     ```
@@ -124,9 +124,9 @@ quicksort (x:xs) =
     [1.414,1.618,2.718,3.142]
     ["Arta","Igoumenitsa","Ioannina","Preveza"]
     [False,False,True,True]
-    ``` -->
+    ```
 
-<!-- ??? note "Λύση άσκησης H1E4 (β' ερώτημα με τη συνάρτηση βιβλιοθήκης sort)"
+??? note "Λύση άσκησης H1E4 (β' ερώτημα με τη συνάρτηση βιβλιοθήκης sort)"
     ```{.hs title=h1e4sort.hs linenums="1"}
     --8<-- "src/haskell/lab1/h1e4sort.hs"
     ```
@@ -140,5 +140,5 @@ quicksort (x:xs) =
     [1.414,1.618,2.718,3.142]
     ["Arta","Igoumenitsa","Ioannina","Preveza"]
     [False,False,True,True]
-    ``` -->
+    ```
 
