@@ -333,7 +333,7 @@ length(?List, ?Length)                                                          
 
 Εντοπίστε τον ρόλο των συμβόλων `?`, `+`, `-`  που εμφανίζονται πριν τα ονόματα των παραμέτρων των κατηγορημάτων στις περιγραφές τους. 
 
-<!-- ??? note "Λύση άσκησης PRO1E5"
+??? note "Λύση άσκησης PRO1E5"
     ```{.prolog title=pro1e5.pl linenums="1"}
     --8<-- "src/prolog/lab1/pro1e5.pl"
     ```
@@ -366,7 +366,7 @@ length(?List, ?Length)                                                          
     
     ?- my_sum_list([1,2,3,4,5], S).
     S = 15.
-    ``` -->
+    ```
 
 **Άσκηση PRO1E6** Γράψτε ένα κατηγόρημα `binary_to_decimal(ListOfBits, Decimal)` που να μετατρέπει μια λίστα από δυαδικά ψηφία στον αντίστοιχο δεκαδικό αριθμό. Για παράδειγμα:
 
@@ -381,7 +381,7 @@ length(?List, ?Length)                                                          
 Μπορεί να σας φανεί χρήσιμο το κατηγόρημα `reverse/2` που αντιστρέφει μια λίστα.
 
 
-<!-- ??? note "Λύση άσκησης PRO1E6"
+??? note "Λύση άσκησης PRO1E6"
     ```{.prolog title=pro1e6.pl linenums="1"}
     --8<-- "src/prolog/lab1/pro1e6.pl"
     ```
@@ -409,9 +409,7 @@ length(?List, ?Length)                                                          
     ?- binary_to_decimal([1,1,0,Χ,0], 26).
     Χ = 1.
     ``` 
-    -->
-
-
+   
 [^1]: [Learn Prolog Now Ch.1 - Facts, Rules, and Queries](https://lpn.swi-prolog.org/lpnpage.php?pagetype=html&pageid=lpn-htmlch1)
 [^2]: [Learn Prolog Now Ch.2 - Unification and Proof Search](https://lpn.swi-prolog.org/lpnpage.php?pagetype=html&pageid=lpn-htmlch2)
 [^3]: [Learn Prolog Now Ch.3 - Recursion](https://lpn.swi-prolog.org/lpnpage.php?pagetype=html&pageid=lpn-htmlch3)
