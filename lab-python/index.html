@@ -1,0 +1,856 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../lab/">
+      
+      
+        <link rel="next" href="../lab-haskell/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.28">
+    
+    
+      
+        <title>Python - ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#python" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ" class="md-header__button md-logo" aria-label="ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Python
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Σχετικά με το μάθημα
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../theory/" class="md-tabs__link">
+          
+  
+  Θεωρία
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lab/" class="md-tabs__link">
+          
+  
+  Εργαστήριο
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ" class="md-nav__button md-logo" aria-label="ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Σχετικά με το μάθημα
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Θεωρία
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Θεωρία
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ύλη
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Εργαστήριο
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Εργαστήριο
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Εργαστηριακό τμήμα μαθήματος
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Python
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#marko-knobl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Διαφάνειες από τον Marko Knöbl
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notebooks-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notebooks εισαγωγής στην Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Βιβλία για Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#online" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online μαθήματα
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Videos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheat-sheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cheat sheets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python roadmap
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-haskell/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Haskell
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-prolog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prolog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#marko-knobl" class="md-nav__link">
+    <span class="md-ellipsis">
+      Διαφάνειες από τον Marko Knöbl
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notebooks-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Notebooks εισαγωγής στην Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Βιβλία για Python
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#online" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online μαθήματα
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tutorials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tutorials
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Videos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cheat-sheets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cheat sheets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#python-roadmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Python roadmap
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="python">Python</h1>
+<h2 id="marko-knobl">Διαφάνειες από τον <a href="https://marko-knoebl.github.io/slides/index-en.html">Marko Knöbl</a></h2>
+<ul>
+<li><a href="https://marko-knoebl.github.io/slides/python-beginner-collection-en.html">Python basics</a></li>
+<li><a href="https://marko-knoebl.github.io/slides/python-intermediate-collection-en.html">Python intermediate</a></li>
+<li><a href="https://marko-knoebl.github.io/slides/python-advanced-collection-en.html">Python advanced</a></li>
+<li><a href="https://marko-knoebl.github.io/slides/python-in-practice-collection-en.html">Python in practice</a></li>
+<li><a href="https://marko-knoebl.github.io/slides/python-data-science-0-overview-collection-en.html">Python and data science</a></li>
+</ul>
+<h2 id="notebooks-python">Notebooks εισαγωγής στην Python</h2>
+<ol>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/01-intro.ipynb">Εισαγωγή</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/02-strings.ipynb">Λεκτικά</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/03-lists-tuples-dictionaries-sets.ipynb">Λίστες, πλειάδες, λεξικά και σύνολα</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/04-conditionals.ipynb">Η εντολή if</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/05-loops.ipynb">Επαναλήψεις</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/06-comprehensions.ipynb">Comprehensions</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/07-exceptions.ipynb">Εξαιρέσεις</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/08-files.ipynb">Αρχεία</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/09-functions.ipynb">Συναρτήσεις</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/10-lambdas.ipynb">Συναρτήσεις λάμδα</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/11-classes.ipynb">Κλάσεις</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/12-logging.ipynb">Logging</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/13-testing.ipynb">Testing</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/14-csv.ipynb">CSV</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/15-excel.ipynb">Excel</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/16-xml.ipynb">XML</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/17-json.ipynb">JSON</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/18-yaml.ipynb">YAML</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/19-pickle.ipynb">Αποθήκευση (serialize) αντικειμένων με το pickle</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/20-datetime.ipynb">Ημερομηνίες και ώρες</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/21-random.ipynb">Τυχαίες τιμές</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/22-regular_expressions.ipynb">Κανονικές εκφράσεις</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/23-generators.ipynb">Generators</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/24-iterators.ipynb">Iterators</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/25-itertools.ipynb">Το module itertools</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/26-enums.ipynb">enums</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/27-urllib.ipynb">Το module urllib</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/28-requests.ipynb">Το module requests</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/29-bs4.ipynb">bs4</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/30-collections.ipynb">Το module collections</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/31-PLY.ipynb">PLY - Python Lex Yacc</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/32-alias.ipynb">Aliasing</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/33-abstract_syntax_trees.ipynb">AST</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/34-operator_overloading.ipynb">Υπερφόρτωση τελεστών</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/35-mutable_vs_immutable.ipynb">Τροποποιήσιμα και μη τροποποιήσιμα αντικείμενα</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/36-numpy.ipynb">numpy</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/37-pandas.ipynb">pandas</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/38-matplotlib.ipynb">matplotlib</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/39-dataclasses.ipynb">dataclasses</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/40-functools.ipynb">Το module functools</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/41-LEGB.ipynb">LEGB</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/42-os.ipynb">Το module os</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/43-easter_eggs.ipynb">Easter eggs</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/44-seaborn.ipynb">seaborn</a></li>
+<li><a href="https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/45-datasets.ipynb">datasets</a></li>
+</ol>
+<h2 id="python_1">Βιβλία για Python</h2>
+<ul>
+<li><a href="https://automatetheboringstuff.com/">Automate the Boring Stuff with Python by Al Sweigart</a></li>
+<li><a href="https://greenteapress.com/wp/think-python-2e/">Think Python by Allen B. Downey</a></li>
+<li><a href="https://python.swaroopch.com/">A byte of Python by Swaroop</a><ul>
+<li><a href="http://dide.flo.sch.gr/Plinet/Meetings/Meeting23/A_Byte_of_Python-el.pdf">Μετάφραση στα Ελληνικά</a></li>
+</ul>
+</li>
+<li><a href="https://repository.kallipos.gr/handle/11419/2745">Μανής, Γ. (2015). Εισαγωγή στον Προγραμματισμό με αρωγό τη γλώσσα Python [Προπτυχιακό εγχειρίδιο]. Κάλλιπος, Ανοικτές Ακαδημαϊκές Εκδόσεις. https://hdl.handle.net/11419/2745</a></li>
+<li><a href="https://repository.kallipos.gr/handle/11419/1708">Μαγκούτης, Κ., &amp; Νικολάου, Χ. (2015). Εισαγωγή στον αντικειμενοστραφή προγραμματισμό με Python [Προπτυχιακό εγχειρίδιο]. Κάλλιπος, Ανοικτές Ακαδημαϊκές Εκδόσεις. https://hdl.handle.net/11419/1708</a></li>
+<li><a href="https://repository.kallipos.gr/handle/11419/8587">Παναγιώτου, Γ. (2022). Μια εισαγωγή στην Python για Μεταλλειολόγους &amp; άλλους Μηχανικούς [Προπτυχιακό εγχειρίδιο]. Κάλλιπος, Ανοικτές Ακαδημαϊκές Εκδόσεις. https://dx.doi.org/10.57713/kallipos-99</a></li>
+<li><a href="https://github.com/pamoroso/free-python-books">Github repository με ελεύθερα διαθέσιμα βιβλία για Python</a></li>
+</ul>
+<h2 id="online">Online μαθήματα</h2>
+<ul>
+<li><a href="https://www.py4e.com/">PY4E: Python for everybody</a></li>
+<li><a href="https://python-course.eu/">python-course.eu</a></li>
+</ul>
+<h2 id="tutorials">Tutorials</h2>
+<ul>
+<li><a href="https://github.com/ivnvxd/pyquest">PyQuest</a></li>
+<li><a href="https://github.com/gregmalcolm/python_koans">Python Koans</a></li>
+</ul>
+<h2 id="videos">Videos</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=YYXdXT2l-Gg&amp;list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU">Corey Schafer -  Python tutorials</a></li>
+<li><a href="https://www.youtube.com/playlist?list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-">Socratica - Python learning tutorials</a></li>
+<li><a href="https://cs50.harvard.edu/x/2021/shorts/python/">CS50x -  Python</a></li>
+</ul>
+<h2 id="cheat-sheets">Cheat sheets</h2>
+<ul>
+<li><a href="../resources/mementopython3-english.pdf">Python 3 Cheat Sheet (v2.0.6) by Laurent Pointal</a></li>
+<li><a href="https://kieranholland.com/best-python-cheat-sheet/">The *Best Python Cheat Sheet</a></li>
+<li><a href="https://ehmatthes.github.io/pcc/cheatsheets/README.html">Python Crash Course cheat sheets</a></li>
+</ul>
+<h2 id="python-roadmap">Python roadmap</h2>
+<p><a href="https://roadmap.sh/python"><img alt="A mushroom-head robot" src="../images/python-roadmap2024.png" title="Python roadmap from roadmap.sh" /></a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Γκόγκος Χρήστος &copy 2024
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": "-navigation.tabs -content.code.copy", "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+        <script src="../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
