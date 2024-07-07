@@ -617,7 +617,16 @@ $ ./fileWriteTo
 * [Graham Hutton - Functional Programming](https://www.youtube.com/channel/UCBDp7ydYTHi1dh4Gnf3VTPA)
 * [Philipp Hagenlocher - Haskell for Imperative Programmers](https://www.youtube.com/watch?v=Vgu82wiiZ90&list=PLe7Ei6viL6jGp1Rfu0dil1JH1SHk9bgDV)
 * [Curtis D'Alves - Learning Haskell](https://www.youtube.com/playlist?list=PLHRF-X-NtQR4MZBvm05NshPIEI8ELID5m)
+* [Haskell Course by IOG Academy](https://www.youtube.com/playlist?list=PLNEK_Ejlx3x1D9Vq5kqeC3ZDEP7in4dqb)
 
+## Μαθήματα
+* [Haskell MOOC Part 1 & Part 2 - by Joel Kaasinen (Nitor) and John Lång (University of Helsinki)](https://haskell.mooc.fi/)
+* [Beginner crash course - by Type Classes](https://typeclasses.com/beginner-crash-course)
+* [Haskell and Functional Programming course for complete beginners - by Dmitrii Kovanikov](https://github.com/haskell-beginners-2022/course-plan)
+* [Functional Programming Course - by Tony Morris & Mark Hibberd](https://github.com/system-f/fp-course)
+* [Haskell via Sokoban by Joachim Breitner](https://haskell-via-sokoban.nomeata.de/)
+    * [CodeWorld environment](https://code.world/)
+  
 ## Haskell documentation
 * [Hoogle](https://hoogle.haskell.org/)
 * [Search Haskell packages](https://flora.pm/)
