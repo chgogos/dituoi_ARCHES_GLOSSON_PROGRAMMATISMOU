@@ -4,6 +4,9 @@ nav:
         - theory.md
     - 'Εργαστήριο':
         - lab.md
+    - 'Python':
         - lab-python.md
+    - 'Haskell':        
         - lab-haskell.md
+    - 'Prolog':        
         - lab-prolog.md
