@@ -55,7 +55,6 @@
 44. [seaborn](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/44-seaborn.ipynb)
 45. [datasets](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/45-datasets.ipynb)
 
-
 ## Βιβλία για Python
 * [Automate the Boring Stuff with Python by Al Sweigart](https://automatetheboringstuff.com/)
 * [Think Python by Allen B. Downey](https://greenteapress.com/wp/think-python-2e/)
@@ -86,3 +85,102 @@
 
 ## Python roadmap
 [![A mushroom-head robot](images/python-roadmap2024.png 'Python roadmap from roadmap.sh')](https://roadmap.sh/python)
+
+## Αποσπάσματα κώδικα
+
+??? note "ανάγνωση και εκτύπωση ημερομηνιών"
+    ```{.py title="datetime_example.py" linenums="1"}
+    --8<-- "projects/datetime_example.py"
+    ```
+    Ένα παράδειγμα εκτέλεσης
+    ```
+    $ python datetime_example.py
+    10/04/2024
+    10|4|24
+    10-April-24
+    Wed 10 Apr 2024
+    ```
+
+
+??? note "ορίσματα γραμμής εντολών με το sys.argv"
+    ```{.py title="command_line_arg_example1.py" linenums="1"}
+    --8<-- "projects/command_line_arg_example1.py"
+    ```
+    Ένα παράδειγμα εκτέλεσης
+    ```
+    $ python command_line_arg_example1.py 1 a bcde
+    ΠΛΗΘΟΣ ΟΡΙΣΜΑΤΩΝ: 4
+    όρισμα 0 με τιμή /Users/.../command_line_arg_example1.py
+    όρισμα 1 με τιμή 1
+    όρισμα 2 με τιμή a
+    όρισμα 3 με τιμή bcde
+    ```
+
+??? note "ορίσματα γραμμής εντολών με το argparse"
+    ```{.py title="argparse_example.py" linenums="1"}
+    --8<-- "projects/argparse_example.py"
+    ```
+    Ένα παράδειγμα εκτέλεσης
+    ```
+    $ python argparse_example.py -i a.txt -o b.txt
+    Αρχείο εισόδου: a.txt
+    Αρχείο εξόδου: b.txt
+    ```
+
+??? note "απλό γράφημα με το matplotlib"
+    ```{.py title="matplotlib_example1.py" linenums="1"}
+    --8<-- "projects/matplotlib_example1.py"
+    ```
+    Ένα παράδειγμα εκτέλεσης (θα πρέπει να έχει προηγηθεί η εγκατάσταση με το pip της βιβλιοθήκης matplotlib)
+    ```
+    $ python matplotlib_example1.py
+    ```
+    ![matplotlib example 1](images/matplotlib_example1.png)
+
+
+??? note "χρονομέτρηση κώδικα στην Python με το time.time()"
+    ```{.py title="time_execution1.py" linenums="1"}
+    --8<-- "projects/time_execution1.py"
+    ```
+    Ένα παράδειγμα εκτέλεσης
+    ```
+    $ python time_execution1.py
+    Execution time: 2.0694435829936992 seconds
+    ```
+
+??? note "χρονομέτρηση κώδικα στην Python με το timeit.default_timer()"
+    ```{.py title="time_execution2.py" linenums="1"}
+    --8<-- "projects/time_execution2.py"
+    ```
+    Ένα παράδειγμα εκτέλεσης
+    ```
+    $ python time_execution2.py
+    Execution time: 1.9552855410147458 seconds
+    ```
+
+??? note "χρήση assert στην Python"
+    ```{.py title="assert_example.py" linenums="1"}
+    --8<-- "src/python/assert_example.py"
+    ```
+    Παραδείγμα εκτέλεσης 1
+    ```
+    $ python assert_example.py
+    5.0
+    Traceback (most recent call last):
+    File "assert_example.py", line 6, in <module>
+        print(divide(10, 0))  # AssertionError: Denominator cannot be zero!
+    File "assert_example.py", line 2, in divide
+        assert b != 0, "Denominator cannot be zero!"
+    AssertionError: Denominator cannot be zero!
+    ```
+    Παραδείγμα εκτέλεσης 2
+    ```
+    $ python assert_example.py
+    5.0
+    Traceback (most recent call last):
+    File "assert_example.py", line 6, in <module>
+        print(divide(10, 0))  # AssertionError: Denominator cannot be zero!
+    File "assert_example.py", line 3, in divide
+        return a / b
+    ZeroDivisionError: division by zero
+    ```

@@ -23,14 +23,27 @@
 * [Εργαστήριο 2](./lab2_prolog.md)
 
 
-<!-- ## Εργαστηριακές ασκήσεις 2023-2024
+## Εργαστηριακές ασκήσεις 2024-2025
+
+* [1η εργαστηριακή άσκηση (pdf)](./projects/2025_agp_assignment1.pdf)
+
+---
+
+<!-- ## Εργαστηριακές ασκήσεις προηγούμενων ετών -->
+
+###  Εργαστηριακές ασκήσεις 2023-2024
 
 * [1η εργαστηριακή άσκηση (pdf)](./projects/2024_agp_assignment1.pdf)
     * [Ενδεικτική λύση](./assignment2024_1_sol.md)
 * [2η εργαστηριακή άσκηση (pdf)](./projects/2024_agp_assignment2.pdf)
     * [Ενδεικτική λύση](./assignment2024_2_sol.md)
+* [3η εργαστηριακή άσκηση (pdf)](./projects/2024_agp_assignment3.pdf)
+    * [Ενδεικτική λύση](./assignment2024_3_sol.md)
+* [4η εργαστηριακή άσκηση (pdf)](./projects/2024_agp_assignment4.pdf)
+    * [Ενδεικτική λύση](./assignment2024_4_sol.md)
 
-??? note "template για το my_re_functions.py"
+
+<!-- ??? note "template για το my_re_functions.py"
     ```{.py title="my_re_functions_template.py" linenums="1"}
     --8<-- "projects/my_re_functions_template.py"
     ```
@@ -40,78 +53,4 @@
     ΝΙΚΗΤΗΣ: ΙΣΟΠΑΛΙΑ
     ΗΜΕΡΟΜΗΝΙΑ ΑΓΩΝΑ: 09-04-2023
     ΠΛΗΘΟΣ ΚΙΝΗΣΕΩΝ: 49
-    ```
-
-??? note "ανάγνωση και εκτύπωση ημερομηνιών"
-    ```{.py title="datetime_example.py" linenums="1"}
-    --8<-- "projects/datetime_example.py"
-    ```
-    Ένα παράδειγμα εκτέλεσης
-    ```
-    $ python datetime_example.py
-    10/04/2024
-    10|4|24
-    10-April-24
-    Wed 10 Apr 2024
-    ```
-
-
-??? note "ορίσματα γραμμής εντολών με το sys.argv"
-    ```{.py title="command_line_arg_example1.py" linenums="1"}
-    --8<-- "projects/command_line_arg_example1.py"
-    ```
-    Ένα παράδειγμα εκτέλεσης
-    ```
-    $ python command_line_arg_example1.py 1 a bcde
-    ΠΛΗΘΟΣ ΟΡΙΣΜΑΤΩΝ: 4
-    όρισμα 0 με τιμή /Users/.../command_line_arg_example1.py
-    όρισμα 1 με τιμή 1
-    όρισμα 2 με τιμή a
-    όρισμα 3 με τιμή bcde
-    ```
-
-??? note "ορίσματα γραμμής εντολών με το argparse"
-    ```{.py title="argparse_example.py" linenums="1"}
-    --8<-- "projects/argparse_example.py"
-    ```
-    Ένα παράδειγμα εκτέλεσης
-    ```
-    $ python argparse_example.py -i a.txt -o b.txt
-    Αρχείο εισόδου: a.txt
-    Αρχείο εξόδου: b.txt
-    ```
-
-??? note "απλό γράφημα με το matplotlib"
-    ```{.py title="matplotlib_example1.py" linenums="1"}
-    --8<-- "projects/matplotlib_example1.py"
-    ```
-    Ένα παράδειγμα εκτέλεσης (θα πρέπει να έχει προηγηθεί η εγκατάσταση με το pip της βιβλιοθήκης matplotlib)
-    ```
-    $ python matplotlib_example1.py
-    ```
-    ![matplotlib example 1](images/matplotlib_example1.png)
-
-* [3η εργαστηριακή άσκηση (pdf)](./projects/2024_agp_assignment3.pdf)
-    * [Ενδεικτική λύση](./assignment2024_3_sol.md)
-  
-* [4η εργαστηριακή άσκηση (pdf)](./projects/2024_agp_assignment4.pdf)
-
-??? note "χρονομέτρηση κώδικα στην Python με το time.time()"
-    ```{.py title="time_execution1.py" linenums="1"}
-    --8<-- "projects/time_execution1.py"
-    ```
-    Ένα παράδειγμα εκτέλεσης
-    ```
-    $ python time_execution1.py
-    Execution time: 2.0694435829936992 seconds
-    ```
-
-??? note "χρονομέτρηση κώδικα στην Python με το timeit.default_timer()"
-    ```{.py title="time_execution2.py" linenums="1"}
-    --8<-- "projects/time_execution2.py"
-    ```
-    Ένα παράδειγμα εκτέλεσης
-    ```
-    $ python time_execution2.py
-    Execution time: 1.9552855410147458 seconds
     ``` -->
