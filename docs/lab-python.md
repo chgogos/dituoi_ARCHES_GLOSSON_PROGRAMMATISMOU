@@ -1,5 +1,3 @@
-# Python
-
 ## Διαφάνειες από τον [Marko Knöbl](https://marko-knoebl.github.io/slides/index-en.html)
 * [Python basics](https://marko-knoebl.github.io/slides/python-beginner-collection-en.html)
 * [Python intermediate](https://marko-knoebl.github.io/slides/python-intermediate-collection-en.html)
@@ -58,6 +56,7 @@
 ## Βιβλία για Python
 * [Automate the Boring Stuff with Python by Al Sweigart](https://automatetheboringstuff.com/)
 * [Think Python by Allen B. Downey](https://greenteapress.com/wp/think-python-2e/)
+* [The Python Coding Book](https://thepythoncodingbook.com/)
 * [A byte of Python by Swaroop](https://python.swaroopch.com/)
     * [Μετάφραση στα Ελληνικά]( http://dide.flo.sch.gr/Plinet/Meetings/Meeting23/A_Byte_of_Python-el.pdf)
 * [Μανής, Γ. (2015). Εισαγωγή στον Προγραμματισμό με αρωγό τη γλώσσα Python [Προπτυχιακό εγχειρίδιο]. Κάλλιπος, Ανοικτές Ακαδημαϊκές Εκδόσεις. https://hdl.handle.net/11419/2745](https://repository.kallipos.gr/handle/11419/2745)
@@ -66,22 +65,31 @@
 * [Github repository με ελεύθερα διαθέσιμα βιβλία για Python](https://github.com/pamoroso/free-python-books)
 
 ## Online μαθήματα
+* [Python Programming MOOC 2024 by University of Helsinki](https://programming-24.mooc.fi/)
+* [CS50’s Introduction to Programming with Python by Harvard](https://cs50.harvard.edu/python/2022/)
 * [PY4E: Python for everybody](https://www.py4e.com/)
 * [python-course.eu](https://python-course.eu/)
+* [MITx: Introduction to Computer Science and Programming Using Python](https://www.edx.org/learn/computer-science/massachusetts-institute-of-technology-introduction-to-computer-science-and-programming-using-python)
 
 ## Tutorials
+* [futurecoder.io](https://futurecoder.io/)
+* [PyFlo](https://pyflo.net/)
+* [Practical Python Programming by David Beazley](https://dabeaz-course.github.io/practical-python/)
+* [Learn X in Y minutes Where X=Python](https://learnxinyminutes.com/python/)
 * [PyQuest](https://github.com/ivnvxd/pyquest)
 * [Python Koans](https://github.com/gregmalcolm/python_koans)
 
 ## Videos
 * [Corey Schafer -  Python tutorials](https://www.youtube.com/watch?v=YYXdXT2l-Gg&list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU)
+* [Tech with Tim - Python Programming Tutorials](https://www.youtube.com/watch?v=OFrLs22MDAw&list=PLzMcBGfZo4-mFu00qxl0a67RhjjZj3jXm)
 * [Socratica - Python learning tutorials](https://www.youtube.com/playlist?list=PLi01XoE8jYohWFPpC17Z-wWhPOSuh8Er-)
-* [CS50x -  Python](https://cs50.harvard.edu/x/2021/shorts/python/)
+<!-- * [CS50x -  Python](https://cs50.harvard.edu/x/2021/shorts/python/) -->
 
 ## Cheat sheets
 * [Python 3 Cheat Sheet (v2.0.6) by Laurent Pointal](./resources/mementopython3-english.pdf)
 * [The *Best Python Cheat Sheet](https://kieranholland.com/best-python-cheat-sheet/)
 * [Python Crash Course cheat sheets](https://ehmatthes.github.io/pcc/cheatsheets/README.html)
+* [Python Cheat Sheet for coding intreviews (Neetcode)](https://neetcode.io/courses/lessons/python-for-coding-interviews)
 
 ## Python roadmap
 [![A mushroom-head robot](images/python-roadmap2024.png 'Python roadmap from roadmap.sh')](https://roadmap.sh/python)

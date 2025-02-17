@@ -1,5 +1,3 @@
-# Haskell
-
 H Haskell είναι μια αμιγώς συναρτησιακή γλώσσα προγραμματισμού (pure functional programming language) οκνηρής αποτίμησης (lazy evaluation). Η Haskell διαθέτει ισχυρό στατικό σύστημα τύπων (strong static type system) που αντιλαμβάνεται τους τύπους που απαιτούνται για τις συναρτήσεις και τις παραμέτρους τους.
 
 Τα παραδείγματα κώδικα που ακολουθούν είναι από το "[7 Languages in 7 Weeks, by Bruce A. Tate - A Pragmatic Guide to Learning Programming Languages](https://pragprog.com/titles/btlang/seven-languages-in-seven-weeks/)" και από άλλες πηγές.

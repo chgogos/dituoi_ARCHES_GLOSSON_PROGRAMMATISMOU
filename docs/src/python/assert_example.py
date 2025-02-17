@@ -3,4 +3,4 @@ def divide(a, b):
     return a / b
 
 print(divide(10, 2))  # 5.0
-print(divide(10, 0))  # AssertionError: Denominator cannot be zero!
+print(divide(10, 0))  # ZeroDivisionError: division by zero
