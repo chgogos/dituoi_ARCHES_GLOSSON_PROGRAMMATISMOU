@@ -54,6 +54,7 @@
 45. [datasets](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/45-datasets.ipynb)
 
 ## Βιβλία για Python
+* [Programming Foundations - Διαδραστικό βιβλίο για εκμάθηση της Python από το TU Delft](https://interactivetextbooks.tudelft.nl/programming-foundations/intro.html)
 * [Automate the Boring Stuff with Python by Al Sweigart](https://automatetheboringstuff.com/)
 * [Think Python by Allen B. Downey](https://greenteapress.com/wp/think-python-2e/)
 * [The Python Coding Book](https://thepythoncodingbook.com/)
