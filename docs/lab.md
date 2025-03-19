@@ -10,7 +10,7 @@
 | [Εργαστήριο 1](./lab1_python.md)    | συγγραφή και εκτέλεση απλών προγραμμάτων σε Python, ranges, δομή επανάληψης, δομή επιλογής, βασικές δομές δεδομένων (lists, tuples, dictionaries, sets), λεκτικά (μήκος λεκτικού, αντιστροφή λεκτικού, λήψη τμήματος λεκτικού με slice), αμυντικός προγραμματισμός, import και χρήση βιβλιοθηκών, ChatGPT prompts για παραγωγή κώδικα Python, χρήση του REPL (Read Evaluate Print Loop) της Python. |
 | [Εργαστήριο 2](./lab2_python.md)    | συγγραφή συναρτήσεων, unit tests με τη στάνταρντ βιβλιοθήκη unittest, comprehensions, virtual environments (venv), εξωτερικές βιβλιοθήκες και εγκατάσταση με το pip, unit tests με το pytest.|
 | [Εργαστήριο 3](./lab3_python.md)    | αρχεία κειμένου, κανονικές εκφράσεις (regular expressions), αρχεία XML, μορφοποίηση κώδικα (π.χ. με το black), διάταξη imports με το isort, docstrings.|
-| [Εργαστήριο 4](./lab4_python.md)    | αντικειμενοστραφής προγραμματισμός με την Python, οι μέθοδοι `__init__`, `__str__`, `__repr__`, υπερφόρτωση τελεστών, κληρονομικότητα, εξαιρέσεις.|
+| [Εργαστήριο 4](./lab4_python.md)    | αντικειμενοστραφής προγραμματισμός με την Python, οι μέθοδοι `__init__`, `__str__`, `__repr__`, υπερφόρτωση τελεστών, κληρονομικότητα, εξαιρέσεις, ορίσματα γραμμής εντολών με το sys.argv και με το argparse, logging.|
 | [Εργαστήριο 5](./lab5_python.md)    | γραφικά περιβάλλοντα διεπαφής με το tkinter, APIs, matplotlib, MVC (Model View Controller)|
 <!-- | [Εργαστήριο 6](./lab6_python.md)    | γεννήτριες (generators), coroutines, `*args`, `**kwargs`, `__slots__`, lambdas, zip και unzip, caching, context mamagers | -->
 <!-- | [Εργαστήριο 7](./lab7_python.md)    | επιτάχυνση υπολογισμών με τη numpy | -->
@@ -37,6 +37,9 @@
 ## Εργαστηριακές ασκήσεις 2024-2025
 
 * [1η εργαστηριακή άσκηση (pdf)](./projects/2025_agp_assignment1.pdf)
+* [2η εργαστηριακή άσκηση (pdf)](./projects/2025_agp_assignment2.pdf)
+<!-- * [3η εργαστηριακή άσκηση (pdf)](./projects/2025_agp_assignment3.pdf)
+* [4η εργαστηριακή άσκηση (pdf)](./projects/2025_agp_assignment4.pdf) -->
 
 ---
 
