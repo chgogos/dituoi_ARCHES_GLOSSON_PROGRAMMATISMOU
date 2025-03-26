@@ -407,18 +407,83 @@ After modifyByPointer:
 a = 10, b = 20
 ```
 
-### Αιωρούμενος Δείκτης (Dangling Pointer)
+### 6.11.2 Λειτουργίες δεικτών
 
-```{.c title="dangling_pointer.c" linenums="1"}
---8<-- "src/c/dangling_pointer.c"
+Ανάθεση (assignment) και αποαναφορά (dereference)
+
+```{.c title="pointer_operations.c" linenums="1"}
+--8<-- "src/c/pointer_operations.c"
 ```
 
 ```console
-$ gcc dangling_pointer.c && ./a.out
+Before swapping: x = 10, y = 20
+After swapping: x = 20, y = 10
+```
+
+### 6.11.3 Προβλήματα με δείκτες
+
+#### 6.11.3.1 Αιωρούμενοι Δείκτες (Dangling Pointers)
+
+```{.c title="dangling_pointer1.c" linenums="1"}
+--8<-- "src/c/dangling_pointer1.c"
+```
+
+```console
+$ gcc dangling_pointer1.c && ./a.out
 Value in allocated memory: 42
 Memory has been freed.
 Value in dangling pointer: 0
 ```
+
+#### 6.11.3.2 Χαμένες μεταβλητές δυναμικής δέσμευσης σωρού
+
+```{.c title="memory_leakage.c" linenums="1"}
+--8<-- "src/c/memory_leakage.c"
+```
+
+```console
+$ gcc memory_leakage.c && ./a.out
+Allocated memory region 1: 0 10 20 30 40 
+Memory at address 0x144605e40 is not freed.
+Allocated memory region 2: 0 10 20 30 40 
+Memory at address 0x144605dc0 is not freed.
+Allocated memory region 3: 0 10 20 30 40 
+Memory at address 0x144605de0 is not freed.
+```
+
+#### 6.11.3.3 Δείκτες στη C και στη C++
+
+Αριθμητική δεικτών στη C
+
+```{.c title="pointer_arithmetic.c" linenums="1"}
+--8<-- "src/c/pointer_arithmetic.c"
+```
+
+```console
+$ gcc pointer_arithmetic.c && ./a.out
+Array elements using pointer arithmetic:
+1 2 3 4 5 
+```
+
+void δείκτες
+
+```{.c title="void_pointers.c" linenums="1"}
+--8<-- "src/c/void_pointers.c"
+```
+
+```console
+$ gcc void_pointers.c && ./a.out
+Integer: 10
+Float: 5.50
+Character: A
+```
+
+#### 6.11.7.3 Διαχείριση Σωρού
+
+* Reference counter
+* Mark and Sweep
+
+[Garbage Collection (Mark & Sweep) - Computerphile](https://www.youtube.com/watch?v=c32zXYAK7CI)
 
 <!-- ## 6.12 Έλεγχος Τύπων
 

@@ -18,7 +18,7 @@
 [Σημειώσεις](./theory_ch6.md) Παρουσίαση: [ΕΝ](./resources/pl11ch6.pdf) | [ΕΛ](./resources/pl11ch6GR.pdf)
 
 ### 7. Εκφράσεις και προτάσεις εκχώρησης
-Παρουσίαση: [ΕΝ](./resources/pl11ch7.pdf)
+[Σημειώσεις](./theory_ch7.md) Παρουσίαση: [ΕΝ](./resources/pl11ch7.pdf) | [ΕΛ](./resources/pl11ch6GR.pdf)
 
 ### 8. Δομές ελέγχου σε επίπεδο προτάσεων
 Παρουσίαση: [ΕΝ](./resources/pl11ch8.pdf)
