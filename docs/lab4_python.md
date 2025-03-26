@@ -254,27 +254,105 @@ tdl.stats() # {'open': 1, 'completed': 1}
 * Προσθέστε μια μέθοδο `expected_value` που να επιστρέφει την αναμενόμενη τιμή και ορίστε τη συνάρτηση ως `@property`.
 * Προσθέστε μια μέθοδο κλάσης `from_sides` που να δέχεται ως όρισμα το πλήθος των πλευρών ενός ζαριού και να επιστρέφει ένα αντικείμενο ζαριού με ίση πιθανότητα αποτελέσματος για κάθε πλευρά του (χρησιμοποιήστε τον decorator `@classmethod`).
 * Προσθέστε τη μέθοδο `__len__` έτσι ώστε να εμφανίζει για ένα ζάρι το πλήθος των πλευρών του.
-* Υπερφορτώστε τον τελεστή `+` έτσι ώστε να δημιουργεί ένα νέο ζάρι με τις πιθανότητες να προκύψει το καθένα από τα αποτελέσματα από το συνδυασμό των αποτελέσματων δύο ζαριών. Για παράδειγμα προσθέτοντας δύο ζάρια με 6 πλευρές το καθένα θα προκύψει ένα νέο "ζάρι" με πιθανά αποτελέσματα από το 2 μέχρι το 12, όπου το 2 προκύπτει μόνο με (1,1) και έχει πιθανότητα `1/6*1/6` να συμβεί, το 3 μπορεί να προκύψει με (1,2) και (2,1) και έχει πιθανότητα `1/6*1/6 + 1/6*1/6` να συμβεί κ.ο.κ.
+* Υπερφορτώστε τον τελεστή `+` έτσι ώστε να δημιουργεί ένα νέο ζάρι με τις πιθανότητες να προκύψει το καθένα από τα αποτελέσματα από το συνδυασμό των αποτελέσματων δύο ζαριών. Για παράδειγμα προσθέτοντας δύο ζάρια με 6 πλευρές το καθένα θα προκύψει ένα νέο "ζάρι" με πιθανά αποτελέσματα από το 2 μέχρι το 12, όπου το 2 προκύπτει μόνο με (1,1) και έχει πιθανότητα `1/6 * 1/6` να συμβεί, το 3 μπορεί να προκύψει με (1,2) και (2,1) και έχει πιθανότητα `1/6 * 1/6 + 1/6 * 1/6` να συμβεί κ.ο.κ.
 
 ??? note "Λύση άσκησης E4A9"
     ```{.py title="e4a9.py" linenums="1"}
     --8<-- "src/python/lab4/e4a9.py"
     ```
 
-```console
-$ python e4a9.py
-Dice({1: 0.16666666666666666, 2: 0.16666666666666666, 3: 0.16666666666666666, 4: 0.16666666666666666, 5: 0.16666666666666666, 6: 0.16666666666666666})
-Dice with sides: 1, 2, 3, 4, 5, 6
-Rolls: [2, 4, 1, 5, 6]
-Expected value of d6 = 3.5, sides = 6
-Dice({1: 0.25, 2: 0.25, 3: 0.25, 4: 0.25})
-Dice with sides: 1, 2, 3, 4
-Rolls: [3, 1, 2, 4, 1]
-Expected value of d4 = 2.5, sides = 4
-Dice({2: 0.041666666666666664, 3: 0.08333333333333333, 4: 0.125, 5: 0.16666666666666666, 6: 0.16666666666666666, 7: 0.16666666666666666, 8: 0.125, 9: 0.08333333333333333, 10: 0.041666666666666664})
-Dice with sides: 2, 3, 4, 5, 6, 7, 8, 9, 10
-Rolls: [5, 8, 5, 5, 2]
-Expected value of d6_d4 = 6.0, sides = 9
+    Παράδειγμα εκτέλεσης:
+    ```console
+    $ python e4a9.py
+    Dice({1: 0.16666666666666666, 2: 0.16666666666666666, 3: 0.16666666666666666, 4: 0.16666666666666666, 5: 0.16666666666666666, 6: 0.16666666666666666})
+    Dice with sides: 1, 2, 3, 4, 5, 6
+    Rolls: [2, 4, 1, 5, 6]
+    Expected value of d6 = 3.5, sides = 6
+    Dice({1: 0.25, 2: 0.25, 3: 0.25, 4: 0.25})
+    Dice with sides: 1, 2, 3, 4
+    Rolls: [3, 1, 2, 4, 1]
+    Expected value of d4 = 2.5, sides = 4
+    Dice({2: 0.041666666666666664, 3: 0.08333333333333333, 4: 0.125, 5: 0.16666666666666666, 6: 0.16666666666666666, 7: 0.16666666666666666, 8: 0.125, 9: 0.08333333333333333, 10: 0.041666666666666664})
+    Dice with sides: 2, 3, 4, 5, 6, 7, 8, 9, 10
+    Rolls: [5, 8, 5, 5, 2]
+    Expected value of d6_d4 = 6.0, sides = 9
 ```
 
-[^5]: Πρόκειται για παράδειγμα από το [https://calmcode.io/course/objects - calmcode.io - objects](https://calmcode.io/course/objects/) 
+[^5]: Πρόκειται για παράδειγμα από το [https://calmcode.io/course/objects - calmcode.io - objects](https://calmcode.io/course/objects/)
+
+**Άσκηση 10** Γράψτε ένα πρόγραμμα που να δέχεται ορίσματα γραμμής εντολών (τουλάχιστον 2). Αν το πρώτο όρισμα είναι το sum να εμφανίζει το άθροισμα από τις τιμές που ακολουθούν. Αν το πρώτο όρισμα είναι reverse τότε να αντιστρέφει το κείμενο που ακολουθεί.
+
+??? note "Λύση άσκησης E4A10"
+    ```{.py title="e4a10.py" linenums="1"}
+    --8<-- "src/python/lab4/e4a10.py"
+    ```
+
+    Παράδειγμα εκτέλεσης:
+    ```console
+    $ python e4a10.py sum 5 10 15
+    Το άθροισμα είναι: 30.0
+    $ python e4a10.py reverse Hello
+    olleH
+    ```
+
+??? note "Λύση άσκησης E4A10 με το argparse"
+    ```{.py title="e4a10b.py" linenums="1"}
+    --8<-- "src/python/lab4/e4a10b.py"
+    ```
+    
+    Παράδειγμα εκτέλεσης:
+    ```console
+    $ python e4a10b.py -h
+    usage: e4a10b.py [-h] {sum,reverse} ...
+
+    Process some inputs with different operations.
+
+    positional arguments:
+    {sum,reverse}  Available commands
+        sum          Sum all the provided numbers
+        reverse      Reverse the provided text
+
+    options:
+    -h, --help     show this help message and exit
+    $ python e4a10b.py sum -h 
+    usage: e4a10b.py sum [-h] numbers [numbers ...]
+
+    positional arguments:
+    numbers     Numbers to sum
+
+    options:
+    -h, --help  show this help message and exit
+    $ python e4a10b.py reverse -h
+    usage: e4a10b.py reverse [-h] text [text ...]
+
+    positional arguments:
+    text        Text to reverse
+
+    options:
+    -h, --help  show this help message and exit
+    $ python e4a10b.py revers     
+    usage: e4a10b.py [-h] {sum,reverse} ...
+    e4a10b.py: error: argument command: invalid choice: 'revers' (choose from 'sum', 'reverse')
+    $ python e4a10b.py sum 10 20 30 
+    The sum is: 60.0
+    $ python e4a10b.py reverse Hello
+    Reversed text: olleH
+    ```
+
+**Άσκηση 11** Γράψτε ένα πρόγραμμα που να ρυθμίζει το logging έτσι ώστε να εμφανίζει μηνύματα INFO στην οθόνη (με format %(levelname)s - %(message)s) και να αποθηκεύει τα μηνύματα (από DEBUG και πάνω) σε αρχείο e4a11.log (με format %(asctime)s - %(levelname)s - %(message)s). Υλοποιήστε μια συνάρτηση calculate_division(x, y) που: (1) καταγράφει DEBUG με τις τιμές εισόδου, (2) επιστρέφει το αποτέλεσμα της διαίρεσης (INFO για επιτυχία), (3) καταγράφει ERROR με stack trace αν y=0. Καλέστε τη συνάρτηση δύο φορές (έγκυρη και μη έγκυρη διαίρεση) και επαληθεύστε τα logs στην οθόνη και στο αρχείο.
+
+??? note "Λύση άσκησης E4A11"
+    ```{.py title="e4a11.py" linenums="1"}
+    --8<-- "src/python/lab4/e4a11.py"
+    ```
+
+    Παράδειγμα εκτέλεσης
+    ```console
+    $ python e4a11.py
+    INFO - Result: 5.0
+    ERROR - Division by zero!
+    Traceback (most recent call last):
+    File "/Users/chgogos/git_repos/dituoi_ARCHES_GLOSSON_PROGRAMMATISMOU/docs/src/python/lab4/e4a11.py", line 20, in calculate_division
+        result = x / y
+    ZeroDivisionError: division by zero
+    ```
