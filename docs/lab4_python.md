@@ -276,7 +276,7 @@ tdl.stats() # {'open': 1, 'completed': 1}
     Dice with sides: 2, 3, 4, 5, 6, 7, 8, 9, 10
     Rolls: [5, 8, 5, 5, 2]
     Expected value of d6_d4 = 6.0, sides = 9
-```
+    ```
 
 [^5]: Πρόκειται για παράδειγμα από το [https://calmcode.io/course/objects - calmcode.io - objects](https://calmcode.io/course/objects/)
 
