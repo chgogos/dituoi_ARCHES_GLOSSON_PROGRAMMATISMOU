@@ -2,6 +2,37 @@
 
 ## 7.2 Αριθμητικές εκφράσεις
 
+Παράδειγμα με μεγάλους αριθμούς στη Python
+
+```{.py title="large_numbers.py" linenums="1"}
+--8<-- "src/python/large_numbers.py"
+```
+
+```console
+$ python large_numbers.py 
+The factorial of 100 is: 93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000
+```
+
+Παράδειγμα με μεγάλους αριθμούς στη C
+
+```{.c title="large_numbers.c" linenums="1"}
+--8<-- "src/c/large_numbers.c"
+```
+
+Εγκατάσταση της βιβλιοθήκης GMP σε Linux
+```console
+$ sudo apt update
+$ sudo apt install libgmp-dev
+```
+
+```
+$ gcc -o factorial factorial.c -lgmp & ./a.out
+The factorial of 100 is: 93326215443944152681699238856266700490715968264381621468592963895217599993229915608941463976156518286253697920827223758251185210916864000000000000000000000000
+
+```
+
+
+
 ### 7.2.1 Σειρά αποτίμησης τελεστών
 
 ```{.py title="expressions.py" linenums="1"}
