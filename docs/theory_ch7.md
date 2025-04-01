@@ -2,7 +2,17 @@
 
 ## 7.2 Αριθμητικές εκφράσεις
 
-### 7.2.1.6 Εκφράσεις υπό συνθήκη (conditional expressions)
+### 7.2.1 Σειρά αποτίμησης τελεστών
+
+```{.py title="expressions.py" linenums="1"}
+--8<-- "src/python/expressions.py"
+```
+
+```{.c title="expressions.c" linenums="1"}
+--8<-- "src/c/expressions.c"
+```
+
+#### 7.2.1.6 Εκφράσεις υπό συνθήκη (conditional expressions)
 
 ```{.c title="conditional_expression.c" linenums="1"}
 --8<-- "src/c/conditional_expression.c"
@@ -15,9 +25,17 @@ The maximum value is: 20
 -5 is negative
 ```
 
-### 7.2.2.2 Αναφορική διαφάνεια (referential transparency)
+### 7.2.2 Σειρά αποτίμησης τελεστέων
 
-Παράδειγμα που δείχνει ότι η C μπορέι να παραβιάσει την αναφορική διαφάνεια
+#### 7.2.2.1 Παρενέργειες (side-effects)
+
+```{.c title="side_effects.c" linenums="1"}
+--8<-- "src/c/side_effects.c"
+```
+
+#### 7.2.2.2 Αναφορική διαφάνεια (referential transparency)
+
+Παράδειγμα παραβίασης της αναφορικής διαφάνειας στη C
 
 ```{.c title="no_referential_transparency.c" linenums="1"}
 --8<-- "src/c/no_referential_transparency.c"
@@ -54,13 +72,89 @@ $ g++ operator_overload.cpp && ./a.out
 (4,6)
 ```
 
-
 ## 7.4 Μετατροπές τύπων
+
+```{.c title="widening_narrowing.c" linenums="1"}
+--8<-- "src/c/widening_narrowing.c"
+```
+
+```console
+$ gcc widening_narrowing.c && ./a.out
+widening_narrowing.c:24:30: warning: implicit conversion from 'int' to 'unsigned char' changes value from 300 to 44 [-Wconstant-conversion]
+   24 |   unsigned char narrowChar = 300;  // char (0-255), 300 wraps around
+      |                 ~~~~~~~~~~   ^~~
+1 warning generated.
+Widening Conversions:
+int to float: 100 → 100.000000
+float to double: 100.000000 → 100.000000
+
+Narrowing Conversions:
+double to float: 123456.789000 → 123456.789062
+float to int: 123456.789062 → 123456
+
+Overflow in Narrowing:
+300 stored in unsigned char: 44
+```
 
 ## 7.5 Σχεσιακές και Boolean εκφράσεις
 
+```{.py title="equality_vs_identity.py" linenums="1"}
+--8<-- "src/python/equality_vs_identity.py"
+```
+
 ## 7.6 Εσπευσμένη αποτίμηση εκφράσεων
+
+```{.c title="short_circuit.c" linenums="1"}
+--8<-- "src/c/short_circuit.c"
+```
+
+```console
+$ gcc short_circuit.c && ./a.out
+Found 30 at index 2
+```
 
 ## 7.7 Προτάσεις εκχώρησης
 
+```{.c title="assignment_operators.c" linenums="1"}
+--8<-- "src/c/assignment_operators.c"
+```
+
+```console
+$ gcc assignment_operators.c && ./a.out
+Assignment: a = 5
+Equality: a == b is true
+Addition Assignment: a += 10 -> a = 17
+Initial x = 3
+Pre-increment: ++x = 4
+Post-increment: x++ = 4
+After post-increment, x = 5
+```
+
+### 7.7.5 Η εκχώρηση ως έκφραση
+
+```{.c title="assignment_as_expression.c" linenums="1"}
+--8<-- "src/c/assignment_as_expression.c"
+```
+
+```console
+$ gcc assignment_as_expression.c && ./a.out
+Sum after loop: 12
+```
+
 ## 7.8 Αναθέσεις μεικτού-τύπου
+
+```{.py title="mixed_types_assignments.py" linenums="1"}
+--8<-- "src/python/mixed_types_assignments.py"
+```
+
+```console
+$ python mixed_types_assignments.py
+Widening: i (int) = 10, f (float) = 10.00
+Narrowing: pi (float) = 3.14159, x (int) = 3
+String to int: s = '42', num = 42
+Int to string: n = 123, s = '123'
+Float to string: f = 99.99, s = '99.99'
+Boolean to int: b = True, num = 1
+Int to boolean: num = 0, b = False
+Implicit conversion: 5 + 2.5 = 7.5 (type: <class 'float'>)
+```
