@@ -144,7 +144,6 @@
     ```
     ![7GUIs task 3](images/e5a7.png) -->
 
-
 **Άσκηση Ε5Α8** - Υλοποιήστε με το tkinter την 4η εργασία (Timer) από την ιστοσελίδα [7GUIs](https://eugenkiss.github.io/7guis/tasks). Δημιουργήστε ένα παράθυρο όπως το ακόλουθο:
 
 ![Timer](https://eugenkiss.github.io/7guis/static/timer.ed46b6b4.png)
@@ -159,6 +158,28 @@
     ```
     ![7GUIs task 4](images/e5a8.png) -->
 
+**Άσκηση Ε5Α9** - Έστω ένα πρόγραμμα εκτέλεσης 3 εργασιών στις 3 μηχανές ενός εργοστασίου. Δίνεται ο χρόνος έναρξης και ο χρόνος τερματισμού κάθε εργασίας σε κάθε μηχανή:
+
+|Μηχανή|Εργασία|Έναρξη|Τερματισμός|
+|------|-------|------|-----------|
+|0|0|0|20|
+|0|1|20|25|
+|0|2|30|45|
+|1|0|30|58|
+|1|1|90|110|
+|1|2|120|170|
+|2|0|100|220|
+|2|1|200|340|
+|2|2|340|420|
+
+Σχεδιάστε με το matplotlib ένα διάγραμμα Gantt παρόμοιο με το ακόλουθο:
+
+![gantt-chart](images/gantt-chart-3x3.png)
+
+??? note "Λύση άσκησης E5A9"
+    ```{.py title="e5a9.py" linenums="1"}
+    --8<-- "src/python/lab5/e5a9.py"
+    ```
 
 [^1]: [Tkinter Tutorial](https://www.pythontutorial.net/tkinter/)
 [^2]: [Tkinter Matplotlib](https://www.pythontutorial.net/tkinter/tkinter-matplotlib/)
