@@ -37,6 +37,7 @@
 ## Εργαστηριακές ασκήσεις 2024-2025
 
 * [1η εργαστηριακή άσκηση (pdf)](./projects/2025_agp_assignment1.pdf)
+    * [Ενδεικτική λύση](./assignment2025_1_sol.md)
 * [2η εργαστηριακή άσκηση (pdf)](./projects/2025_agp_assignment2.pdf)
 <!-- * [3η εργαστηριακή άσκηση (pdf)](./projects/2025_agp_assignment3.pdf)
 * [4η εργαστηριακή άσκηση (pdf)](./projects/2025_agp_assignment4.pdf) -->
