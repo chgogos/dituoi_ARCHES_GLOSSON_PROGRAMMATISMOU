@@ -5,7 +5,7 @@ def foo(x):
 a = 5
 # μεταβίβαση κατά τιμή
 foo(a)
-print(a)
+print(a) # 5
 
 print("#" * 40)
 
@@ -16,7 +16,7 @@ def fun(x):
 
 a_list = [1, 2, 3, 4, 5]
 fun(a_list)
-print(a_list)
+print(a_list) # [99, 2, 3, 4, 5]
 
 print("#" * 40)
 
@@ -33,4 +33,4 @@ def bar(x):
 obj = MyClass(5)
 # μεταβίβαση κατά αναφορά
 bar(obj)
-print(obj.a)
+print(obj.a) # 6
