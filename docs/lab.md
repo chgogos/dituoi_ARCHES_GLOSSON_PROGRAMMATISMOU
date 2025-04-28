@@ -20,12 +20,12 @@
 
 | Εργαστήριο      | Περιγραφή                            |
 | --------------- | ------------------------------------ |
-| [Εργαστήριο 1](./lab1_haskell.md) | Haskell        |
-| [Εργαστήριο 2](./lab2_haskell.md) | Haskell        |
-| [Εργαστήριο 3](./lab3_haskell.md) | Haskell        |
+| [Εργαστήριο 1](./lab1_haskell.md) | Εγκατάσταση Haskell με το [GHCup](https://www.haskell.org/ghcup/install/), toolchain (ghc, ghci, cabal), μη μεταλλαξιμότητα (immutability), συναρτήσεις, τύποι, αναδρομή, προσδέσεις let (let bindings), προσδέσεις where (where bindings), φρουροί (guards), ταίριασμα προτύπων (pattern matching), λίστες, περιφραστικές λίστες (comprehensions), υλοποίηση της quicksort|
+| [Εργαστήριο 2](./lab2_haskell.md) | Λάμδα συναρτήσεις (lambda functions), συναρτήσεις ανώτερης τάξης (higher order functions), οκνηρή αποτίμηση (lazy evaluation), άπειρες λίστες (infinite lists), μερική αποτίμηση (partial evaluation) |
+| [Εργαστήριο 3](./lab3_haskell.md) | Unit tests με το HUnit, παραδείγματα  |
 
 
-## Λογικός προγραμματισμός (Prolog)
+## Λογικός προγραμματισμός (Prolog) και CP (Constraint Programming) 
 
 | Εργαστήριο      | Περιγραφή                            |
 | --------------- | ------------------------------------ |
