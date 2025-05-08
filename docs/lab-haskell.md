@@ -610,9 +610,10 @@ $ ./fileWriteTo
 ---
 
 !!! important "Σημαντικό!"
-    Διαφάνειες και βίντεο μαθημάτων από τον Graham Hutton, συγγραφέα του βιβλίοθ [Programming in Haskell](https://people.cs.nott.ac.uk/pszgmh/pih.html)
+    Διαφάνειες και βίντεο μαθημάτων από τον Graham Hutton, συγγραφέα του βιβλίου [Programming in Haskell](https://people.cs.nott.ac.uk/pszgmh/pih.html)
     <img src="https://people.cs.nott.ac.uk/pszgmh/pih.jpg" alt="{Programming in Haskell 2nd edition}" width="200"/>
     <!-- ![](https://people.cs.nott.ac.uk/pszgmh/pih.jpg) -->
+    
     [Λύσεις ασκήσεων](https://github.com/singleheart/programming-in-haskell) 
 
 ## Βιβλία - σημειώσεις
