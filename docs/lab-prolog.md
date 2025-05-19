@@ -3,6 +3,8 @@
 * [SWI-Prolog](https://www.swi-prolog.org/)
 * [SWI-Prolog online (SWISH)](https://swish.swi-prolog.org/)
 
+* [SWI-Prolog Editor (μόνο για Windows)](https://arbeitsplattform.bildung.hessen.de/fach/informatik/swiprolog/indexe.html)
+
 ### Επιπλέον διανομές της Prolog
 
 * [Amzi! Prolog](http://www.amzi.com/products/prolog_products.htm)
