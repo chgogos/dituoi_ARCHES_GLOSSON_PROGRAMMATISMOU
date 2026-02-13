@@ -1,0 +1,1850 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../theory_ch2/">
+      
+      
+        <link rel="next" href="../theory_ch5/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>3. Περιγραφή συντακτικού και σημασιολογίας - ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ" class="md-header__button md-logo" aria-label="ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3. Περιγραφή συντακτικού και σημασιολογίας
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Σχετικά με το μάθημα
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../theory/" class="md-tabs__link">
+          
+  
+  
+  Θεωρία
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lab/" class="md-tabs__link">
+          
+  
+  
+  Εργαστήριο
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lab-python/" class="md-tabs__link">
+          
+  
+  
+  Python
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lab-haskell/" class="md-tabs__link">
+          
+  
+  
+  Haskell
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lab-prolog/" class="md-tabs__link">
+          
+  
+  
+  Prolog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ" class="md-nav__button md-logo" aria-label="ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Σχετικά με το μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Θεωρία
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Θεωρία
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ύλη
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Εργαστήριο
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Εργαστήριο
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Εργαστηριακό τμήμα μαθήματος
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Haskell
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Haskell
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-haskell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab haskell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prolog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prolog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-prolog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab prolog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Εισαγωγή
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Το γενικό πρόβλημα της περιγραφής του συντακτικού
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Το γενικό πρόβλημα της περιγραφής του συντακτικού">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lexeme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Λέξημα (lexeme)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Λεκτική μονάδα (token)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#321-recognizers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1 Μηχανισμοί αναγνώρισης γλωσσών (recognizers)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-generators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2 Μηχανισμοί παραγωγής γλωσσών (generators)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Επίσημες μέθοδοι περιγραφής συντακτικού
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 Επίσημες μέθοδοι περιγραφής συντακτικού">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-backus-naur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1 Μορφή Backus-Naur και γραμματικές χωρίς συμφραζόμενα
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3.1 Μορφή Backus-Naur και γραμματικές χωρίς συμφραζόμενα">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#3311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.1 Γραμματικές χωρίς συμφραζόμενα
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3312-backus-naur" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.2 Προέλευση της μορφής Backus-Naur
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3313-bnf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.3 Βασικές έννοιες BNF
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3314" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.4 Περιγραφή λιστών
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3315" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.5 Γραμματικές και παραγωγές
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3316" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.6 Δένδρα συντακτικής ανάλυσης
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3317" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.7 Ασάφεια
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3318" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.8 Προτεραιότητα τελεστών
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3319" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.9 Προσεταιριστικότητα τελεστών
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33110-if-else" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.1.10 Μια ασαφής γραμματική για το if-else
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-bnf-extended-bnf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.2 Εκτεταμένη BNF (Extended BNF)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-recognizers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3.3 Γραμματικές και recognizers
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 Γραμματικές χαρακτηριστικών (ή κατηγορικές γραμματικές)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 Γραμματικές χαρακτηριστικών (ή κατηγορικές γραμματικές)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.1 Στατική σημασιολογία
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.2 Βασικές έννοιες
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#343" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.3 Ορισμός γραμματικών χαρακτηριστικών
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#344-intrinsic-attributes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.4 Εσωτερικά χαρακτηριστικά (intrinsic attributes)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#345" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4.5 Παραδείγματα γραμματικών χαρακτηριστικών
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 Περιγραφή του νοήματος των προγραμμάτων: Δυναμική σημασιολογία
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.5 Περιγραφή του νοήματος των προγραμμάτων: Δυναμική σημασιολογία">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#351-operational-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.1 Λειτουργική σημασιολογία (Operational Semantics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3511" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.1.1 Η βασική διαδικασία
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3512" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.1.2 Αποτίμηση της λειτουργικής σημασιολογίας
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#352-denotational-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.2 Δηλωτική σημασιολογία (Denotational Semantics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#353-axiomatic-semantics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5.3 Αξιωματική σημασιολογία (Axiomatic Semantics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Επιπλέον ασκήσεις για το κεφάλαιο 3
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="3">3. Περιγραφή συντακτικού και σημασιολογίας</h1>
+<ul>
+<li>Συντακτικό (syntax)</li>
+<li>Σημασιολογία (semantics)</li>
+<li>Μέθοδος περιγραφής συντακτικού γραμματικών χωρίς συμφραζόμενα (CFGs = Context Free Grammars)</li>
+<li>Παραγωγή, δένδρα συντακτικής ανάλυσης, ασάφεια, προτεραιότητα τελεστών, προσεταιριστικότητα τελεστών</li>
+<li>BNF (Backus Naur Form), EBNF (Extended Backus Naur Form)</li>
+<li>Γραμματικές χαρακτηριστικών (attribute grammars) για περιγραφή συντακτικού και στατικής σημασιολογίας</li>
+<li>Δυναμική σημασιολογία</li>
+</ul>
+<h2 id="31">3.1 Εισαγωγή</h2>
+<ul>
+<li>Η πληρότητα και η ακρίβεια περιγραφής μιας γλώσσας προγραμματισμού είναι κεφαλαιώδους σημασίας.</li>
+<li>Ορισμένες γλώσσες παρουσιάζουν το πρόβλημα της ύπαρξης πολλών διαφορετικών διαλέκτων ως συνέπεια του όχι απόλυτα ακριβή ορισμού τους.</li>
+<li>Συντακτικό είναι η μορφή (δομή) των εκφράσεων, εντολών, και προγραμματιστικών μονάδων.</li>
+<li>Σημασιολογία είναι η σημασία των εκφράσεων, εντολών, και προγραμματιστικών μονάδων.</li>
+<li>Μια γλώσσα ορίζεται από το συντακτικό και τη σημασιολογία της.</li>
+</ul>
+<p>Παράδειγμα: Ποια είναι η σημασιολογία του ακόλουθου κώδικα;</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>while(λογική_έκφραση) εντολές
+</span></code></pre></div>
+<details class="note">
+<summary>Απάντηση</summary>
+<p>Ο κώδικας υποδηλώνει επανάληψη των εντολών όσο η <code>λογική_έκφραση</code> είναι αληθής</p>
+</details>
+<h2 id="32">3.2 Το γενικό πρόβλημα της περιγραφής του συντακτικού</h2>
+<ul>
+<li>Μια πρόταση είναι ένα σύνολο χαρακτήρων (συμβολοσειρές) κάποιου αλφαβήτου.</li>
+<li>Οι συντακτικοί κανόνες καθορίζουν τις έγκυρες προτάσεις που περιλαμβάνει η γλώσσα.</li>
+<li>Μια γλώσσα είναι το σύνολο των έγκυρων προτάσεών της.</li>
+<li>Οι κανόνες συντακτικού των φυσικών γλωσσών (π.χ. Ελληνικά, Αγγλικά) είναι πολύ πιο περίπλοκοι από τους κανόνες των τεχνητών γλωσσών (π.χ. Java, Python).</li>
+</ul>
+<h3 id="lexeme">Λέξημα (lexeme)</h3>
+<ul>
+<li>Ένα λέξημα είναι η συντακτική μονάδα χαμηλότερου επιπέδου της γλώσσας (π.χ., *, sum, begin). </li>
+<li>Τα λεξήματα δεν περιλαμβάνονται στην περιγραφή του συντακτικού.</li>
+<li>Ένα πρόγραμμα μπορεί να θεωρηθεί ως μια ακολουθία λεξημάτων παρά ως μια ακολουθία χαρακτήρων.</li>
+</ul>
+<h3 id="token">Λεκτική μονάδα (token)</h3>
+<ul>
+<li>Μια λεκτική μονάδα  είναι μια κατηγορία λεξημάτων (π.χ. αναγνωριστικά μεταβλητών)</li>
+<li>Υπάρχουν λεκτικές μονάδες με ένα μόνο πιθανό λέξημα (π.χ. ο τελεστής +)</li>
+</ul>
+<p>Παράδειγμα: Ποια είναι τα λεξήματα και ποιες οι λεκτικές μονάδες για τον ακόλουθο κώδικα;</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>index = 2 * count + 17;
+</span></code></pre></div>
+<details class="note">
+<summary>Απάντηση</summary>
+<table>
+<thead>
+<tr>
+<th>Λέξημα</th>
+<th>Λεκτική μονάδα</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>αναγνωριστικό</td>
+</tr>
+<tr>
+<td>=</td>
+<td>σύμβολο_ίσον</td>
+</tr>
+<tr>
+<td>2</td>
+<td>ακέραια_τιμή</td>
+</tr>
+<tr>
+<td>*</td>
+<td>τελεστής πολλαπλασιασμού</td>
+</tr>
+<tr>
+<td>count</td>
+<td>αναγνωριστικό</td>
+</tr>
+<tr>
+<td>+</td>
+<td>τελεστής πρόσθεσης</td>
+</tr>
+<tr>
+<td>17</td>
+<td>ακέραια_τιμή</td>
+</tr>
+<tr>
+<td>;</td>
+<td>ερωτηματικό</td>
+</tr>
+</tbody>
+</table>
+</details>
+<h3 id="321-recognizers">3.2.1 Μηχανισμοί αναγνώρισης γλωσσών (recognizers)</h3>
+<p>Οι recognizers διαβάζουν από την είσοδο συμβολοσειρές του αλφαβήτου της γλώσσας και αποφασίζουν το εάν  ανήκουν ή όχι στη γλώσσα. Παράδειγμα μηχανισμού αναγνώρισης γλωσσών είναι ο συντακτικός αναλυτής των μεταγλωττιστών.</p>
+<h3 id="322-generators">3.2.2 Μηχανισμοί παραγωγής γλωσσών (generators)</h3>
+<p>Οι generators παράγουν έγκυρες προτάσεις της γλώσσας. Μπορεί να εξεταστεί αν η σύνταξη μιας συγκεκριμένης πρότασης είναι ορθή πραγματοποιώντας σύγκριση με τη δομή του μηχανισμού παραγωγής.</p>
+<h2 id="33">3.3 Επίσημες μέθοδοι περιγραφής συντακτικού</h2>
+<h3 id="331-backus-naur">3.3.1 Μορφή Backus-Naur και γραμματικές χωρίς συμφραζόμενα</h3>
+<p>H BNF (Backus Naur Form) και οι CFG (Context Free Grammars) είναι ισοδύναμοι τρόποι περιγραφής του συντακτικού μιας γλώσσας.</p>
+<h4 id="3311">3.3.1.1 Γραμματικές χωρίς συμφραζόμενα</h4>
+<ul>
+<li>Αναπτύχθηκαν από τον Noam Chomsky στα μέσα των 1950s.</li>
+<li>Είχαν ως στόχο την περιγραφή του συντακτικού των φυσικών γλωσσών.</li>
+<li>Ορίζουν μια κατηγορία γλωσσών που ονομάζονται γλώσσες χωρίς συμφραζόμενα.</li>
+</ul>
+<h4 id="3312-backus-naur">3.3.1.2 Προέλευση της μορφής Backus-Naur</h4>
+<ul>
+<li>Προτάθηκαν από τον John Backus για να περιγράψουν το συντακτικό της Algol 58.</li>
+<li>Τροποποιήθηκαν από τον Peter Naur για την περιγραφή της Algol 60.</li>
+<li>Η BNF είναι ένας φυσικός συμβολισμός για την περιγραφή συντακτικού.</li>
+<li>Η BNF είναι ισοδύναμη με τις CFGs.</li>
+</ul>
+<h4 id="3313-bnf">3.3.1.3 Βασικές έννοιες BNF</h4>
+<ul>
+<li>H BNF είναι μια μετα-γλώσσα για περιγραφή συντακτικού γλωσσών προγραμματισμού.</li>
+<li>Μη-τερματικά (non-terminals): αφαιρέσεις που αναπαριστούν κατηγορίες συντακτικών δομών.</li>
+<li>Τα μη τερματικά εσωκλείονται σε <code>&lt;&gt;</code>, π.χ. <code>&lt;var&gt;</code>.</li>
+<li>Τερματικά (terminals): λεξήματα ή λεκτικές μονάδες.</li>
+<li>Σύμβολο έναρξης: ένα από τα μη-τερματικά σύμβολα.</li>
+<li>Κανόνες BNF: αποτελούνται από αριστερό μέρος που είναι κάποιο μη-τερματικό και από δεξιό μέρος που είναι μια συμβολοσειρά από τερματικά και/ή μη-τερματικά.</li>
+<li>Με τη BNF περιγράφονται:<ul>
+<li>Λίστες παρόμοιων δομών.</li>
+<li>Η σειρά με την οποία πρέπει να εμφανίζονται διαφορετικές δομές και ένθετες δομές σε οποιοδήποτε βάθος.</li>
+<li>Προτεραιότητα τελεστών.</li>
+<li>Προσεταιριστικότητα τελεστών.</li>
+</ul>
+</li>
+</ul>
+<p>Παράδειγμα ορισμού της εκχώρησης με BNF (για μια υποθετική γλώσσα προγραμματισμού):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;assign&gt; -&gt; &lt;var&gt; = &lt;expression&gt;
+</span></code></pre></div>
+<p>Παράδειγμα πρότασης που περιγράφεται από τον παραπάνω κανόνα:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>total = subtotal1 + subtotal2
+</span></code></pre></div>
+<p>Παράδειγμα κανόνων BNF με δύο RHS (Right Hand Sides), το σύμβολο | σημαίνει εναλαλκτική υλοποίηση για το δεξί μέρος του κανόνα.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&lt;if_stmt&gt; -&gt; if (&lt;logic_expr&gt;) &lt;stmt&gt;
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>           | if (&lt;logic_expr&gt;) &lt;stmt&gt; else &lt;stmt&gt;
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>&lt;stmt&gt; -&gt; &lt;single_stmt&gt;
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        | begin &lt;stmt_list&gt; end
+</span></code></pre></div>
+<h4 id="3314">3.3.1.4 Περιγραφή λιστών</h4>
+<p>Ο ορισμός λιστών μεταβλητού μήκους γίνεται στην BNF με αναδρομή (το μη-τερματικό στο αριστερό μέρος του κανόνα εμφανίζεται ξανά στο δεξί μέρος του κανόνα):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&lt;identifier_list&gt; -&gt; identifier
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>                   | identifier, &lt;identifier_list&gt;
+</span></code></pre></div>
+<h4 id="3315">3.3.1.5 Γραμματικές και παραγωγές</h4>
+<ul>
+<li>Μια γραμματική είναι μια παραγωγική συσκευή για τον ορισμό γλωσσών.</li>
+<li>Μια παραγωγή (derivation) είναι η επαναλαμβανόμενη εφαρμογή κανόνων, ξεκινώντας από το αρχικό σύμβολο και τερματίζοντας σε μια πρόταση που περιέχει μόνο τερματικά σύμβολα.</li>
+</ul>
+<p>Ένα παράδειγμα γραμματικής: </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>&lt;program&gt; -&gt; &lt;stmts&gt;
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>&lt;stmts&gt; -&gt; &lt;stmt&gt; 
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>         | &lt;stmt&gt; ; &lt;stmts&gt;
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>&lt;stmt&gt; -&gt; &lt;var&gt; = &lt;expr&gt;
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>&lt;var&gt; -&gt; a | b | c | d
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>&lt;expr&gt; -&gt; &lt;term&gt; + &lt;term&gt; 
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        | &lt;term&gt; - &lt;term&gt;
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>&lt;term&gt; -&gt; &lt;var&gt; | const
+</span></code></pre></div>
+<p>Παραγωγή της πρότασης <code>a = b + const</code> (χρησιμοποιώντας αριστερότερες παραγωγές):</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&lt;program&gt;   =&gt; &lt;stmts&gt;              &lt;-- sentential form
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>            =&gt; &lt;stmt&gt;               &lt;-- sentential form
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>            =&gt; &lt;var&gt; = &lt;expr&gt;       &lt;-- sentential form
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>            =&gt; a = &lt;expr&gt;           &lt;-- sentential form
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>            =&gt; a = &lt;term&gt; + &lt;term&gt;  &lt;-- sentential form
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>            =&gt; a = &lt;var&gt; + &lt;term&gt;   &lt;-- sentential form
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>            =&gt; a = b + &lt;term&gt;       &lt;-- sentential form
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>            =&gt; a = b + const        &lt;-- sentence (μόνο τερματικά σύμβολα)
+</span></code></pre></div>
+Ένα ακόμα παράδειγμα γραμματικής (για απλές προτάσεις εκχώρησης):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>&lt;assign&gt; -&gt; &lt;id&gt; = &lt;expr&gt;
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>&lt;id&gt;     -&gt; A | B | C
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>&lt;expr&gt;   -&gt; &lt;id&gt; + &lt;expr&gt;
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>          | &lt;id&gt; * &lt;expr&gt;
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>          | ( &lt;expr&gt; )
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>          | &lt;id&gt;
+</span></code></pre></div>
+<p>Παραγωγή της πρότασης <code>A = B * (A + C)</code>:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>&lt;assign&gt;    =&gt; &lt;id&gt; = &lt;expr&gt;
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>            =&gt; A = &lt;expr&gt;
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>            =&gt; A = &lt;id&gt; * &lt;expr&gt;
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>            =&gt; A = B * &lt;expr&gt;
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>            =&gt; A = B * ( &lt;expr&gt;)
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>            =&gt; A = B * ( &lt;id&gt; + &lt;expr&gt;)
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>            =&gt; A = B * ( A + &lt;expr&gt;)
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>            =&gt; A = B * ( A + &lt;id&gt;)
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>            =&gt; A = B * ( A + C )
+</span></code></pre></div>
+<h4 id="3316">3.3.1.6 Δένδρα συντακτικής ανάλυσης</h4>
+<ul>
+<li>Τα δένδρα συντακτικής ανάλυσης (parse trees) αποτελούν ιεραρχικές αναπαραστάσεις παραγωγών.</li>
+<li>Κάθε εσωτερικός κόμβος ενός parse tree σημειώνεται με ένα μη-τερματικό σύμβολο και κάθε φύλλο με ένα τερματικό σύμβολο.</li>
+</ul>
+<p>Παράδειγμα: Το parse tree για την πρόταση <code>A = B * (A + C)</code>:</p>
+<p><img alt="" src="../images/fig3_1.png" /></p>
+<h4 id="3317">3.3.1.7 Ασάφεια</h4>
+<p>Μια γραμματική που παράγει μια προτασιακή μορφή για την οποία υπάρχουν δύο ή περισσότερα διακριτά δένδρα συντακτικής ανάλυσης λέμε ότι είναι ασαφής (ambiquous).</p>
+<p>Παράδειγμα ασαφούς γραμματικής: </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>&lt;assign&gt; -&gt; &lt;id&gt; = &lt;expr&gt;
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>&lt;id&gt; -&gt; A | B | C
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>&lt;expr&gt; -&gt; &lt;expr&gt; + &lt;expr&gt;
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>        | &lt;expr&gt; * &lt;expr&gt;
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>        | (&lt;expr&gt;)
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>        | &lt;id&gt;
+</span></code></pre></div>
+<p>Για την πρόταση <code>A = B + C * A</code> προκύπτουν δύο διαφορετικά δένδρα συντακτικής ανάλυσης:</p>
+<p><img alt="" src="../images/fig3_2.png" /></p>
+<h4 id="3318">3.3.1.8 Προτεραιότητα τελεστών</h4>
+<p>Αν ένας τελεστής σε μια αριθμητική έκφραση παράγεται χαμηλότερα στο δένδρο συντακτικής ανάλυσης (και συνεπώς πρέπει να αποτιμηθεί πρώτος) τότε έχει προτεραιότητα ως προς τελεστές που παράγονται υψηλότερα στο δένδρο.</p>
+<p>Παράδειγμα σαφούς γραμματικής (παράδειγμα 3.4 του βιβλίου): </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>&lt;assign&gt; -&gt; &lt;id&gt; = &lt;expr&gt;
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>&lt;id&gt; -&gt; A | B | C
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>&lt;expr&gt; -&gt; &lt;expr&gt; + &lt;term&gt;
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>        | &lt;term&gt;
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>&lt;term&gt; -&gt; &lt;term&gt; * &lt;factor&gt;
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>        | &lt;factor&gt;
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>&lt;factor&gt; -&gt; ( &lt;expr&gt; )
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>          | &lt;id&gt;
+</span></code></pre></div>
+<p>Παραγωγή της πρότασης <code>A = B + C * A</code> (αριστερότερες παραγωγές):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>&lt;assign&gt;    =&gt; &lt;id&gt; = &lt;expr&gt;
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>            =&gt; A = &lt;expr&gt;
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>            =&gt; A = &lt;expr&gt; + &lt;term&gt;
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>            =&gt; A = &lt;term&gt; + &lt;term&gt;
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>            =&gt; A = &lt;factor&gt; + &lt;term&gt;
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>            =&gt; A = &lt;id&gt; + &lt;term&gt;
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>            =&gt; A = B + &lt;term&gt;
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>            =&gt; A = B + &lt;term&gt; * &lt;factor&gt;
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>            =&gt; A = B + &lt;factor&gt; * &lt;factor&gt;
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>            =&gt; A = B + &lt;id&gt; * &lt;factor&gt;
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>            =&gt; A = B + C * &lt;factor&gt;
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>            =&gt; A = B + C * &lt;id&gt;
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>            =&gt; A = B + C * A
+</span></code></pre></div>
+<p>Παραγωγή της πρότασης <code>A = B + C * A</code> (με δεξιότερες παραγωγές):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&lt;assign&gt;    =&gt; &lt;id&gt; = &lt;expr&gt;
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>            =&gt; &lt;id&gt; = &lt;expr&gt; + &lt;term&gt;
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>            =&gt; &lt;id&gt; = &lt;expr&gt; + &lt;term&gt; * &lt;factor&gt;
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>            =&gt; &lt;id&gt; = &lt;expr&gt; + &lt;term&gt; * &lt;id&gt;
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>            =&gt; &lt;id&gt; = &lt;expr&gt; + &lt;term&gt; * A
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>            =&gt; &lt;id&gt; = &lt;expr&gt; + &lt;factor&gt; * A
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>            =&gt; &lt;id&gt; = &lt;expr&gt; + &lt;id&gt; * A
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>            =&gt; &lt;id&gt; = &lt;expr&gt; + C * A
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>            =&gt; &lt;id&gt; = &lt;term&gt; + C * A
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>            =&gt; &lt;id&gt; = &lt;factor&gt; + C * A
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>            =&gt; &lt;id&gt; = &lt;id&gt; + C * A
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>            =&gt; &lt;id&gt; = B + C * A
+</span><span id="__span-13-13"><a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>            =&gt; A = B + C * A
+</span></code></pre></div>
+<p>Το δένδρο συντακτικής ανάλυσης που προκύπτει (και για τις δύο περιπτώσεις) είναι το ακόλουθο:</p>
+<p><img alt="" src="../images/fig3_3.png" /></p>
+<p>Κάθε παραγωγή με σαφή γραμματική έχει ένα και μοναδικό δένδρο συντακτικής ανάλυσης. Ωστόσο, το ίδιο δένδρο συντακτικής ανάλυσης μπορεί να προκύψει από διαφορετικές παραγωγές μιας σαφούς γραμματικής.</p>
+<h4 id="3319">3.3.1.9 Προσεταιριστικότητα τελεστών</h4>
+<p>Όταν μια έκφραση περιλαμβάνει δύο τελεστές που έχουν την ίδια προτεραιότητα (π.χ. * και /) τότε απαιτείται ένας σημασιολογικός κανόνας προκειμένου να καθοριστεί ποιος τελεστής θα πρέπει να έχει προτεραιότητα (π.χ. <code>A / B * C</code>). O κανόνας αυτός ονομάζεται <strong>προσεταιριστικότητα</strong>.</p>
+<ul>
+<li>Αριστερή προσεταιριστικότητα: +, -, *, /<ul>
+<li><code>1 + 2 + 3 =&gt; 3 + 3 =&gt; 6</code></li>
+</ul>
+</li>
+<li>Δεξιά προσεταιριστικότητα: ^ (ύψωση σε δύναμη)<ul>
+<li><code>2^2^3 =&gt; 2^8 =&gt; 256</code></li>
+</ul>
+</li>
+</ul>
+<p>Η προσεταιριστικότητα τελεστών μπορεί να καθορίζεται μέσω της γραμματικής.</p>
+<p>Η ακόλουθη γραμματική είναι ασαφής:  </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>&lt;expr&gt; -&gt; &lt;expr&gt; + &lt;expr&gt; 
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>        | &lt;id&gt;
+</span></code></pre></div>
+<p>Η ακόλουθη γραμματική είναι σαφής (ορίζει αριστερή προσεταιριστικότητα):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>&lt;expr&gt; -&gt; &lt;expr&gt; + &lt;id&gt; 
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>        | &lt;id&gt;
+</span></code></pre></div>
+<p>Παρατηρήστε ότι ο κανόνας είναι αριστερά αναδρομικός.</p>
+<p>Η ακόλουθη γραμματική είναι σαφής (ορίζει δεξιά προσεταιριστικότητα):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>&lt;factor&gt; -&gt; &lt;exp&gt; ^ &lt;factor&gt;
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>          | &lt;exp&gt;
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>&lt;exp&gt; -&gt; ( &lt;expr&gt; )
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>       | id
+</span></code></pre></div>
+<p>Παρατηρήστε ότι ο 1ος κανόνας είναι δεξιά αναδρομικός.</p>
+<h4 id="33110-if-else">3.3.1.10 Μια ασαφής γραμματική για το if-else</h4>
+<p>Γραμματική (ασαφής):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>&lt;if_stmt&gt; -&gt;    if (&lt;logic_expr&gt;) &lt;stmt&gt;
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>                if (&lt;logic_expr&gt;) &lt;stmt&gt; else &lt;stmt&gt;
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>&lt;stmt&gt; -&gt; &lt;if_stmt&gt; 
+</span></code></pre></div>
+<p>Πρόταση:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>if (&lt;logic_expr&gt;) if (&lt;logic_expr&gt;) &lt;stmt&gt; else &lt;stmt&gt;
+</span></code></pre></div>
+<p>Δένδρα συντακτικής ανάλυσης (υπάρχουν δύο, λόγω ασαφούς γραμματικής):</p>
+<p><img alt="" src="../images/fig3_5.png" /></p>
+<p>Γραμματική (σαφής):</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>&lt;stmt&gt; -&gt; &lt;matched&gt; | &lt;unmatched&gt;
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>&lt;matched&gt;   -&gt; if (&lt;logic_expr&gt;) &lt;matched&gt; else &lt;matched&gt;
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>             | any non-if statement
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>&lt;unmatched&gt; -&gt; if (&lt;logic_expr&gt;) &lt;stmt&gt;
+</span><span id="__span-19-5"><a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>             | if (&lt;logic_expr&gt;) &lt;matched&gt; else &lt;unmatched&gt;
+</span></code></pre></div>
+<p>Για την πρόταση:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>if (&lt;logic_expr&gt;) if (&lt;logic_expr&gt;) &lt;stmt&gt; else &lt;stmt&gt;
+</span></code></pre></div>
+<p>υπάρχει ένα μόνο δένδρο συντακτικής ανάλυσης για την παραπάνω πρόταση.</p>
+<h3 id="332-bnf-extended-bnf">3.3.2 Εκτεταμένη BNF (Extended BNF)</h3>
+<p>Η εκτεταμένη BNF δεν ενισχύει την περιγραφική δύναμη της BNF, απλά αυξάνει την ευκολία ανάγνωσης και γραφής του.Τρεις επεκτάσεις:</p>
+<p>1) Προαιρετικά τμήματα του RHS τοποθετούνται σε αγκύλες []</p>
+<p>Αντί για:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>&lt;if_stmt&gt; -&gt; if (&lt;expression&gt;) &lt;statement&gt;
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>           | if (&lt;expression&gt;) &lt;statement&gt; else &lt;statement&gt;
+</span></code></pre></div>
+<p>σε EBNF γράφουμε:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>&lt;if_stmt&gt; → if (&lt;expression&gt;) &lt;statement&gt; [else &lt;statement&gt;]
+</span></code></pre></div>
+<p>2) Χρήση αγκυλών {} υποδηλώνουν ότι το τμήμα που εσωκλείεται μπορεί να επαναλαμβάνεται απεριόριστα ή να αποκλειστεί εντελώς.</p>
+<p>Αντί για:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a>&lt;identifier_list&gt; -&gt; identifier
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>                   | identifier, &lt;identifier_list&gt;
+</span></code></pre></div>
+<p>σε EBNF γράφουμε:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>&lt;identifier_list&gt; -&gt; identifier {, identifier}
+</span></code></pre></div>
+<p>3) Χρήση παρενθέσεων και τελεστή | για να υποδηλώσει δυνατότητα επιλογής ενός στοιχείου από μια ομάδα στοιχείων</p>
+<p>Αντί για:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>&lt;term&gt; -&gt; &lt;term&gt; * &lt;factor&gt;
+</span><span id="__span-25-2"><a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>        | &lt;term&gt; / &lt;factor&gt;
+</span><span id="__span-25-3"><a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>        | &lt;term&gt; % &lt;factor&gt;
+</span></code></pre></div>
+<p>σε EBNF γράφουμε:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>&lt;term&gt; -&gt; &lt;term&gt; (* | / | %) &lt;factor&gt;
+</span></code></pre></div>
+<p>Παράδειγμα γραμματικής σε BNF και ισοδύναμης σε EBNF</p>
+<p>BNF</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>&lt;expr&gt; -&gt; &lt;expr&gt; + &lt;term&gt;
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>        | &lt;expr&gt; - &lt;term&gt;
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>        | &lt;term&gt;
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>&lt;term&gt; -&gt; &lt;term&gt; * &lt;factor&gt;
+</span><span id="__span-27-5"><a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a>        | &lt;term&gt; / &lt;factor&gt;
+</span><span id="__span-27-6"><a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>        | &lt;factor&gt;
+</span><span id="__span-27-7"><a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a>&lt;factor&gt; -&gt; &lt;exp&gt; ^ &lt;factor&gt;
+</span><span id="__span-27-8"><a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>          | &lt;exp&gt;
+</span><span id="__span-27-9"><a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a>&lt;exp&gt; -&gt; (&lt;expr&gt;)
+</span><span id="__span-27-10"><a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a>       | id
+</span></code></pre></div>
+<p>EBNF (ισοδύναμο με το παραπάνω σε BNF)</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>&lt;expr&gt; -&gt; &lt;term&gt; {(+ | -) &lt;term&gt;}
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>&lt;term&gt; -&gt; &lt;factor&gt; {(* | /) &lt;factor&gt;}
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>&lt;factor&gt; -&gt; &lt;exp&gt; { ^ &lt;exp&gt;}
+</span><span id="__span-28-4"><a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>&lt;exp&gt; -&gt; (&lt;expr&gt;) | id
+</span></code></pre></div>
+<p>Επιπλέον παραλλαγές στην EBNF</p>
+<ul>
+<li>Εναλλακτικά RHS τοποθετούνται σε ξεχωριστές γραμμές αντί για |</li>
+<li>Χρήση : αντί για -&gt;</li>
+<li>Χρήση opt για προαιρετικά μέρη, αντί για αγκύλες [ ]</li>
+<li>Χρήση oneof για επιλογές αντί για παρενθέσεις και |</li>
+</ul>
+<h3 id="333-recognizers">3.3.3 Γραμματικές και recognizers</h3>
+<p>Δεδομένης της γραμματικής μιας γλώσσας χωρίς συμφραζόμενα, μπορεί να κατασκευαστεί αυτόματα ένας αναγνωριστικός (recognizer) μηχανισμός για προγράμματα της γλώσσας. Συνεπώς, η κατασκευή του συντακτικού αναλυτή για μια νέα γλώσσα μπορεί να αυτοματοποιηθεί με εργαλεία λογισμικού όπως το <a href="https://www2.dmst.aueb.gr/dds/comp/yacc/indexw.htm">yacc</a>, το bison κ.α.</p>
+<h2 id="34">3.4 Γραμματικές χαρακτηριστικών (ή κατηγορικές γραμματικές)</h2>
+<p>Μια γραμματική χαρακτηριστικών (attribute grammar) είναι μια γραμματική που επιτυγχάνει να να περιγράψει τη δομή μιας γλώσσας προγραμματισμού καλύτερα από μια γραμματική χωρίς συμφραζόμενα.</p>
+<h3 id="341">3.4.1 Στατική σημασιολογία</h3>
+<p>Κανόνες στατικής σημασιολογίας: πρόκειται για κανόνες του συντακτικού των γλωσσών προγραμματισμού που μπορούν να ελεγχθούν κατά τη μεταγλώττιση και οι οποίοι είτε δεν μπορούν να οριστούν με γραμματικές χωρίς συμφραζόμενα είτε ορίζονται μεν αλλά με δύσχρηστο τρόπο. </p>
+<h3 id="342">3.4.2 Βασικές έννοιες</h3>
+<p>Οι γραμματικές χαρακτηριστικών είναι γραμματικές χωρίς συμφραζόμενα στις οποίες έχουν προστεθεί:</p>
+<ol>
+<li>χαρακτηριστικά: σχετίζονται με τερματικά και μη-τερματικά σύμβολα και είναι παρόμοια με μεταβλητές καθώς δέχονται τιμές</li>
+<li>συναρτήσεις υπολογισμού χαρακτηριστικών: καθορίζουν τον τρόπο υπολογισμού των χαρακτηριστικών</li>
+<li>κατηγορήματα: εκφράζουν τους σημασιολογικούς κανόνες γραμματικής της γλώσσας</li>
+</ol>
+<h3 id="343">3.4.3 Ορισμός γραμματικών χαρακτηριστικών</h3>
+<p>Μια γραμματική χαρακτηριστικών είναι μια γραμματική χωρίς συμφραζόμενα όπου:</p>
+<ol>
+<li>Για κάθε σύμβολο γραμματικής υπάρχει ένα σύνολο τιμών χαρακτηριστικών Α(Χ).</li>
+<li>Για κάθε κανόνα γραμματικής υπάρχει ένα σύνολο συναρτήσεων που ορίζουν χαρακτηριστικά μη-τερματικών του κανόνα</li>
+<li>Για κάθε κανόνα υπάρχει ένα σύνολο κατηγορημάτων που πρέπει να ελέγχονται για να διασφαλιστεί η συνέπεια των χαρακτηριστικών</li>
+</ol>
+<p>Έστω ένας κανόνας:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>Χ0 -&gt; Χ1 ... Χn
+</span></code></pre></div>
+<p>Τα λεγόμενα συντιθέμενα χαρακτηριστικά (synthesized attributes) ορίζονται από συναρτήσεις της μορφής:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>S(X0) = f(A(X1), ..., A(Xn))
+</span></code></pre></div>
+<p>Δηλαδή, η τιμή ενός συντιθέμενου χαρακτηριστικού σε έναν κόμβο του δένδρου συντακτικής ανάλυσης εξαρτάται μόνο από τιμές χαρακτηριστικών σε κόμβους παιδιά αυτού του κόμβου.</p>
+<p>Τα λεγόμενα κληρονομούμενα χαρακτηριστικά (inherited attributes) ορίζονται από συναρτήσεις της μορφής:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>I(Xj) = f(A(X0), ..., A(Xn)) για 1 &lt;= j &lt;= n
+</span></code></pre></div>
+<p>Δηλαδή, η τιμή ενός κληρονομούμενου χαρακτηριστικού σε έναν κόμβο του δένδρου συντακτικής ανάλυσης εξαρτάται μόνο από τις τιμές του χαρακτηριστικών του γονέα του και των άλλων παιδιών του γονέα του.</p>
+<p>Τα συντιθέμενα χαρακτηριστικά μεταδίδουν σημασιολογικές πληροφορίες με ανοδική πορεία σε ένα δένδρο σημασιολογικής ανάλυσης. Τα κληρονομούμενα χαρακτηριστικά μεταδίδουν σημασιολογικές πληροφορίες με καθοδική και πλευρική πορεία σε ένα δένδρο σημασιολογικής ανάλυσης. </p>
+<p>Αν έχουν υπολογιστεί όλες οι τιμές χαρακτηριστικών σε ένα δένδρο συντακτικής ανάλυσης τότε το δένδρο λέγεται ότι είναι πλήρως χαρακτηρισμένο.</p>
+<h3 id="344-intrinsic-attributes">3.4.4 Εσωτερικά χαρακτηριστικά (intrinsic attributes)</h3>
+<p>Τα εσωτερικά χαρακτηριστικά είναι συντιθέμενα χαρακτηριστικά οι τιμές των οποίων ορίζονται εκτός του δένδρου συντακτικής ανάλυσης και αποδίδονται στα φύλλα του δένδρου. </p>
+<h3 id="345">3.4.5 Παραδείγματα γραμματικών χαρακτηριστικών</h3>
+<p>Έστω το ακόλουθο συντακτικό μιας γλώσσας</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>&lt;assign&gt; -&gt; &lt;var&gt; = &lt;expr&gt;
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>&lt;expr&gt; -&gt; &lt;var&gt; + &lt;var&gt;
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>        | &lt;var&gt;
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>&lt;var&gt; -&gt; A | B | C
+</span></code></pre></div>
+<p>Η στατική σημασιολογία ορίζει ότι οι μεταβλητές είναι δύο τύπων <code>int</code> και <code>real</code>. Όταν υπάρχουν δύο μεταβλητές στη δεξιά πλευρά μιας εκχώρησης, οι μεταβλητές δεν είναι απαραίτητο να είναι του ίδιου τύπου. Ειδικότερα ισχύει ότι:</p>
+<ul>
+<li>όταν οι τύποι των δύο μεταβλητών δεν είναι ίδιοι, τότε ο τύπος της έκφρασης είναι πραγματικός.</li>
+<li>όταν οι τύποι των δύο μεταβλητών είναι ίδιοι, τότε ο τύπος της έκφρασης είναι ίδιος με αυτό τον τύπο.</li>
+</ul>
+<p>Τα χαρακτηριστικά των μη-τερματικών συμβόλων είναι:</p>
+<ul>
+<li><strong>actual_type</strong>: Συντιθέμενο χαρακτηριστικό που σχετίζεται με τα μη-τερματικά <code>&lt;var&gt;</code>
+και <code>&lt;expr&gt;</code>. Χρησιμοποιείται για την αποθήκευση του πραγματικού τύπου, <code>int</code> ή <code>real</code>, μιας μεταβλητής ή μιας έκφρασης. Αν πρόκειται για μεταβλητή, ο πραγματικός τύπος είναι εσωτερικό χαρακτηριστικό (intrinsic attribute). Αν πρόκειται για έκφραση, καθορίζεται από τους πραγματικούς τύπους των παιδιών του μη τερματικού <code>&lt;expr&gt;</code>.</li>
+<li><strong>expected_type</strong>: Κληρονομούμενο χαρακτηριστικό που σχετίζεται με το μη-τερματικό <code>&lt;expr&gt;</code>. Χρησιμοποιείται για να αποθηκεύσει τον τύπο, <code>int</code> ή <code>real</code>, που αναμένεται για την έκφραση, όπως καθορίζεται από τον τύπο της μεταβλητής στο αριστερό μέρος της εντολής ανάθεσης.</li>
+</ul>
+<p>Η γραμματική χαρακτηριστικών στο σύνολο της είναι η ακόλουθη:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>1. Συντακτικός κανόνας: &lt;assign&gt; -&gt; &lt;var&gt; = &lt;expr&gt;
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>   Σημασιολογικός κανόνας: &lt;expr&gt;.expected_type = &lt;var&gt;.actual_type
+</span><span id="__span-33-3"><a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>
+</span><span id="__span-33-4"><a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>2. Συντακτικός κανόνας: &lt;expr&gt; -&gt; &lt;var&gt;[2] + &lt;var&gt;[3]
+</span><span id="__span-33-5"><a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>   Σημασιολογικός κανόνας: 
+</span><span id="__span-33-6"><a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>    &lt;expr&gt;.actual_type =
+</span><span id="__span-33-7"><a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>    if (&lt;var&gt;[2].actual_type = int_type) and (&lt;var&gt;[3].actual_type = int_type) then 
+</span><span id="__span-33-8"><a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>      int_type
+</span><span id="__span-33-9"><a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>    else 
+</span><span id="__span-33-10"><a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>      real_type
+</span><span id="__span-33-11"><a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a>    end if
+</span><span id="__span-33-12"><a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a>   Κατηγόρημα: &lt;expr&gt;.actual_type == &lt;expr&gt;.expected_type
+</span><span id="__span-33-13"><a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a>
+</span><span id="__span-33-14"><a id="__codelineno-33-14" name="__codelineno-33-14" href="#__codelineno-33-14"></a>3. Συντακτικός κανόνας: &lt;expr&gt; -&gt; &lt;var&gt;
+</span><span id="__span-33-15"><a id="__codelineno-33-15" name="__codelineno-33-15" href="#__codelineno-33-15"></a>   Σημασιολογικός κανόνας: &lt;expr&gt;.actual_type = &lt;var&gt;.actual_type
+</span><span id="__span-33-16"><a id="__codelineno-33-16" name="__codelineno-33-16" href="#__codelineno-33-16"></a>   Κατηγόρημα: &lt;expr&gt;.actual_type == &lt;expr&gt;.expected_type
+</span><span id="__span-33-17"><a id="__codelineno-33-17" name="__codelineno-33-17" href="#__codelineno-33-17"></a>
+</span><span id="__span-33-18"><a id="__codelineno-33-18" name="__codelineno-33-18" href="#__codelineno-33-18"></a>4. Συντακτικός κανόνας: &lt;var&gt; -&gt; A | B | C
+</span><span id="__span-33-19"><a id="__codelineno-33-19" name="__codelineno-33-19" href="#__codelineno-33-19"></a>  I.    Συντακτικός κανόνας: &lt;var&gt; -&gt; A
+</span><span id="__span-33-20"><a id="__codelineno-33-20" name="__codelineno-33-20" href="#__codelineno-33-20"></a>        Σημασιολογικός κανόνας: &lt;var&gt;.actual_type = look-up(A.value)
+</span><span id="__span-33-21"><a id="__codelineno-33-21" name="__codelineno-33-21" href="#__codelineno-33-21"></a>  II.   Συντακτικός κανόνας: &lt;var&gt; -&gt; B
+</span><span id="__span-33-22"><a id="__codelineno-33-22" name="__codelineno-33-22" href="#__codelineno-33-22"></a>        Σημασιολογικός κανόνας: &lt;var&gt;.actual_type = look-up(B.value)
+</span><span id="__span-33-23"><a id="__codelineno-33-23" name="__codelineno-33-23" href="#__codelineno-33-23"></a>  III.  Συντακτικός κανόνας: &lt;var&gt; -&gt; C
+</span><span id="__span-33-24"><a id="__codelineno-33-24" name="__codelineno-33-24" href="#__codelineno-33-24"></a>        Σημασιολογικός κανόνας: &lt;var&gt;.actual_type = look-up(C.value)
+</span></code></pre></div>
+<p>Η συνάρτηση look-up ελέγχει αν υπάρχει ένα όνομα μεταβλητής στον πίνακα συμβόλων και επιστρέφει τον τύπο της μεταβλητής</p>
+<p>Το δένδρο συντακτικής ανάλυσης για την πρόταση <code>A = A + B</code> είναι το ακόλουθο:</p>
+<p><img alt="" src="../images/fig3_6.png" /></p>
+<p>Με την ακόλουθη σειρά αποτίμησης είναι δυνατός ο υπολογισμός των χαρακτηριστικών:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>&lt;var&gt;.actual_type &lt;- look-up(A) (κανόνας 4)
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>&lt;expr&gt;.expected_type &lt;- &lt;var&gt;.actual_type (κανόνας 1)
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>&lt;var&gt;[2].actual_type &lt;- look-up(A) (κανόνας 4)
+</span><span id="__span-34-4"><a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a>&lt;var&gt;[3].actual_type &lt;- look-up(B) (κανόνας 4)
+</span><span id="__span-34-5"><a id="__codelineno-34-5" name="__codelineno-34-5" href="#__codelineno-34-5"></a>&lt;expr&gt;.actual_type &lt;- είτε int είτε real (κανόνας 2)
+</span><span id="__span-34-6"><a id="__codelineno-34-6" name="__codelineno-34-6" href="#__codelineno-34-6"></a>&lt;expr&gt;.expected_type == &lt;expr&gt;.actual_type που είναι είτε TRUE είτε FALSE
+</span></code></pre></div>
+<p>Αν το Α είναι real και το B είναι int τότε προκύπτει το ακόλουθο επισημειωμένο δένδρο συντακτικής ανάλυσης:</p>
+<p><img alt="" src="../images/fig3_8.png" /></p>
+<h2 id="35">3.5 Περιγραφή του νοήματος των προγραμμάτων: Δυναμική σημασιολογία</h2>
+<p>Δεν υπάρχει ένας κοινά αποδεκτός συμβολισμός ή φορμαλισμός για την περιγραφή της σημασιολογίας των γλωσσών προγραμματισμού. Οι 3 κύριοι τρόποι περιγραφής της σημασιολογίας είναι οι:</p>
+<ul>
+<li>Λειτουργική σημασιολογία</li>
+<li>Δηλωτική σημασιολογία</li>
+<li>Αξιωματική σημασιολογία</li>
+</ul>
+<p>Η μεθοδολογίες και οι συμβολισμοί για τη σημασιολογία επιτρέπουν (σε κάποιο βαθμό):</p>
+<ul>
+<li>την πληρέστερη περιγραφή των δομών της γλώσσας</li>
+<li>την κατασκευή μηχανισμών απόδειξης ορθότητας προγραμμάτων</li>
+<li>την κατασκευή γεννητριών μεταγλωττιστών</li>
+<li>την ανίχνευση ασαφειών και ασυνεπειών στην κατασκευή των γλωσσών προγραμματισμού</li>
+</ul>
+<h3 id="351-operational-semantics">3.5.1 Λειτουργική σημασιολογία (Operational Semantics)</h3>
+<ul>
+<li>Περιγράφει το νόημα ενός προγράμματος εκτελώντας τις εντολές του προγράμματος σε μια μηχανή είτε σε προσομοίωση είτε πραγματικά. </li>
+<li>Η αλλαγή στην κατάσταση της μηχανής μνήμη, καταχωρητές, κ.λπ .) ορίζει τη σημασία των εντολών.</li>
+</ul>
+<h3 id="3511">3.5.1.1 Η βασική διαδικασία</h3>
+<p>Αρχικά σχεδιάζεται μια ενδιάμεση γλώσσα με κύριο επιθυμητό χαρακτηριστικό τη σαφήνεια. Κάθε δομή της ενδιάμεσης γλώσσας πρέπει να έχει προφανές και σαφές νόημα.</p>
+<p><strong>Παράδειγμα λειτουργικής σημασιολογίας για την εντολή for της C</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>for(expr1;expr2;expr3)
+</span><span id="__span-35-2"><a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>{
+</span><span id="__span-35-3"><a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>    stmts
+</span><span id="__span-35-4"><a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>}
+</span></code></pre></div>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>expr1
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>loop: control = expr2
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a>    if (control == 0) goto out
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>    stmts
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>    expr3
+</span><span id="__span-36-6"><a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a>    goto loop
+</span><span id="__span-36-7"><a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>out: ...
+</span></code></pre></div>
+Γενικά, ισχύει ότι οι ακόλουθες εντολές επαρκούν για την περιγραφή της λειτουργικής σημασιολογίας των απλών εντολών ελέγχου μιας τυπικής γλώσσας προγραμματισμού (ωστόσο, χρειάζεται επεκτάσεις προκειμένου να περιγραφεί η σημασιολογία των μετατροπών τύπων, των διατάξεων, των δεικτών και των υποπρογραμμάτων).</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>ident = var
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>ident = un_op var
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>ident = var bin_op var
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>goto label
+</span><span id="__span-37-5"><a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a>if (var rel_op var) goto label
+</span></code></pre></div>
+<p>όπου:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>ident = αναγνωριστικό
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>var = αναγνωριστικό ή σταθερά
+</span><span id="__span-38-3"><a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>un_op = μοναδιαίος τελεστής  
+</span><span id="__span-38-4"><a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>bin_op = δυαδικός τελεστής 
+</span><span id="__span-38-5"><a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>rel_op = συγκριτικός τελεστής
+</span></code></pre></div>
+<h3 id="3512">3.5.1.2 Αποτίμηση της λειτουργικής σημασιολογίας</h3>
+<ul>
+<li>Καλή αν χρησιμοποιείται χωρίς προσκόλληση στην τυπικότητα εγχειρίδια γλώσσας , κ.λπ.</li>
+<li>Εξαιρετικά πολύπλοκη αν χρησιμοποιηθεί τυπικά π.χ., VDL), όπως χρησιμοποιήθηκε για την περιγραφή της σημασιολογίας της PL/I.</li>
+<li>Βασίζεται σε γλώσσες προγραμματισμού χαμηλότερου επιπέδου και όχι στα μαθηματικά ή στη λογική.</li>
+<li>Οι προτάσεις μιας γλώσσας προγραμματισμού περιγράφονται από προτάσεις μιας γλώσσας προγραμματισμού χαμηλότερου επιπέδου.</li>
+</ul>
+<h3 id="352-denotational-semantics">3.5.2 Δηλωτική σημασιολογία (Denotational Semantics)</h3>
+<ul>
+<li>Βασίζεται σε θεωρία αναδρομικών συναρτήσεων.</li>
+<li>Ορισμός ενός μαθηματικού αντικειμένου για κάθε οντότητα της γλώσσας.</li>
+<li>Ορισμός μιας συνάρτησης που αντιστοιχεί στιγμιότυπα των οντοτήτων της γλώσσας σε στιγμιότυπα των αντίστοιχων μαθηματικών αντικειμένων.</li>
+<li>Το νόημα των δομών της γλώσσας ορίζεται μόνο από τις τιμές των μεταβλητών του προγράμματος.</li>
+</ul>
+<p>Αποτίμηση της δηλωτικής σημασιολογίας</p>
+<ul>
+<li>Μπορεί να χρησιμοποιηθεί για αποδείξεις ορθότητας προγραμμάτων.</li>
+<li>Παρέχει έναν μαθηματικά αυστηρό τρόπο σκέψης για τα προγράμματα.</li>
+<li>Μπορεί να βοηθήσει στη σχεδίαση γλωσσών.</li>
+<li>Έχει χρησιμοποιηθεί στη σχεδίαση συστημάτων γεννητριών μεταγλωττιστών.</li>
+<li>Λόγω πολυπλοκότητάς, παρουσιάζει μικρή χρησιμότητα για τους χρήστες της γλώσσας.</li>
+</ul>
+<h3 id="353-axiomatic-semantics">3.5.3 Αξιωματική σημασιολογία (Axiomatic Semantics)</h3>
+<ul>
+<li>Βασίζεται στον κατηγορηματικό λογισμό. </li>
+<li>Ορίζονται αξιώματα ή κανόνες συμπερασμού για κάθε τύπο εντολής της γλώσσας προκειμένου να επιτραπούν μετασχηματισμοί λογικών εκφράσεων σε περισσότερο τυπικές λογικές εκφράσεις.</li>
+</ul>
+<p>Αποτίμηση της αξιωματικής σημασιολογίας</p>
+<ul>
+<li>Είναι δύσκολη η ανάπτυξη αξιωμάτων ή κανόνων συμπερασμού για όλες τις εντολές μιας γλώσσας.</li>
+<li>Αποτελεί καλό εργαλείο για αποδείξεις ορθότητας, και εξαιρετικό πλαίσιο συλλογισμού για τα προγράμματα, αλλά δεν είναι το ίδιο χρήσιμο για χρήστες γλωσσών και συγγραφείς μεταγλωττιστών.</li>
+</ul>
+<hr />
+<h2 id="3_1">Επιπλέον ασκήσεις για το κεφάλαιο 3</h2>
+<ol>
+<li>Δίνεται η ακόλουθη γραμματική:</li>
+</ol>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>&lt;stmt&gt; -&gt; &lt;assignment_ stmt&gt; | &lt;if_ stmt&gt;
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>&lt;assignment_ stmt&gt; -&gt; &lt;var&gt; = &lt;expr&gt;;
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>&lt;if_ stmt&gt; -&gt; if (&lt;cond&gt;) &lt;stmt&gt; else &lt;stmt&gt;
+</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>&lt;cond&gt; -&gt; &lt;expr&gt; ==  &lt;expr&gt;
+</span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a>&lt;expr&gt; -&gt; &lt;var&gt;
+</span><span id="__span-39-6"><a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a>                | &lt;const&gt;
+</span><span id="__span-39-7"><a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a>                | &lt;expr&gt; + &lt;expr&gt;
+</span><span id="__span-39-8"><a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a>&lt;var&gt; -&gt; a | b | c
+</span><span id="__span-39-9"><a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a>&lt;cons&gt; -&gt; 0 | 1 | 2 
+</span></code></pre></div>
+<p>Γράψτε μια αριστερότερη παραγωγή για την ακόλουθη πρόταση:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>if (a==0) b=2; else c=a+1;
+</span></code></pre></div>
+<details class="note">
+<summary>Λύση άσκησης 1</summary>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>&lt;stmt&gt; -&gt; 
+</span><span id="__span-41-2"><a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>&lt;if_stmt&gt; -&gt; 
+</span><span id="__span-41-3"><a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>if (&lt;cond&gt;) &lt;stmt&gt; else &lt;stmt&gt; -&gt; 
+</span><span id="__span-41-4"><a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>if (&lt;expr&gt; ==  &lt;expr&gt;) &lt;stmt&gt; else &lt;stmt&gt; -&gt;
+</span><span id="__span-41-5"><a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>if (&lt;var&gt; ==  &lt;expr&gt;) &lt;stmt&gt; else &lt;stmt&gt; -&gt; 
+</span><span id="__span-41-6"><a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>if (a ==  &lt;expr&gt;) &lt;stmt&gt; else &lt;stmt&gt; -&gt; 
+</span><span id="__span-41-7"><a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a>if (a ==  &lt;const&gt;) &lt;stmt&gt; else &lt;stmt&gt; -&gt; 
+</span><span id="__span-41-8"><a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a>if (a ==  0) &lt;stmt&gt; else &lt;stmt&gt; -&gt; 
+</span><span id="__span-41-9"><a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a>if (a ==  0) &lt;assignment_stmt&gt; else &lt;stmt&gt; -&gt; 
+</span><span id="__span-41-10"><a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a>if (a ==  0) &lt;var&gt; = &lt;expr&gt;; else &lt;stmt&gt; -&gt; 
+</span><span id="__span-41-11"><a id="__codelineno-41-11" name="__codelineno-41-11" href="#__codelineno-41-11"></a>if (a ==  0) b = &lt;expr&gt;; else &lt;stmt&gt; -&gt; 
+</span><span id="__span-41-12"><a id="__codelineno-41-12" name="__codelineno-41-12" href="#__codelineno-41-12"></a>if (a ==  0) b = &lt;const&gt;; else &lt;stmt&gt; -&gt; 
+</span><span id="__span-41-13"><a id="__codelineno-41-13" name="__codelineno-41-13" href="#__codelineno-41-13"></a>if (a ==  0) b = 2; else &lt;stmt&gt; -&gt; 
+</span><span id="__span-41-14"><a id="__codelineno-41-14" name="__codelineno-41-14" href="#__codelineno-41-14"></a>if (a ==  0) b = 2; else &lt;assignment_stmt&gt; -&gt; 
+</span><span id="__span-41-15"><a id="__codelineno-41-15" name="__codelineno-41-15" href="#__codelineno-41-15"></a>if (a ==  0) b = 2; else &lt;var&gt; = &lt;expr&gt;; -&gt; 
+</span><span id="__span-41-16"><a id="__codelineno-41-16" name="__codelineno-41-16" href="#__codelineno-41-16"></a>if (a ==  0) b = 2; else &lt;var&gt; = &lt;expr&gt;; -&gt; 
+</span><span id="__span-41-17"><a id="__codelineno-41-17" name="__codelineno-41-17" href="#__codelineno-41-17"></a>if (a ==  0) b = 2; else c = &lt;expr&gt;; -&gt; 
+</span><span id="__span-41-18"><a id="__codelineno-41-18" name="__codelineno-41-18" href="#__codelineno-41-18"></a>if (a ==  0) b = 2; else c = &lt;expr&gt; + &lt;expr&gt;; -&gt; 
+</span><span id="__span-41-19"><a id="__codelineno-41-19" name="__codelineno-41-19" href="#__codelineno-41-19"></a>if (a ==  0) b = 2; else c = &lt;var&gt; + &lt;expr&gt;; -&gt; 
+</span><span id="__span-41-20"><a id="__codelineno-41-20" name="__codelineno-41-20" href="#__codelineno-41-20"></a>if (a ==  0) b = 2; else c = a + &lt;expr&gt;; -&gt; 
+</span><span id="__span-41-21"><a id="__codelineno-41-21" name="__codelineno-41-21" href="#__codelineno-41-21"></a>if (a ==  0) b = 2; else c = a + &lt;const&gt;; -&gt; 
+</span><span id="__span-41-22"><a id="__codelineno-41-22" name="__codelineno-41-22" href="#__codelineno-41-22"></a>if (a ==  0) b = 2; else c = a + 1;
+</span></code></pre></div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Γκόγκος Χρήστος &copy 2025
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": "-navigation.tabs -content.code.copy", "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

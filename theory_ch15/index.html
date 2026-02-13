@@ -1,0 +1,1518 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../theory_ch14/">
+      
+      
+        <link rel="next" href="../theory_ch16/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>15. Γλώσσες συναρτησιακού προγραμματισμού - ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#15" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ" class="md-header__button md-logo" aria-label="ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              15. Γλώσσες συναρτησιακού προγραμματισμού
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Σχετικά με το μάθημα
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../theory/" class="md-tabs__link">
+          
+  
+  
+  Θεωρία
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lab/" class="md-tabs__link">
+          
+  
+  
+  Εργαστήριο
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lab-python/" class="md-tabs__link">
+          
+  
+  
+  Python
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lab-haskell/" class="md-tabs__link">
+          
+  
+  
+  Haskell
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lab-prolog/" class="md-tabs__link">
+          
+  
+  
+  Prolog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ" class="md-nav__button md-logo" aria-label="ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Σχετικά με το μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Θεωρία
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Θεωρία
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ύλη
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Εργαστήριο
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Εργαστήριο
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Εργαστηριακό τμήμα μαθήματος
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Haskell
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Haskell
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-haskell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab haskell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prolog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prolog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-prolog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab prolog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#151" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.1 Εισαγωγή
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#152" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2 Μαθηματικές συναρτήσεις
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15.2 Μαθηματικές συναρτήσεις">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1521" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2.1 Απλές συναρτήσεις
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1522" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.2.2 Συναρτησιακές μορφές
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#153" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.3 Βασικά στοιχεία των γλωσσών συναρτησιακού προγραμματισμού
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#154-lisp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.4 Η πρώτη συναρτησιακή γλώσσα προγραμματισμού: Lisp
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15.4 Η πρώτη συναρτησιακή γλώσσα προγραμματισμού: Lisp">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1541" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.4.1 Τύποι και δομές δεδομένων
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1542-lisp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.4.2 Ο πρώτος διερμηνευτής της Lisp
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#155-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5 Scheme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15.5 Scheme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1551-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5.1 Η προέλευση της Scheme
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1552-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5.2 Ο διερμηνευτής της Scheme
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1553" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5.3 Βασικές αριθμητικές συναρτήσεις
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1554" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5.4 Ορισμός συναρτήσεων
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1555" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5.5 Συναρτήσεις εξόδου
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1556" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5.6 Αριθμητικές συναρτήσεις κατηγορημάτων
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1557" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5.7 Ροή ελέγχου
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1558" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5.8 Συναρτήσεις λιστών
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1559" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5.9 Συναρτήσεις κατηγορημάτων για συμβολικά άτομα και λίστες
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15510-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5.10 Παράδειγμα συναρτήσεων Scheme
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15511-let" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5.11 LET
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15512-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5.12 Αναδρομή ουράς στη Scheme
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15.5.12 Αναδρομή ουράς στη Scheme">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#15513" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5.13 Συναρτησιακές μορφές
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#155131" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5.13.1 Συναρτησιακή σύνθεση
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#155132-apply-to-all" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5.13.2 Η συναρτησιακή μορφή apply-to-all
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15514" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.5.14 Συναρτήσεις που κατασκευάζουν κώδικα
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#156-common-lisp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.6 Common Lisp
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#157-ml" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.7 ML
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#158-haskell" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.8 Haskell
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#159-f" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.9 F#
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1510" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.10 Υποστήριξη συναρτησιακού προγραμματισμού σε κυρίως προστακτικές γλώσσες
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1511" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15.11 Σύγκριση συναρτησιακών και προστακτικών γλωσσών
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="15">15. Γλώσσες συναρτησιακού προγραμματισμού</h1>
+<ul>
+<li>Οι γλώσσες συναρτησιακού προγραμματισμού στηρίζονται σε βασικές ιδέες των μαθηματικών συναρτήσεων.</li>
+<li>Γλώσσες συναρτησιακού προγραμματισμού: Lisp, Scheme, Racket, ML, OCaml, Haskell, F#.</li>
+<li>Υποστήριξη για συναρτησιακό προγραμματισμό από προστακτικές γλώσσες.</li>
+<li>Εφαρμογές γλωσσών συναρτησιακού προγραμματισμού.</li>
+</ul>
+<h2 id="151">15.1 Εισαγωγή</h2>
+<p>Το προστακτικό στυλ προγραμματισμού παρουσιάζει μεγάλη εξάρτηση από την επικρατούσα αρχιτεκτονική των Η/Υ.</p>
+<p>Τα προγράμματα που γράφονται σε προστακτικές γλώσσες διατηρούν μια κατάσταση (οι τιμές των μεταβλητών του προγράμματος) η οποία αλλάζει καθώς εκτελείται το πρόγραμμα. Ο προγραμματιστής πρέπει να κατανοεί το πως μεταβάλλεται η κατάσταση του προγράμματος κατά την εκτέλεση, κάτι το οποίο δεν είναι καθόλου εύκολο για μεγάλα προγράμματα.</p>
+<p>Τα προγράμματα σε συναρτησιακές γλώσσες δεν έχουν μεταβλητές και δεν υπάρχει η έννοια της κατάστασης του προγράμματος όπως στα προγράμματα των προστακτικών γλωσσών.</p>
+<h2 id="152">15.2 Μαθηματικές συναρτήσεις</h2>
+<p>Μια μαθηματική συνάρτηση είναι μια αντιστοίχιση των μελών ενός συνόλου (του πεδίου ορισμού) σε ένα άλλο σύνολο (το πεδίο τιμών).</p>
+<p>Σε μια μαθηματική συνάρτηση η σειρά αποτίμησης των εκφράσεων αντιστοίχισης προσδιορίζεται από εκφράσεις αναδρομής και συνθήκης και όχι από επαναληπτική εκτέλεση εντολών όπως συνηθίζεται στις προστακτικές γλώσσες.</p>
+<p>Οι μαθηματικές συναρτήσεις δεν έχουν παράπλευρες συνέπειες (side-effects).</p>
+<h3 id="1521">15.2.1 Απλές συναρτήσεις</h3>
+<p>Ο συμβολισμός εκφράσεων λάμδα διατυπώθηκε από τον A. Church το 1941 και αποτελεί έναν τρόπο ορισμού συναρτήσεων χωρίς ονόματα. Μια έκφραση λάμδα καθορίζει τις παραμέτρους και την αντιστοίχιση μιας συνάρτησης. Ο Church όρισε τον <strong>λογισμό λάμδα</strong> που αποτελεί ένα επίσημο μοντέλο υπολογισμών που χρησιμοποιεί εκφράσεις λάμδα. Η συναρτησιακές γλώσσες προγραμματισμού βασίζονται στον λογισμό λάμδα.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>λ(x) x*x*x
+</span></code></pre></div>
+<p>Πριν την αποτίμησή της μια παράμετρος αναπαριστά οποιοδήποτε μέλος του πεδίου ορισμού, αλλά κατά τη διάρκεια της αποτίμησης δεσμεύεται σε ένα συγκεκριμένο μέλος του πεδίου ορισμού.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>(λ(x) x*x*x)(2)
+</span></code></pre></div>
+<h3 id="1522">15.2.2 Συναρτησιακές μορφές</h3>
+<p>Μια συναρτησιακή μορφή ή συνάρτηση υψηλής τάξης (high-order function) είναι μια συνάρτηση που παίρνει μια ή περισσότερες συναρτήσεις ως παραμέτρους, ή επιστρέφει μια συνάρτηση ως αποτέλεσμα ή και τα δύο.</p>
+<p>Παραδείγματα συναρτησιακών μορφών</p>
+<ul>
+<li>Σύνθεση συναρτήσεων (composition)</li>
+<li>Εφαρμογή σε όλα (apply-to-all)</li>
+</ul>
+<h2 id="153">15.3 Βασικά στοιχεία των γλωσσών συναρτησιακού προγραμματισμού</h2>
+<p>Μια αμιγής συναρτησιακή γλώσσα δεν έχει μεταβλητές και προτάσεις εκχώρησης όπως οι προστακτικές γλώσσες. Συνεπώς, δεν υποστηρίζει δομές επανάληψης καθώς ο έλεγχός τους θα χρειαζόταν μεταβλητές. Η δε επανάληψη επιτυγχάνεται μέσω αναδρομής. </p>
+<p>Η εκτέλεση μιας συνάρτησης με τις ίδιες παραμέτρους παράγει το ίδιο αποτέλεσμα (αναφορική διαφάνεια = referential transparency). Συνεπώς ο έλεγχος της ορθότητας συναρτήσεων μπορεί να γίνεται χωριστά για κάθε συνάρτηση.</p>
+<p>Μια συναρτησιακή γλώσσα παρέχει ένα σύνολο από βασικές συναρτήσεις, ένα σύνολο από συναρτησιακές μορφές για σύνθεση συναρτήσεων, μια πράξη εφαρμογής συναρτήσεων και κάποιες δομές για την αναπαράσταση παραμέτρων και  αποτελεσμάτων των συναρτήσεων.</p>
+<h2 id="154-lisp">15.4 Η πρώτη συναρτησιακή γλώσσα προγραμματισμού: Lisp</h2>
+<p>John McCarthy 1959</p>
+<p>Οι σύγχρονες διάλεκτοι της Lisp περιλαμβάνουν χαρακτηριστικά προστακτικών γλωσσών, όπως μεταβλητές προστακτικού τύπου, προτάσεις εκχώρησης και επανάληψη. </p>
+<h3 id="1541">15.4.1 Τύποι και δομές δεδομένων</h3>
+<p>Δύο βασικές κατηγορίες αντικειμένων δεδομένων στη Lisp είναι τα άτομα και οι λίστες.</p>
+<ul>
+<li>Τα άτομα είναι είτε σύμβολα είτε αριθμητικές τιμές.</li>
+<li>Οι λίστες οριοθετούν τα στοιχεία τους με παρενθέσεις, ενώ ένα στοιχείο μιας λίστας μπορεί να είναι το ίδιο λίστα. Η λίστες συνήθως υλοποιούνται ως συνδεδεμένες λίστες και κάθε κόμβος έχει δύο δύο δείκτες, έναν για αναφορές στα δεδομένα του κόμβου και ένα που δείχνει προς το επόμενο στοιχείο της λίστας ή για το τελευταίο στοιχείο της λίστας στην τιμή nil.</li>
+</ul>
+<p>Παραδείγματα λιστών</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>(A B C D)
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>(A (B C) D (E (F G)))
+</span></code></pre></div>
+<h3 id="1542-lisp">15.4.2 Ο πρώτος διερμηνευτής της Lisp</h3>
+<p>Η κλήση συνάρτησης γίνεται ως εξής:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>(όνομα_συνάρτησης παράμετρος1 παράμετρος2 ... παράμετροςn)
+</span></code></pre></div>
+<p>S-εκφράσεις</p>
+<p>EVAL: καθολική συνάρτηση αποτίμησης όλων των συναρτήσεων. Τα προγράμματα ερμηνεύονται από την καθολική συνάρτηση EVAL.</p>
+<h2 id="155-scheme">15.5 Scheme</h2>
+<p>Lisp -&gt; Scheme -&gt; Racket</p>
+<h3 id="1551-scheme">15.5.1 Η προέλευση της Scheme</h3>
+<p>Η γλώσσα Scheme είναι διάλεκτος της Lisp. Είναι μια μικρή γλώσσα, χωρίς τύπους, με απλό συντακτικό και σημασιολογία. Η Scheme σχεδιάστηκε με σκοπό τη διδασκαλία. Η Scheme έχει στατική εμβέλεια.</p>
+<h3 id="1552-scheme">15.5.2 Ο διερμηνευτής της Scheme</h3>
+<p>H Scheme διαθέτει REPL (Read Evaluate Print Loop).</p>
+<h3 id="1553">15.5.3 Βασικές αριθμητικές συναρτήσεις</h3>
+<h3 id="1554">15.5.4 Ορισμός συναρτήσεων</h3>
+<p>Ένα πρόγραμμα Scheme είναι μια συλλογή από ορισμούς συναρτήσεων. </p>
+<p>Μια ανώνυμη συνάρτηση περιλαμβάνει τη λέξη lambda και ονομάζεται έκφραση lambda.</p>
+<h3 id="1555">15.5.5 Συναρτήσεις εξόδου</h3>
+<h3 id="1556">15.5.6 Αριθμητικές συναρτήσεις κατηγορημάτων</h3>
+<p>Κατηγορηματική συνάρτηση είναι μια συνάρτηση που επιστρέφει μια λογική τιμή. Οι προκαθορισμένες κατηγορηματικές συναρτήσεις έχουν ονόματα που τελειώνουν με αγγλικό ερωτηματικό.</p>
+<h3 id="1557">15.5.7 Ροή ελέγχου</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>(if predicate then_expression else_expression)
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>(cond cond-clause ...)
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>cond-clause     =       [test-expr then-body ...+]
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>        |       [else then-body ...+]
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        |       [test-expr =&gt; proc-expr]
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        |       [test-expr]
+</span></code></pre></div>
+<h3 id="1558">15.5.8 Συναρτήσεις λιστών</h3>
+<p>Τα δεδομένα και ο κώδικας έχουν την ίδια μορφή. </p>
+<p><strong>Συνάρτηση QUOTE</strong></p>
+<p>Επιστρέφει την παράμετρο χωρίς μεταβολή.</p>
+<p><strong>Συνάρτηση CAR</strong></p>
+<p>Επιστρέφει την κεφαλή της λίστας.</p>
+<p><strong>Συνάρτηση CDR</strong> </p>
+<p>Επιστρέφει την ουρά της λίστας.</p>
+<p><strong>Συνάρτηση CONS</strong> </p>
+<p>Κατασκευάζει μια νέα λίστα από δύο ξεχωριστά τμήματα λίστας.</p>
+<p><strong>Συνάρτηση LIST</strong></p>
+<p>Κατασκευάζει μια λίστα από μεταβλητό αριθμό παραμέτρων.</p>
+<h3 id="1559">15.5.9 Συναρτήσεις κατηγορημάτων για συμβολικά άτομα και λίστες</h3>
+<p>Διατίθενται 3 βασικές συναρτήσεις κατηγορημάτων για συμβολικά άτομα και λίστες.</p>
+<ul>
+<li>EQ?  πραγματοποιεί σύγκριση δεικτών</li>
+<li>EQV? πραγματοποιεί σύγκριση τιμών</li>
+<li>NULL? επιστρέφει #Τ αν το όρισμά της είναι κενό</li>
+<li>LIST? επιστρέφει #Τ αν το όρισμά της είναι λίστα</li>
+</ul>
+<p>To EQ? λειτουργεί σωστά για συμβολικά άτομα αλλά όχι απαραίτητα για αριθμητικά άτομα. Για τα αριθμητικά άτομα μπορεί να χρησιμοποιηθεί το κατηγόρημα =. </p>
+<h3 id="15510-scheme">15.5.10 Παράδειγμα συναρτήσεων Scheme</h3>
+<p>Παραδείγματα επεξεργασίας λιστών</p>
+<p><strong>Παράδειγμα 1</strong></p>
+<p>Επίλυση προβλήματος ιδιότητας μέλους ενός δεδομένου ατόμου σε μια δεδομένη λίστα που δεν περιλαμβάνει υπολίστες (απλή λίστα).</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>(define (my_member atm a_list)
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>    (cond
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>        ((null? a_list) #f)
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        ((eq? atm (car a_list)) #t)
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        (else (my_member atm (cdr a_list)))
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>))
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&gt; (my_member &#39;a &#39;(a b c))
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>#true
+</span></code></pre></div>
+<p><strong>Παράδειγμα 2</strong></p>
+<p>Διαπίστωση του εάν δύο δεδομένες απλές λίστες είναι ίσες.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>(define (equalsimp list1 list2)
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>    (cond
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>        ((null? list1) (null? list2))
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>        ((null? list2) #f)
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        ((eq? (car list1) (car list2))
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>            (equalsimp (cdr list1) (cdr list2)))
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>        (else #f)
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>    )
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>)
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>&gt; (equalsimp &#39;(a b) &#39;(a b))
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>#true
+</span></code></pre></div>
+<p><strong>Παράδειγμα 3</strong></p>
+<p>Κατασκευή μιας νέας λίστας που περιέχει όλα τα στοιχεία δύο δεδομένων ορισμάτων λιστών.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>(define (my_append list1 list2)
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>    (cond 
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>        ((null? list1) list2)
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>        (else (cons (car list1) (my_append (cdr list1) list2)))
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    )
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>)
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>&gt; (my_append &#39;(a b) &#39;(c d e))
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>(list &#39;a &#39;b &#39;c &#39;d &#39;e)
+</span></code></pre></div>
+<h3 id="15511-let">15.5.11 LET</h3>
+<p>Η LET είναι μια συνάρτηση που δημιουργεί μια τοπική εμβέλεια στην οποία τα ονόματα φράσσονται προσωρινά σε τιμές εκφράσεων.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a> #lang racket
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>(define (quadratic_roots a b c)
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    (let (
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>        (root_part_over_2a (/ (sqrt (- (* b b) (* 4 a c))) (* 2 a)))
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>        (minus_b_over_2a (/ (- 0 b) (* 2 a)))
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>    )
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    (list (+ minus_b_over_2a root_part_over_2a)
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>            (- minus_b_over_2a root_part_over_2a))
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>))
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>&gt; (quadratic_roots 2 5 3)
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>&#39;(-1 -1.5)
+</span></code></pre></div>
+<h3 id="15512-scheme">15.5.12 Αναδρομή ουράς στη Scheme</h3>
+<p>Μια συνάρτηση εκτελεί αναδρομή ουράς (tail recursion) αν η αναδρομική κλήση της είναι η τελευταία πράξη στη συνάρτηση. Αυτές οι συναρτήσεις μπορούν να μετατραπούν αυτόματα από έναν μεταγλωττιστή έτσι ώστε να μην χρησιμοποιείται αναδρομή, αλλά επανάληψη με αποτέλεσμα την ταχύτερη εκτέλεση τους.</p>
+<h4 id="15513">15.5.13 Συναρτησιακές μορφές</h4>
+<h4 id="155131">15.5.13.1 Συναρτησιακή σύνθεση</h4>
+<p>Η συναρτησιακή σύνθεση δέχεται δύο συναρτήσεις ως παραμέτρους και επιστρέφει μια συνάρτηση που εφαρμόζει πρώτα τη συνάρτηση της δεύτερης παραμέτρου στην παράμετρο της και κατόπιν τη συνάρτηση της πρώτης παραμέτρου στην τιμή επιστροφής της συνάρτησης της δεύτερης παραμέτρου. Δηλαδή, η συνάρτηση σύνθεσης των f και g είναι η h(x) = f(g(x))</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>(define (compose f g) (lambda (x) (f (g x))))
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>&gt; ((compose car cdr) &#39;((a b) c d))                                                                                      &#39;c 
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>&#39;c
+</span></code></pre></div>
+<h4 id="155132-apply-to-all">15.5.13.2 Η συναρτησιακή μορφή apply-to-all</h4>
+<p>H map είναι παραλλαγή της apply-to-all που δέχεται δύο παραμέτρους, μια συνάρτηση και μια λίστα.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>&gt; (map (lambda (num) (* num num num)) &#39;(3 4 2 6))                                                                       
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>&#39;(27 64 8 216)   
+</span></code></pre></div>
+<h4 id="15514">15.5.14 Συναρτήσεις που κατασκευάζουν κώδικα</h4>
+<p>Τα προγράμματα και τα δεδομένα έχουν την ίδια δομή. Ένα πρόγραμμα μπορεί να δημιουργεί εκφράσεις και να καλεί την EVAL για την αποτίμησή τους.</p>
+<h2 id="156-common-lisp">15.6 Common Lisp</h2>
+<p>H Common Lisp (1990) δημιουργήθηκε προκειμένου να συνδυαστούν τα χαρακτηριστικά πολλών διαλέκτων της Lisp (συμπεριλαμβανομένης της Scheme). Είναι αρκετά μεγάλη και πολύπλοκη ως γλώσσα. Υποστηρίζει στατική και δυναμική εμβέλεια. Ο στόχος της Common Lisp ήταν να χρησιμοποιηθεί ως γλώσσα προγραμματισμού εφαρμογών του εμπορίου.</p>
+<h2 id="157-ml">15.7 ML</h2>
+<h2 id="158-haskell">15.8 Haskell</h2>
+<p>Η Haskell είναι μια αμιγής συναρτησιακή γλώσσα. Οι εκφράσεις στην Haskell δεν έχουν  παράπλευρες συνέπειες.</p>
+<p>Συνάρτηση παραγοντικού (με αντιστοίχιση μοτίβων - pattern matching) 1η έκδοση</p>
+<div class="language-hs highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nf">fact</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="mi">1</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="nf">fact</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="mi">1</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="nf">fact</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fact</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span>
+</span></code></pre></div>
+<p>Συνάρτηση για υπολογισμό του νιοστού όρου fibonacci (0, 1, 1, 2, 3, 5, 8, 11, 19, ...)</p>
+<div class="language-hs highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nf">fib</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="mi">1</span>
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="nf">fib</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="mi">1</span>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="nf">fin</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">fib</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">fib</span><span class="w"> </span><span class="n">n</span>
+</span></code></pre></div>
+<p>Υπάρχει η δυνατότητα να προστεθούν φρουροί (guards) σε γραμμές του ορισμού μιας συνάρτησης, ώστε να προσδιορίζεται πότε μπορεί να εφαρμοστεί ο ορισμός.</p>
+<p>Συνάρτηση παραγοντικού - 2η έκδοση</p>
+<div class="language-hs highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nf">fact</span><span class="w"> </span><span class="n">n</span>
+</span><span id="__span-19-2"><a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="mi">1</span>
+</span><span id="__span-19-3"><a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="mi">1</span>
+</span><span id="__span-19-4"><a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">    </span><span class="o">|</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">fact</span><span class="w"> </span><span class="p">(</span><span class="n">n</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span>
+</span></code></pre></div>
+<p><strong>Λίστες</strong></p>
+<div class="language-hs highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nf">colors</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="p">[</span><span class="s">&quot;blue&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;green&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;red&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;yellow&quot;</span><span class="p">]</span>
+</span></code></pre></div>
+<p>Η Haskell διαθέτει διάφορους τελεστές λιστών όπως οι ακόλουθοι:
+* ++ για συνένωση λιστών
+* :  για ενθεματική εκδοχή του CONS
+* .. για αριθμητική ακολουθία σε λίστες</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>5:[2, 7, 9] δίνει [5, 2, 7, 9]
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>[1, 3..11] δίνει  [1, 3, 5, 7, 9, 11]
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>[1, 3, 5] ++ [2, 4, 6]  δίνει  [1, 3, 5, 2, 4, 6]
+</span></code></pre></div>
+Συνάρτηση υπολογισμού του γινομένου των στοιχείων μιας λίστας</p>
+<div class="language-hs highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nf">product</span><span class="w"> </span><span class="kt">[]</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="mi">1</span>
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="nf">product</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="kt">:</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="n">x</span>
+</span></code></pre></div>
+<p>Συνάρτησης παραγοντικού (με χρήση της product) - 3η έκδοση</p>
+<div class="language-hs highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nf">fact</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">product</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="n">n</span><span class="p">]</span>
+</span></code></pre></div>
+<p><strong>Η δομή let</strong></p>
+<div class="language-hs highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nf">quadratic_root</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="ow">=</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">    </span><span class="kr">let</span><span class="w"> </span><span class="n">minus_b_over_2a</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mf">2.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="p">)</span>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">        </span><span class="n">root_part_over_2a</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">b</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">4.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="mf">2.0</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">a</span><span class="p">)</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">    </span><span class="kr">in</span><span class="w"> </span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w">        </span><span class="n">minus_b_over_2a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">root_part_over_2a</span><span class="p">,</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="w">        </span><span class="n">minus_b_over_2a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">root_part_over_2a</span>
+</span></code></pre></div>
+<p><strong>Περιφραστικές λίστες (list comprehensions)</strong></p>
+<p>Λίστα όλων των n*n*n ώστε το n να βρίσκεται στο διάστημα 1 έως και 50.</p>
+<div class="language-hs highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="ow">&lt;-</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="mi">50</span><span class="p">]]</span>
+</span></code></pre></div>
+<p>Υπολογισμός των παραγόντων ενός αριθμού n.</p>
+<div class="language-hs highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nf">factors</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="ow">=</span><span class="w">  </span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="ow">&lt;-</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="o">..</span><span class="n">n</span><span class="w"> </span><span class="p">`</span><span class="n">div</span><span class="p">`</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="p">`</span><span class="n">mod</span><span class="p">`</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span>
+</span></code></pre></div>
+<p><strong>Υλοποίηση της quicksort στην Haskell</strong></p>
+<div class="language-hs highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nf">sort</span><span class="w"> </span><span class="kt">[]</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="kt">[]</span>
+</span><span id="__span-27-2"><a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="nf">sort</span><span class="w"> </span><span class="p">(</span><span class="n">h</span><span class="kt">:</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="n">sort</span><span class="w"> </span><span class="p">[</span><span class="n">b</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="ow">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="p">]</span>
+</span><span id="__span-27-3"><a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">             </span><span class="o">++</span><span class="w"> </span><span class="p">[</span><span class="n">h</span><span class="p">]</span><span class="w"> </span><span class="o">++</span>
+</span><span id="__span-27-4"><a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="w">             </span><span class="n">sort</span><span class="w"> </span><span class="p">[</span><span class="n">b</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="ow">&lt;-</span><span class="w"> </span><span class="n">t</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">h</span><span class="w"> </span><span class="p">]</span>
+</span></code></pre></div>
+<p><strong>Οκνηρή αποτίμηση (lazy evaluation)</strong></p>
+<p>Οι εκφράσεις αποτιμώνται μόνο όταν οι τιμές τους είναι απαραίτητες.</p>
+<p><strong>Ατέρμονες δομές δεδομένων</strong></p>
+<div class="language-hs highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nf">positives</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="o">..</span><span class="p">]</span>
+</span><span id="__span-28-2"><a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="nf">evens</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="o">..</span><span class="p">]</span>
+</span><span id="__span-28-3"><a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="nf">squares</span><span class="w"> </span><span class="ow">=</span><span class="w"> </span><span class="p">[</span><span class="n">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">n</span><span class="w"> </span><span class="ow">&lt;-</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="o">..</span><span class="p">]]</span>
+</span></code></pre></div>
+<h2 id="159-f">15.9 F#</h2>
+<h2 id="1510">15.10 Υποστήριξη συναρτησιακού προγραμματισμού σε κυρίως προστακτικές γλώσσες</h2>
+<p>Στοιχεία συναρτησιακού προγραμματισμού έχουν προστεθεί σε γλώσσες κυρίως προστακτικού προγραμματισμού. Ένα παράδειγμα είναι οι ανώνυμες συναρτήσεις που μοιάζουν με εκφράσεις λάμδα και συναντώνται στις C++, Java, Python, C#, JavaScript, Ruby.</p>
+<p><strong>JavaScript</strong></p>
+<p><strong>Java</strong></p>
+<p><strong>Python</strong></p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="k">lambda</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">:</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span>
+</span></code></pre></div>
+<p>H Python έχει τις συναρτήσεις υψηλής τάξης filter και map που χρησιμοποιούν ως πρώτη παράμετρο εκφράσεις λάμδα, ως δεύτερη παράμετρο έναν τύπο ακολουθίας (λίστα, πλειάδα ή συμβολοσειρά) και επιστρέφουν τον ίδιο τύπο ακολουθίας.</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nb">map</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
+</span></code></pre></div>
+<p>θα επιστρέψει</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>[8, 64, 216, 512]
+</span></code></pre></div>
+<p>Επιπλέον, η Python υποστηρίζει εφαρμογές μερικών συναρτήσεων (partial functions).</p>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">operator</span><span class="w"> </span><span class="kn">import</span> <span class="n">add</span>
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="n">add5</span> <span class="o">=</span> <span class="n">partial</span><span class="p">(</span><span class="n">add</span><span class="p">,</span><span class="mi">5</span><span class="p">)</span>
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="nb">print</span><span class="p">(</span><span class="n">add5</span><span class="p">(</span><span class="mi">15</span><span class="p">))</span>
+</span></code></pre></div>
+<p>θα εμφανίσει την τιμή 20.</p>
+<p><strong>C++</strong></p>
+<h2 id="1511">15.11 Σύγκριση συναρτησιακών και προστακτικών γλωσσών</h2>
+<ul>
+<li>Οι συναρτησιακές γλώσσες μπορούν να έχουν πιο απλή συντακτική δομή και απλούστερη σημασιολογία.</li>
+<li>Τα συναρτησιακά προγράμματα δεν έχουν παράπλευρες συνέπειες (side effects).</li>
+<li>Τα συναρτησιακά προγράμματα έχουν μικρότερο μέγεθος σε σχέση με τα αντίστοιχα προστακτικά προγράμματα.</li>
+<li>Τα προτασιακά προγράμματα είναι ταχύτερα από τα αντίστοιχα συναρτησιακά προγράμματα.</li>
+<li>Οι συναρτησιακές γλώσσες διευκολύνουν την ανάγνωση του κώδικα.</li>
+<li>Η ταυτόχρονη εκτέλεση στις προστακτικές γλώσσες παρουσιάζει διάφορες δυσκολίες. Λόγω της απουσίας παράπλευρων συνεπειών στον αμιγή συναρτησιακό προγραμματισμό καθίσταται ευκολότερη η ταυτόχρονη εκτέλεση συναρτήσεων.  </li>
+<li>Η πλειοψηφία των προγραμματιστών μαθαίνουν προγραμματισμό σε προστακτικές γλώσσες και κατά συνέπεια τα συναρτησιακά προγράμματα φαίνονται περίεργα και δυσνόητα.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Γκόγκος Χρήστος &copy 2025
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": "-navigation.tabs -content.code.copy", "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1466 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../theory_ch15/">
+      
+      
+        <link rel="next" href="../theory_ch2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>16. Γλώσσες λογικού προγραμματισμού - ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#16" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ" class="md-header__button md-logo" aria-label="ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              16. Γλώσσες λογικού προγραμματισμού
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Σχετικά με το μάθημα
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../theory/" class="md-tabs__link">
+          
+  
+  
+  Θεωρία
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lab/" class="md-tabs__link">
+          
+  
+  
+  Εργαστήριο
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lab-python/" class="md-tabs__link">
+          
+  
+  
+  Python
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lab-haskell/" class="md-tabs__link">
+          
+  
+  
+  Haskell
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lab-prolog/" class="md-tabs__link">
+          
+  
+  
+  Prolog
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ" class="md-nav__button md-logo" aria-label="ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ΑΡΧΕΣ ΓΛΩΣΣΩΝ ΠΡΟΓΡΑΜΜΑΤΙΣΜΟΥ
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Σχετικά με το μάθημα
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Θεωρία
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Θεωρία
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../theory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ύλη
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Εργαστήριο
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Εργαστήριο
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Εργαστηριακό τμήμα μαθήματος
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-python/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab python
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Haskell
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Haskell
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-haskell/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab haskell
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Prolog
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Prolog
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lab-prolog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Lab prolog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#161" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.1 Εισαγωγή
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#162" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.2 Μια σύντομη εισαγωγή στον κατηγορηματικό λογισμό
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16.2 Μια σύντομη εισαγωγή στον κατηγορηματικό λογισμό">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1621-propositions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.2.1 Προτάσεις (propositions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1622-clausal-form" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.2.2 Προτασιακή μορφή (clausal form)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#163" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.3 Κατηγορηματικός Λογισμός και απόδειξη θεωρημάτων
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#164" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.4 Επισκόπηση του λογικού προγραμματισμού
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#165-prolog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.5 Η γέννηση της Prolog
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#166-prolog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.6 Τα βασικά στοιχεία της Prolog
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16.6 Τα βασικά στοιχεία της Prolog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1661" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.6.1 Όροι
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1662" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.6.2 Προτάσεις γεγονότων
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1663" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.6.3 Προτάσεις κανόνων
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1664" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.6.4 Προτάσεις τελικής κατάστασης
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1665-prolog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.6.5 Η εξαγωγή συμπεράσματος στην Prolog
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1666" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.6.6 Απλή αριθμητική
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1667" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.6.7 Δομές λιστών
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#167-prolog" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.7 Ελλείψεις της Prolog
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16.7 Ελλείψεις της Prolog">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1671" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.7.1 Έλεγχος σειράς ανάλυσης
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1672" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.7.2 Υπόθεση κλειστού κόσμου
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1673" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.7.3 Το πρόβλημα της άρνησης
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1674" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.7.4 Εγγενείς περιορισμοί
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#168" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.8 Εφαρμογές λογικού προγραμματισμού
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16.8 Εφαρμογές λογικού προγραμματισμού">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1681" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.8.1 Συστήματα διαχείρισης σχεσιακών βάσεων δεδομένων
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1682" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.8.2 Έμπειρα συστήματα
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1683" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16.8.3 Επεξεργασία φυσικής γλώσσας
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="16">16. Γλώσσες λογικού προγραμματισμού</h1>
+<ul>
+<li>Λογικός προγραμματισμός</li>
+<li>Γλώσσες λογικού προγραμματισμού (Prolog)</li>
+<li>Κατηγορηματικός λογισμός</li>
+<li>Επισκόπηση της Prolog (αριθμητική, λίστες, αποσφαλμάτωση προγραμμάτων, τομείς εφαρμογών)</li>
+</ul>
+<p>Η συμβολική λογική αποτελεί τη βάση για το λογικό προγραμματισμό και τις γλώσσες λογικού προγραμματισμού.</p>
+<p>Στόχος του λογικού προγραμματισμού είναι ο προγραμματισμός να μην είναι διαδικαστικός, δηλαδή να μην απαιτείται η αναλυτική περιγραφή των ενεργειών που οδηγούν στη λύση του προβλήματος.</p>
+<h2 id="161">16.1 Εισαγωγή</h2>
+<p>Τα προγράμματα εκφράζονται σε μια μορφή συμβολικής λογικής και χρησιμοποιείται μια λογική διεργασία εξαγωγής συμπερασμάτων για την παραγωγή αποτελεσμάτων.</p>
+<p>Τα λογικά προγράμματα είναι <strong>δηλωτικά και όχι διαδικαστικά</strong>, δηλαδή δεν περιγράφονται αναλυτικές διαδικασίες επίλυσης από τον προγραμματιστή. Αντίθετα, χρησιμοποιούνται δηλώσεις γεγονότων και κανόνων. </p>
+<p>Τα προγράμματα σε γλώσσες λογικού προγραμματισμού είναι συλλογές δεδομένων και κανόνων. Ο χρήστης θέτει ερωτήματα, τα οποία απαντώνται χρησιμοποιώντας τα δεδομένα και τους κανόνες.</p>
+<p>Το συντακτικό των λογικών γλωσσών είναι πολύ διαφορετικό από τις άλλες γλώσσες προγραμματισμού.</p>
+<h2 id="162">16.2 Μια σύντομη εισαγωγή στον κατηγορηματικό λογισμό</h2>
+<p>Η βάση του λογικού προγραμματισμού είναι <strong>η τυπική λογική</strong> που έχει στενή σχέση με τα μαθηματικά.</p>
+<p>Μια πρόταση είναι μια λογική δήλωση που μπορεί να είναι αληθής ή όχι και αποτελείται από αντικείμενα και σχέσεις μεταξύ αντικειμένων.</p>
+<p>Η συμβολική λογική μπορεί να χρησιμοποιηθεί για:</p>
+<ul>
+<li>Έκφραση προτάσεων</li>
+<li>Έκφραση σχέσεων μεταξύ προτάσεων</li>
+<li>Εξαγωγή νέων προτάσεων από αληθείς προτάσεις</li>
+</ul>
+<p>Ο κατηγορηματικός λογισμός πρώτης τάξης είναι η μορφή συμβολικής λογικής που χρησιμοποιείται στο λογικό προγραμματισμό.</p>
+<h3 id="1621-propositions">16.2.1 Προτάσεις (propositions)</h3>
+<ul>
+<li>Οι απλοί όροι είναι οι σταθερές και οι μεταβλητές.</li>
+<li>Μια σταθερά είναι ένα σύμβολο που αναπαριστά ένα αντικείμενο.</li>
+<li>Μια μεταβλητή είναι ένα σύμβολο που μπορεί να αναπαριστά διαφορετικά αντικείμενα σε διαφορετικές χρονικές στιγμές.</li>
+<li>Ένας σύνθετος όρος αποτελείται από έναν συναρτητή (functor) και μια διατεταγμένη λίστα παραμέτρων.</li>
+</ul>
+<p>Παραδείγματα σύνθετων όρων.</p>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>man(jake)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>like(bob, steak)
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>man(fred)
+</span></code></pre></div>
+που μπορεί να σημαίνουν ότι ο Jake είναι άνδρας, ότι στον bob αρέσει το steak, και ότι o fred είναι άνδρας.</p>
+<p>Οι προτάσεις μπορούν να περιέχουν σύνθετους όρους που συνδέονται με  λογικούς τελεστές (άρνηση, σύζευξη, διάζευξη, ισοδυναμία και συνεπαγωγή) και μπορούν να περιέχουν μεταβλητές και ποσοδείκτες (καθολικό και υπαρξιακό).</p>
+<h3 id="1622-clausal-form">16.2.2 Προτασιακή μορφή (clausal form)</h3>
+<p>Με τον κατηγορηματικό λογισμό υπάρχουν πολλοί τρόποι με τους οποίους μπορεί να διατυπωθεί το ίδιο νόημα. Για να μπορεί να χρησιμοποιηθεί σε ένα αυτόματο σύστημα χρησιμοποιείται μια τυποποιημένη μορφή που ονομάζεται προτασιακή μορφή και η οποία είναι σε θέση να εκφράσει όλες τις προτάσεις που εκφράζονται με τον κατηγορηματικό λογισμό.</p>
+<p>Μια πρόταση σε προτασιακή μορφή έχει την ακόλουθη γενική μορφή </p>
+<p><img src="https://latex.codecogs.com/svg.image?B_1&space;\cup&space;B_2&space;\cup&space;...&space;\cup&space;B_n&space;\subset&space;A_1&space;\cap&space;A_2&space;\cap&space;...&space;\cap&space;A_n" title="B_1 \cup B_2 \cup ... \cup B_n \subset A_1 \cap A_2 \cap ... \cap A_n" /></p>
+<p>και σημαίνει ότι αν όλα τα Α είναι αληθή τότε τουλάχιστον ένα από τα Β θα είναι αληθές.</p>
+<p>Ένα παράδειγμα:</p>
+<p><img src="https://latex.codecogs.com/svg.image?father(louis,&space;al)&space;\cup&space;father(louis,&space;violet)&space;\subset&space;father(al,&space;bob)&space;\cap&space;mother(violet,&space;bob)&space;\cap&space;grandfather(louis,&space;bob)&space;" title="father(louis, al) \cup father(louis, violet) \subset father(al, bob) \cap mother(violet, bob) \cap grandfather(louis, bob) " /></p>
+<p>που σημαίνει ότι αν ο Al είναι πατέρας του Bob και η Violet μητέρα του Bob και ο Louis παππούς του Bob τότε ο Louis είναι είτε πατέρας του Al είτε πατέρας της Violet.</p>
+<h2 id="163">16.3 Κατηγορηματικός Λογισμός και απόδειξη θεωρημάτων</h2>
+<p>Ανάλυση (Robinson 1965).</p>
+<p>Προτάσεις Horn. Προτασιακή μορφή με επιπλέον περιορισμούς  που καθιστά την ανάλυση υπολογιστικά αποδοτική.</p>
+<h2 id="164">16.4 Επισκόπηση του λογικού προγραμματισμού</h2>
+<p>Δηλωτική σημασιολογία: Υπάρχει ένας τρόπος προσδιορισμού του νοήματος κάθε πρότασης και δεν εξαρτάται από το πως μπορεί να χρησιμοποιηθεί η πρόταση για την επίλυση ενός προβλήματος (απλούστερη από τη σημασιολογία των προτάσεων των προστακτικών γλωσσών). </p>
+<h2 id="165-prolog">16.5 Η γέννηση της Prolog</h2>
+<p><a href="https://www.mta.ca/~rrosebru/oldcourse/371199/prolog/history.html">Alen Coleraurer, Phillippe Roussel, Robert Kowalski (1972)</a></p>
+<h2 id="166-prolog">16.6 Τα βασικά στοιχεία της Prolog</h2>
+<p>Υπάρχουν πολλοί διάλεκτοι της Prolog. Η πλέον διαδεδομένη είναι η διάλεκτος του Εδιμβούργου.</p>
+<h3 id="1661">16.6.1 Όροι</h3>
+<p>Ένας όρος στην Prolog είναι μια σταθερά, μια μεταβλητή ή μια δομή.</p>
+<p>Οι μεταβλητές μπορούν να είναι bounded ή unbounded.</p>
+<p>Τα γεγονότα ορίζονται μέσω των δομών.</p>
+<p>Οι προτάσεις της Prolog είναι γεγονότα, κανόνες και τελικές καταστάσεις.</p>
+<h3 id="1662">16.6.2 Προτάσεις γεγονότων</h3>
+<p>Δύο είδη προτάσεων:</p>
+<ul>
+<li>Ακέφαλες προτάσεις Horn (αντιστοιχούν σε γεγονότα)</li>
+<li>Προτάσεις Horn με κεφαλή (αντιστοιχούν σε κανόνες)</li>
+</ul>
+<h3 id="1663">16.6.3 Προτάσεις κανόνων</h3>
+<p>Σε έναν κανόνα το δεξιό μέρος είναι το προηγούμενο (το if) και το αριστερό μέρος είναι το επόμενο (το then).</p>
+<h3 id="1664">16.6.4 Προτάσεις τελικής κατάστασης</h3>
+<p>Οι προτάσεις τελικής κατάστασης, μένει να αποδειχθεί ότι ισχύουν ή ότι δεν ισχύουν, και είναι όμοιες εμφανισιακά με τις προτάσεις γεγονότα.</p>
+<h3 id="1665-prolog">16.6.5 Η εξαγωγή συμπεράσματος στην Prolog</h3>
+<p>Η Prolog χρησιμοποιεί <strong>αντίστροφη αλυσίδωση (backward chaining)</strong>, δηλαδή ξεκινά από το ζητούμενο (την τελική κατάσταση) και επιχειρεί να εντοπίσει μια σειρά αντιστοιχήσεων που οδηγεί σε υπάρχοντα γεγονότα. Η αντίστροφη αλυσίδωση λειτουργεί καλύτερα όταν αναμένεται ένα σχετικά μικρό σύνολο απαντήσεων.</p>
+<p>Η Prolog χρησιμοποιεί <strong>αναζήτηση πρώτα κατά βάθος</strong> (εντοπίζει μια πλήρη απόδειξη για την πρώτη δευτερεύουσα τελική κατάσταση πριν προχωρήσει στην επόμενη) καθώς έχει μικρότερες απαιτήσεις μνήμης.</p>
+<p>Οπισθοδρόμηση (backtracking) είναι η επιστροφή σε κάποιο σημείο στο οποίο είχε ανατεθεί μια τιμή σε μια μεταβλητή και η δοκιμή μιας άλλης εναλλακτικής τιμής.</p>
+<p>Πρόβλημα με την οπισθοδρόμηση</p>
+<p>Η απάντηση για το ακόλουθο ερώτημα: </p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>?- male(X), parent(X, shelley).
+</span></code></pre></div>
+<p>μπορεί να καθυστερεί περισσότερο από την απάντηση για το επόμενο ερώτημα:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>?- parent(X, shelley), male(X).
+</span></code></pre></div>
+<h3 id="1666">16.6.6 Απλή αριθμητική</h3>
+<p>Οι αριθμητικές πράξεις εκτελούνται με τον τελεστή is.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>?- B = 34, C=2, A is B/17 + C.
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>B = 34,
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>C = 2,
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>A = 4.
+</span></code></pre></div>
+<p>Ο τελεστής is έχει διαφορετική σημασιολογία από τον τελεστή εκχώρησης των προστακτικών γλωσσών.</p>
+<p>Η πρόταση <strong>Sum is Sum + 1</strong> δεν έχει νόημα στην Prolog:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>?- Sum is Sum + 1.
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>ERROR: Arguments are not sufficiently instantiated
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>ERROR: In:
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>ERROR:   [10] _11678 is _11684+1
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>ERROR:    [9] &lt;user&gt;
+</span></code></pre></div></p>
+<p>Παράδειγμα με αριθμητικές πράξεις:
+<div class="language-prolog highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">speed.pl</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span>
+<span class="normal"><a href="#__codelineno-5-14">14</a></span>
+<span class="normal"><a href="#__codelineno-5-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="c1">% Παράδειγμα από το βιβλίο: Αρχές Γλωσσών Προγραμματισμού, Sebesta, έκδοση 11η, εκδόσεις Γκιούρδας </span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="c1">% Κεφάλαιο 16, σελίδα 706</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="c1">% Διαφάνεια 31 από το πακέτο διαφανειών του βιβλίου </span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="nf">speed</span><span class="p">(</span><span class="s s-Atom">ford</span><span class="p">,</span> <span class="mi">100</span><span class="p">).</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6"></a><span class="nf">speed</span><span class="p">(</span><span class="s s-Atom">chevy</span><span class="p">,</span> <span class="mi">105</span><span class="p">).</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="nf">speed</span><span class="p">(</span><span class="s s-Atom">dodge</span><span class="p">,</span> <span class="mi">95</span><span class="p">).</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="nf">speed</span><span class="p">(</span><span class="s s-Atom">volvo</span><span class="p">,</span> <span class="mi">80</span><span class="p">).</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9"></a><span class="nf">time</span><span class="p">(</span><span class="s s-Atom">ford</span><span class="p">,</span> <span class="mi">20</span><span class="p">).</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="nf">time</span><span class="p">(</span><span class="s s-Atom">chevy</span><span class="p">,</span> <span class="mi">21</span><span class="p">).</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="nf">time</span><span class="p">(</span><span class="s s-Atom">dodge</span><span class="p">,</span> <span class="mi">24</span><span class="p">).</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="nf">time</span><span class="p">(</span><span class="s s-Atom">volvo</span><span class="p">,</span> <span class="mi">24</span><span class="p">).</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="nf">distance</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">speed</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Speed</span><span class="p">),</span>
+</span><span id="__span-5-14"><a id="__codelineno-5-14" name="__codelineno-5-14"></a>    <span class="nf">time</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Time</span><span class="p">),</span>
+</span><span id="__span-5-15"><a id="__codelineno-5-15" name="__codelineno-5-15"></a>    <span class="nv">Y</span> <span class="o">is</span> <span class="nv">Speed</span> <span class="o">*</span> <span class="nv">Time</span><span class="p">.</span>
+</span></code></pre></div></td></tr></table></div></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>$ swipl -l speed.pl
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>?- distance(chevy, Chevy_Distance).
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Chevy_Distance = 2205.
+</span></code></pre></div>
+<h3 id="1667">16.6.7 Δομές λιστών</h3>
+<p>Οι λίστες είναι σειρές στοιχείων που μπορεί να είναι ατομικοί όροι, ατομικές προτάσεις ή λίστες.</p>
+<p>Η κενή λίστα συμβολίζεται ως <code>[]</code></p>
+<p>Ο συμβολισμός <code>[Χ|Υ]</code> υποδηλώνει μια λίστα με κεφαλή το στοιχείο <code>X</code> και ουρά τη λίστα <code>Υ</code>.</p>
+<p>Μερικά βασικά κατηγορήματα για λίστες:</p>
+<ul>
+<li><code>append/3</code></li>
+<li><code>reverse/2</code></li>
+<li><code>member/2</code></li>
+</ul>
+<p>Μια υλοποίηση της <code>append</code> (η <code>append</code> υπάρχει υλοποιημένη στην Prolog):</p>
+<div class="language-prolog highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">my_append.pl</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="nf">my_append</span><span class="p">([],</span> <span class="nv">List</span><span class="p">,</span> <span class="nv">List</span><span class="p">).</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="nf">my_append</span><span class="p">([</span><span class="nv">Head</span> <span class="p">|</span> <span class="nv">List_1</span><span class="p">],</span> <span class="nv">List_2</span><span class="p">,</span> <span class="p">[</span><span class="nv">Head</span> <span class="p">|</span> <span class="nv">List_3</span><span class="p">])</span> <span class="p">:-</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3"></a>            <span class="nf">my_append</span><span class="p">(</span><span class="nv">List_1</span><span class="p">,</span> <span class="nv">List_2</span><span class="p">,</span> <span class="nv">List_3</span><span class="p">).</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Η δεύτερη από τις παραπάνω προτάσεις μπορεί να ερμηνευτεί ως εξής: Η επισύναψη της λίστας <code>[Head | List_1]</code> σε μια λίστα <code>List_2</code> παράγει τη λίστα <code>[Head | List_3]</code> αν και μόνο αν η λίστα <code>List_3</code> προκύπτει από την προσάρτηση της λίστας <code>List_2</code> στη λίστα <code>List_1</code>.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>?- trace.
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>[trace] ?- my_append([bob, jo], [jake, darcie], Family).
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>   Call: (10) my_append([bob, jo], [jake, darcie], _4546) ? creep
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>   Call: (11) my_append([jo], [jake, darcie], _4966) ? creep
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>   Call: (12) my_append([], [jake, darcie], _5016) ? creep
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>   Exit: (12) my_append([], [jake, darcie], [jake, darcie]) ? creep
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>   Exit: (11) my_append([jo], [jake, darcie], [jo, jake, darcie]) ? creep
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>   Exit: (10) my_append([bob, jo], [jake, darcie], [bob, jo, jake, darcie]) ? creep
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>Family = [bob, jo, jake, darcie].
+</span></code></pre></div>
+<p>Κατηγορήματα για λίστες που υποστηρίζει η SWI-PROLOG: </p>
+<ul>
+<li><code>member/2</code></li>
+<li><code>append/3</code></li>
+<li><code>append/2</code></li>
+<li><code>prefix/2</code></li>
+<li><code>select/3</code></li>
+<li><code>selectchk/3</code></li>
+<li><code>select/4</code></li>
+<li><code>selectchk/4</code></li>
+<li><code>nextto/3</code></li>
+<li><code>delete/3</code></li>
+<li><code>nth0/3</code></li>
+<li><code>nth1/3</code></li>
+<li><code>nth0/4</code></li>
+<li><code>nth1/4</code></li>
+<li><code>last/2</code></li>
+<li><code>proper_length/2</code></li>
+<li><code>same_length/2</code></li>
+<li><code>reverse/2</code></li>
+<li><code>permutation/2</code></li>
+<li><code>flatten/2</code></li>
+<li><code>clumped/2</code></li>
+<li><code>max_member/2</code></li>
+<li><code>min_member/2</code></li>
+<li><code>sum_list/2</code></li>
+<li><code>max_list/2</code></li>
+<li><code>min_list/2</code></li>
+<li><code>numlist/3</code></li>
+<li><code>is_set/1</code></li>
+<li><code>list_to_set/2</code></li>
+<li><code>intersection/3</code></li>
+<li><code>union/3</code></li>
+<li><code>subset/2</code></li>
+<li><code>subtract/3</code></li>
+</ul>
+<p><a href="https://www.swi-prolog.org/pldoc/man?section=lists">SWI-PROLOG list of predicates</a></p>
+<p>Μια υλοποίηση της <code>member</code> (η <code>member</code> υπάρχει υλοποιημένη στην Prolog)</p>
+<div class="language-prolog highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">my_member.pl</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1">1</a></span>
+<span class="normal"><a href="#__codelineno-9-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="nf">my_member</span><span class="p">(</span><span class="nv">Element</span><span class="p">,</span> <span class="p">[</span><span class="nv">Element</span><span class="p">|</span><span class="k">_</span><span class="p">]).</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="nf">my_member</span><span class="p">(</span><span class="nv">Element</span><span class="p">,</span> <span class="p">[</span><span class="k">_</span><span class="p">|</span><span class="nv">List</span><span class="p">])</span> <span class="p">:-</span>  <span class="nf">my_member</span><span class="p">(</span><span class="nv">Element</span><span class="p">,</span> <span class="nv">List</span><span class="p">).</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Ο χαρακτήρας <code>_</code> υποδηλώνει μια ανώνυμη μεταβλητή.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>?- 9 ?- trace.
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>[trace] 9 ?- my_member(a, [b,c,d]).
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>   Call: (10) my_member(a, [b, c, d]) ? creep
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>   Call: (11) my_member(a, [c, d]) ? creep
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>   Call: (12) my_member(a, [d]) ? creep
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>   Call: (13) my_member(a, []) ? creep
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>   Fail: (13) my_member(a, []) ? creep
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>   Fail: (12) my_member(a, [d]) ? creep
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>   Fail: (11) my_member(a, [c, d]) ? creep
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>   Fail: (10) my_member(a, [b, c, d]) ? creep
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>false.
+</span></code></pre></div>
+<h2 id="167-prolog">16.7 Ελλείψεις της Prolog</h2>
+<p>H Prolog ως γλώσσα προγραμματισμού έχει αρκετές ελλείψεις όπως ο απαιτούμενος σε πολλές περιπτώσεις έλεγχος με παρέμβαση του προγραμματιστή της σειράς με την οποία εφαρμόζεται η ανάλυση, η υπόθεση του κλειστού κόσμου, το πρόβλημα της άρνησης (η διαφορετική σημασιολογία του τελεστή NOT) καθώς και εγγενείς δυσκολίες στη μη διαδικαστική αντιμετώπιση υπολογιστικών προβλημάτων όπως η ταξινόμηση.</p>
+<h3 id="1671">16.7.1 Έλεγχος σειράς ανάλυσης</h3>
+<p>Για λόγους αποδοτικότητας και προκειμένου να αποφεύγονται οι ατέρμονοι βρόχοι, ο προγραμματιστής στην Prolog συχνά χρειάζεται να ενσωματώνει στα προγράμματα του πληροφορίες ροής ελέγχου που απομακρύνουν από τον καθαρό Λογικό Προγραμματισμό. Αυτό συμβαίνει διότι η Prolog έχει συγκεκριμένη σειρά με την οποία επιχειρεί τα ταιριάσματα (από πάνω προς τα κάτω στη βάση γνώσης). </p>
+<p>Ο έλεγχος της οπισθοδρόμησης μπορεί να γίνει με τον τελεστή αποκοπής <code>!</code> (cut). Ο τελεστής ! είναι στην πραγματικότητα μια τελική κατάσταση άμεσης επιτυχίας που αποτρέπει την ικανοποίηση εκ νέου μέσω οπισθοδρόμησης. Για παράδειγμα:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>a,b,!,c,d.
+</span></code></pre></div>
+<p>αν τα <code>a</code> και <code>b</code> επιτύχουν αλλά το <code>c</code> αποτύχει τότε ολόκληρη η τελική κατάσταση αποτυγχάνει (μπορεί να είναι η επιθυμητή συμπεριφορά διότι ίσως να γνωρίζουμε ότι αν το <code>c</code> αποτυγχάνει τότε δεν έχει νόημα η εξέταση εναλλακτικών λύσεων για τα <code>a</code> και <code>b</code>).</p>
+<h3 id="1672">16.7.2 Υπόθεση κλειστού κόσμου</h3>
+<p>Η Prolog είναι ένα σύστημα που μπορεί να αποδείξει ότι κάτι είναι αληθές αλλά όχι ότι είναι ψευδές. Εφόσον δεν μπορεί να αποδείξει με ότι περιέχεται στη βάση δεδομένων του ότι κάτι είναι αληθές υποθέτει ότι είναι ψευδές. </p>
+<p>Έστω η ακόλουθη βάση γνώσης με το κατηγόρημα <code>father(X,Y)</code> που ερμηνεύεται ότι ο πατέρας του/της <code>X</code> είναι ο <code>Y</code></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>father(aristea, sotiris).
+</span></code></pre></div>
+<p>Τα ακόλουθα ερωτήματα λόγω της υπόθεσης του κλειστού κόσμου θα δώσουν τις ακόλουθες απαντήσεις</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>?- father(aristea, Y).
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Y = sotiris.
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>?- father(christos, Y).
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>false.
+</span></code></pre></div>
+<h3 id="1673">16.7.3 Το πρόβλημα της άρνησης</h3>
+<div class="language-prolog highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">sibling.pl</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="nf">parent</span><span class="p">(</span><span class="s s-Atom">bill</span><span class="p">,</span> <span class="s s-Atom">jake</span><span class="p">).</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="nf">parent</span><span class="p">(</span><span class="s s-Atom">bill</span><span class="p">,</span> <span class="s s-Atom">shelley</span><span class="p">).</span>
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="nf">sibling</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">parent</span><span class="p">(</span><span class="nv">M</span><span class="p">,</span> <span class="nv">X</span><span class="p">),</span> <span class="nf">parent</span><span class="p">(</span><span class="nv">M</span><span class="p">,</span> <span class="nv">Y</span><span class="p">).</span>
+</span></code></pre></div></td></tr></table></div>
+<p>Αν τεθεί το ακόλουθο ερώτημα, λαμβάνουμε την απάντηση ότι ο <code>Jake</code> είναι τέκνο των ίδιων γονέων με τον <code>Jake</code>, που δεν έχει νόημα ως απόκριση.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>?- sibling(X,Y).
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>X = Y, Y = jake ;
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>X = jake,
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>Y = shelley ;
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>X = shelley,
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>Y = jake ;
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>X = Y, Y = shelley.
+</span></code></pre></div>
+<p>Με την ακόλουθη αλλαγή στον κώδικα που προσθέτει τον όρο <strong>not(X = Y)</strong> στο κατηγόρημα sibling/2.</p>
+<div class="language-prolog highlight"><table class="highlighttable"><tr><th colspan="2" class="filename"><span class="filename">sibling2.pl</span></th></tr><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="nf">parent</span><span class="p">(</span><span class="s s-Atom">bill</span><span class="p">,</span> <span class="s s-Atom">jake</span><span class="p">).</span>
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2"></a><span class="nf">parent</span><span class="p">(</span><span class="s s-Atom">bill</span><span class="p">,</span> <span class="s s-Atom">shelley</span><span class="p">).</span>
+</span><span id="__span-17-3"><a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="nf">sibling</span><span class="p">(</span><span class="nv">X</span><span class="p">,</span> <span class="nv">Y</span><span class="p">)</span> <span class="p">:-</span> <span class="nf">parent</span><span class="p">(</span><span class="nv">M</span><span class="p">,</span> <span class="nv">X</span><span class="p">),</span> <span class="nf">parent</span><span class="p">(</span><span class="nv">M</span><span class="p">,</span> <span class="nv">Y</span><span class="p">),</span> <span class="o">not</span><span class="p">(</span><span class="nv">X</span> <span class="o">=</span> <span class="nv">Y</span><span class="p">).</span>
+</span></code></pre></div></td></tr></table></div>
+<p>η απάντηση στο ίδιο ερώτημα, είναι πλέον η αναμενόμενη:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>?- sibling(X,Y).
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>X = jake,
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>Y = shelley ;
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>X = shelley,
+</span><span id="__span-18-5"><a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>Y = jake ;
+</span><span id="__span-18-6"><a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>false
+</span></code></pre></div></p>
+<p>Ωστόσο, το <code>not</code> της Prolog δεν είναι ισοδύναμο τον λογικό τελεστή <code>not</code> των άλλων γλωσσών προγραμματισμού. Για παράδειγμα το:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>not(not(some_goal)).
+</span></code></pre></div></p>
+<p>δεν είναι ισοδύναμο με το: 
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>some_goal.
+</span></code></pre></div></p>
+<p>Αυτό φαίνεται στο ακόλουθο παράδειγμα:
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>1 ?- member(X,[mary, fred, barb]).
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>X = mary ;
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>X = fred ;
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>X = barb.
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>2 ?- not(member(X,[mary, fred, barb])).
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>false.
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>
+</span><span id="__span-21-9"><a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>3 ?- not(not(member(X,[mary, fred, barb]))).
+</span><span id="__span-21-10"><a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a>true.
+</span></code></pre></div></p>
+<h3 id="1674">16.7.4 Εγγενείς περιορισμοί</h3>
+<p>Στόχος του λογικού προγραμματισμού είναι ο προγραμματισμός να μην είναι διαδικαστικός, δηλαδή να μην απαιτείται η αναλυτική περιγραφή των ενεργειών βήμα προς βήμα που οδηγούν στη λύση ενός προβλήματος. Ωστόσο, αυτό δεν είναι δυνατό σε όλες τις περιπτώσεις. Για παράδειγμα για να κατασκευαστεί ένας αλγόριθμος ταξινόμησης λίστας στην Prolog, ο αλγόριθμος θα πρέπει να καθορίζει τις λεπτομέρειες του τρόπου ταξινόμησης όπως και σε μια προστακτική ή συναρτησιακή γλώσσα.</p>
+<p><a href="http://kti.mff.cuni.cz/~bartak/prolog/sorting.html">PROLOG PROGRAMMING by ROMAN BARTÁK (sorting)</a></p>
+<h2 id="168">16.8 Εφαρμογές λογικού προγραμματισμού</h2>
+<p>Ο λογικός προγραμματισμός χρησιμοποιείται κυρίως σε Βάσεις Δεδομένων, έμπειρα συστήματα και στην επεξεργασία φυσικής γλώσσας.</p>
+<h3 id="1681">16.8.1 Συστήματα διαχείρισης σχεσιακών βάσεων δεδομένων</h3>
+<p>Τα Συστήματα Διαχείρισης Σχεσιακών Βάσεων Δεδομένων (RDBMS=Relational Database Management Systems) αποθηκεύουν τα δεδομένα με μορφή πινάκων. Η γλώσσα SQL που χρησιμοποιείται για τα ερωτήματα προς τη βάση είναι δηλωτική όπως και ο λογικός προγραμματισμός (ο χρήστης δεν περιγράφει το πως θα ληφθούν τα αποτελέσματα αλλά μόνο τα χαρακτηριστικά των αποτελεσμάτων). Ο λογικός προγραμματισμός μπορεί να χρησιμοποιηθεί για την υλοποίηση ενός RDBMS ενώ επιπλέον παρέχει τη δυνατότητα λήψης επαγωγικών συμπερασμάτων (συμπεράσματα που προκύπτουν από το συνδυασμό γεγονότων και κανόνων που είναι αποθηκευμένα στη βάση). Ωστόσο, η υλοποίηση ενός RDBMS με λογικό προγραμματισμό υστερεί σε ταχύτητα εκτέλεσης σε σχέση με υλοποιήσεις σε προστακτικές γλώσσες προγραμματισμού.</p>
+<h3 id="1682">16.8.2 Έμπειρα συστήματα</h3>
+<p>Τα έμπειρα συστήματα (expert systems) είναι συστήματα που επιδιώκουν την προσομοίωση ενός ανθρώπου ειδικού που διαθέτει εμπειρία και γνώση για μια γνωστική περιοχή (π.χ. γιατρού, μηχανικού αυτοκινήτων). Η Prolog χρησιμοποιείται συχνά στην κατασκευή έμπειρων συστημάτων.</p>
+<h3 id="1683">16.8.3 Επεξεργασία φυσικής γλώσσας</h3>
+<p>Ο λογικός προγραμματισμός μπορεί να χρησιμοποιηθεί για την περιγραφή του συντακτικού γλωσσών, παρουσιάζοντας ισοδυναμία με τις γραμματικές χωρίς συμφραζόμενα. </p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Γκόγκος Χρήστος &copy 2025
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": "-navigation.tabs -content.code.copy", "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/katex.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/katex.min.js"></script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.7/contrib/auto-render.min.js"></script>
+      
+    
+  </body>
+</html>
