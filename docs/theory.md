@@ -23,10 +23,10 @@
 ### 5. Ονόματα προσδέσεις και εμβέλειες 
 [Σημειώσεις](./theory_ch5.md) Παρουσίαση: [ΕΝ](./resources/pl11ch5.pdf) | [ΕΛ](./resources/pl11ch5GR.pdf)
 
-<!-- 
 ### 6. Τύποι δεδομένων
 [Σημειώσεις](./theory_ch6.md) Παρουσίαση: [ΕΝ](./resources/pl11ch6.pdf) | [ΕΛ](./resources/pl11ch6GR.pdf)
 
+<!-- 
 ### 7. Εκφράσεις και προτάσεις εκχώρησης
 [Σημειώσεις](./theory_ch7.md) Παρουσίαση: [ΕΝ](./resources/pl11ch7.pdf) | [ΕΛ](./resources/pl11ch7GR.pdf)
 
