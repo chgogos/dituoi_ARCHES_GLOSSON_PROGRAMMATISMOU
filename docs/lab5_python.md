@@ -1,6 +1,6 @@
 # Εργαστήριο 5 στην Python
 
-Θέματα που εξετάζονται στο εργαστήριο: Γραφικά περιβάλλοντα διεπαφής με το tkinter[^1], APIs, matplotlib[^2], MVC (Model View Controller)[^3]
+Θέματα που εξετάζονται στο εργαστήριο: Οπτικός προγραμματισμός, γραφικά περιβάλλοντα διεπαφής με το tkinter[^1][^6], APIs, matplotlib[^2], MVC (Model View Controller)[^3]
 
 ## Εξάσκηση (εκφωνήσεις και λύσεις ασκήσεων)
 
@@ -186,3 +186,4 @@
 [^3]: [Tkinter MVC](https://www.pythontutorial.net/tkinter/tkinter-mvc/)
 [^4]: [StringVar](https://www.askpython.com/python-modules/tkinter/stringvar-with-examples)
 [^5]: [trace_add](https://coderslegacy.com/python/tkinter-trace/)
+[^6]: [pythoguis - tkinter tutorial](https://www.pythonguis.com/tkinter-tutorial/)

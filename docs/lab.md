@@ -8,6 +8,7 @@
 | [Εργαστήριο 2](./lab2_python.md)    | συγγραφή συναρτήσεων, unit tests με τη στάνταρντ βιβλιοθήκη unittest, comprehensions, virtual environments (venv), εξωτερικές βιβλιοθήκες και εγκατάσταση με το pip, unit tests με το pytest.|
 | [Εργαστήριο 3](./lab3_python.md)    | αρχεία κειμένου, κανονικές εκφράσεις (regular expressions), αρχεία XML, μορφοποίηση κώδικα (π.χ. με το black), διάταξη imports με το isort, docstrings.|
 | [Εργαστήριο 4](./lab4_python.md)    | αντικειμενοστραφής προγραμματισμός με την Python, οι μέθοδοι `__init__`, `__str__`, `__repr__`, υπερφόρτωση τελεστών, κληρονομικότητα, εξαιρέσεις, ορίσματα γραμμής εντολών με το sys.argv και με το argparse, logging.|
+| [Εργαστήριο 5](./lab5_python.md)    | γραφικά περιβάλλοντα διεπαφής με το tkinter, APIs, matplotlib, MVC (Model View Controller)|
 
 !!! note annotate "Συμμετοχή εργαστηρίου στο βαθμό του μαθήματος"
     Το εργαστήριο συμμετέχει με 10% στο βαθμό του μαθήματος.
@@ -16,7 +17,8 @@
 
 | Εργαστήριο      | Περιγραφή                            |
 | --------------- | ------------------------------------ |
-| [Εργαστήριο 5](./lab5_python.md)    | γραφικά περιβάλλοντα διεπαφής με το tkinter, APIs, matplotlib, MVC (Model View Controller)| -->
+ -->
+
 <!-- | [Εργαστήριο 6](./lab6_python.md)    | γεννήτριες (generators), coroutines, `*args`, `**kwargs`, `__slots__`, lambdas, zip και unzip, caching, context managers | -->
 <!-- | [Εργαστήριο 7](./lab7_python.md)    | επιτάχυνση υπολογισμών με τη numpy | -->
 
