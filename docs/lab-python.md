@@ -52,6 +52,7 @@
 43. [Easter eggs](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/43-easter_eggs.ipynb)
 44. [seaborn](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/44-seaborn.ipynb)
 45. [datasets](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/45-datasets.ipynb)
+45. [introspection](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/46-introspection.ipynb)
 
 ## Βιβλία για Python
 * [Programming Foundations - Διαδραστικό βιβλίο για εκμάθηση της Python από το TU Delft](https://interactivetextbooks.tudelft.nl/programming-foundations/intro.html)
