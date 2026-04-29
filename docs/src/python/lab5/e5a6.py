@@ -1,12 +1,5 @@
 import tkinter as tk
 
-root = tk.Tk()
-celsius_var = tk.StringVar()
-celsius_var.set("0.0")
-fahr_var = tk.StringVar()
-fahr_var.set("32.0")
-
-
 def celcius_callback(*args):
     if root.focus_get() != celsius_entry:
         return
@@ -32,6 +25,12 @@ def fahr_callback(*args):
     except ValueError:
         fahr_entry.config(background="pink")
 
+
+root = tk.Tk()
+celsius_var = tk.StringVar()
+celsius_var.set("0.0")
+fahr_var = tk.StringVar()
+fahr_var.set("32.0")
 
 root.geometry("350x30")
 root.title("TempConv")
