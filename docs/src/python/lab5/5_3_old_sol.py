@@ -1,56 +1,47 @@
+import calendar
 import datetime
-from tkinter import BOTTOM, Button, Entry, Frame, Label, StringVar, Tk
+from tkinter import *
+
 import requests
-from matplotlib.backends._backend_tk import NavigationToolbar2Tk
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
+from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 from matplotlib.figure import Figure
 
 
 def plot():
+    api_key = "ΣΥΜΠΛΗΡΩΣΤΕ ΤΟ ΔΙΚΟ ΣΑΣ API ΚΛΕΙΔΙ ΕΔΩ"
+
     lat = latitude_entry.get()
     lon = longitude_entry.get()
 
     date_time = datetime.datetime.now() - datetime.timedelta(days=5)
+    utc_time = calendar.timegm(date_time.utctimetuple())
 
+    timezone = ""
     temperatures = []
     dates = []
 
-    start_date = date_time.strftime("%Y-%m-%d")
-    end_date = datetime.datetime.now().strftime("%Y-%m-%d")
-
-    weather_url = "https://archive-api.open-meteo.com/v1/archive"
-
-    params = {
-        "latitude": lat,
-        "longitude": lon,
-        "start_date": start_date,
-        "end_date": end_date,
-        "hourly": "temperature_2m",
-        "timezone": "auto",
-    }
-
-    response = requests.get(weather_url, params=params)
-    print(response.status_code)
-    print(response.text[:500])
-
-    weather_data = response.json()
-
-    if response.status_code != 200:
-        print("API error:", response.status_code, weather_data)
-        return
-
-    temperatures = [
-        int(temp)
-        for temp in weather_data["hourly"]["temperature_2m"]
-        if temp is not None
-    ]
-
-    for _ in range(6):
+    for _ in range(5):
         temp_date = str(date_time).split(" ")[0]
         temp_date = temp_date.split("-")
         dates.append(temp_date[2] + "/" + temp_date[1] + "/" + temp_date[0])
 
+        weather_url = f"https://api.openweathermap.org/data/2.5/onecall/timemachine?lat={lat}&lon={lon}&units=metric&dt={utc_time}&appid={api_key}"
+        response = requests.get(weather_url)
+        weather_data = response.json()
+
+        if timezone == "":
+            timezone = weather_data["timezone"]
+
+        for i in range(24):
+            temp = int(weather_data["hourly"][i]["temp"])
+            temperatures.append(temp)
+
         date_time = date_time + datetime.timedelta(days=1)
+        utc_time = calendar.timegm(date_time.utctimetuple())
+
+    temp_date = str(date_time).split(" ")[0]
+    temp_date = temp_date.split("-")
+    dates.append(temp_date[2] + "/" + temp_date[1] + "/" + temp_date[0])
 
     fig = Figure(figsize=(10, 5), dpi=100)
     plot1 = fig.add_subplot(111)
