@@ -90,7 +90,7 @@ def calculate_price(price, quantity, discount, tax):
     --8<-- "src/python/lab6/e6a5sol.py"
     ```
 
-**Άσκηση Ε6Α5 (all και any)**
+**Άσκηση Ε6Α6 (all και any)**
 Δίνεται μια λίστα από φοιτητές, όπου κάθε φοιτητής αναπαρίσταται από ένα tuple της μορφής (name, passed) όπου name είναι το όνομα του φοιτητή και το passed που είναι True αν ο φοιτητής πέρασε ένα μάθημα διαφορετικά είναι False. Δίνεται ο ακόλουθος κώδικας που ελέγχει α) αν όλοι οι φοιτητές έχουν περάσει το μάθημα και β) αν υπάρχει τουλάχιστον ένας φοιτητής που δεν πέρασε το μάθημα.
 
 ```{.py title="e6a6.py" linenums="1"}
@@ -103,7 +103,6 @@ def calculate_price(price, quantity, discount, tax):
     ```{.py title="e6a6sol.py" linenums="1"}
     --8<-- "src/python/lab6/e6a6sol.py"
     ```
-
 
 [^1]: [Notebook με παραδείγματα λάμδα συναρτήσεων](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/10-lambdas.ipynb)
 [^2]: [Notebook με παραδείγματα generators](https://github.com/chgogos/dituoi_agp/blob/main/pl/python/notebooks/23-generators.ipynb)
