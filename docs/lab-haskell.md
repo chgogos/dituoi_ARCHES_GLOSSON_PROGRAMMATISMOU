@@ -615,6 +615,8 @@ $ ./fileWriteTo
     <!-- ![](https://people.cs.nott.ac.uk/pszgmh/pih.jpg) -->
     
     [Λύσεις ασκήσεων](https://github.com/singleheart/programming-in-haskell) 
+    [Hangman game](./src/haskell/PIH/ch10/hangman.hs)
+    [Nim game](./src/haskell/PIH/ch10/nim.hs)
 
 ## Βιβλία - σημειώσεις
 * [Σταματόπουλος, Π. (2015). Λογικός και συναρτησιακός προγραμματισμός [Προπτυχιακό εγχειρίδιο]. Κάλλιπος, Ανοικτές Ακαδημαϊκές Εκδόσεις. https://hdl.handle.net/11419/3587](https://repository.kallipos.gr/handle/11419/3587)
