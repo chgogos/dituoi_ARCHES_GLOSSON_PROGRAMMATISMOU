@@ -27,6 +27,8 @@ move board row num = [update r n | (r, n) <- zip [1 ..] board]
         then n - num
         else n
 
+-- I/O utilities
+
 putRow :: Int -> Int -> IO ()
 putRow row num = do
   putStr (show row)
@@ -53,6 +55,8 @@ getDigit prompt = do
 
 newline :: IO ()
 newline = putChar '\n'
+
+-- Nim game
 
 play :: Board -> Int -> IO ()
 play board player = do
