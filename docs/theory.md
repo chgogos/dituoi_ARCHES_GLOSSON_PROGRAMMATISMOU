@@ -40,7 +40,6 @@
 ### 12. Υποστήριξη αντικειμενοστραφούς προγραμματισμού
 [Σημειώσεις](./theory_ch12.md) Παρουσίαση: [ΕΝ](./resources/pl11ch12.pdf) | [ΕΛ](./resources/pl11ch12GR.pdf)
 
-<!-- 
 ### 14. Χειρισμός εξαιρέσεων και χειρισμός συμβάντων
 Παρουσίαση: [ΕΝ](./resources/pl11ch14.pdf) | [ΕΛ](./resources/pl11ch14GR.pdf)
 
@@ -48,4 +47,4 @@
 [Σημειώσεις](./theory_ch15.md) Παρουσίαση: [ΕΝ](./resources/pl11ch15.pdf) | [ΕΛ](./resources/pl11ch15GR.pdf)
 
 ### 16. Γλώσσες λογικού προγραμματισμού
-[Σημειώσεις](./theory_ch16.md)Παρουσίαση: [ΕΝ](./resources/pl11ch16.pdf) | [ΕΛ](./resources/pl11ch16GR.pdf) -->
+[Σημειώσεις](./theory_ch16.md)Παρουσίαση: [ΕΝ](./resources/pl11ch16.pdf) | [ΕΛ](./resources/pl11ch16GR.pdf)
