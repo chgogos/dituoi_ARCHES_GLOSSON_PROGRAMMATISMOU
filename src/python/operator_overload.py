@@ -1,0 +1,19 @@
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    # Overload the + operator
+    def __add__(self, other):
+        return Point(self.x + other.x, self.y + other.y)
+
+    # Overload the string representation
+    def __str__(self):
+        return f"({self.x}, {self.y})"
+
+
+p1 = Point(1, 2)
+p2 = Point(3, 4)
+p3 = p1 + p2
+
+print(p3)
