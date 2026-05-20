@@ -8,6 +8,7 @@ move([X,Wolf,Goat,Cab], nothing, [Y,Wolf,Goat,Cab]) :- change(X, Y).
 
 guarded_or_separated(X, X, X).
 guarded_or_separated(_, Y, Z) :- Y \= Z.
+
 safe([Man, Wolf, Goat, Cabbage]) :- 
     guarded_or_separated(Man, Goat, Wolf), 
     guarded_or_separated(Man, Goat, Cabbage).
@@ -17,3 +18,12 @@ solution(Config, [Move|Moves]) :-
     move(Config, Move, NextConfig),
     safe(NextConfig),
     solution(NextConfig, Moves).
+
+main :-
+    length(L, N),
+    write('Finding solution with '), write(N), writeln(' moves...'),
+    solution([w,w,w,w], L),
+    write('Moves: '), writeln(L),
+    write('Number of moves: '), writeln(N).
+
+:- initialization(main, main).
